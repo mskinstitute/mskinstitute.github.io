@@ -954,67 +954,35 @@ section {
 
 
 /*--------------------------------------------------------------
-# Cource Details Tabs
+# Course Details Tabs
 --------------------------------------------------------------*/
-.cource-details-tabs {
-  overflow: hidden;
-  padding-top: 0;
+.container .featurette h2{
+  font-size: 60px;
+  padding-top: 10px;
+  color: var(--bs-link-color);
 }
-
-.cource-details-tabs .nav-tabs {
-  border: 0;
+.container .featurette h3{
+  padding-top: 10px;
+  font-size: xx-large;
 }
-
-.cource-details-tabs .nav-link {
-  border: 0;
-  padding: 12px 15px 12px 0;
-  transition: 0.3s;
-  color: #37423b;
-  border-radius: 0;
-  border-right: 2px solid #e2e7e4;
-  font-weight: 600;
-  font-size: 15px;
+.container .featurette .course-details{
+  padding-top: 10px;
 }
-
-.cource-details-tabs .nav-link:hover {
-  color: #5fcf80;
-}
-
-.cource-details-tabs .nav-link.active {
-  color: #5fcf80;
-  border-color: #5fcf80;
-}
-
-.cource-details-tabs .tab-pane.active {
-  animation: fadeIn 0.5s ease-out;
-}
-
-.cource-details-tabs .details h3 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #37423b;
-}
-
-.cource-details-tabs .details p {
-  color: #777777;
-}
-
-.cource-details-tabs .details p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-  .cource-details-tabs .nav-link {
-    border: 0;
-    padding: 15px;
+@media (max-width: 768px){
+  .container .featurette h2{
+    font-size: 25px;
+    padding-top: 10px;
   }
-
-  .cource-details-tabs .nav-link.active {
-    color: #fff;
-    background: #5fcf80;
+  .container .featurette h3{
+    padding-top: 10px;
+    font-size: x-large;
+  }
+  .container .featurette video{
+    width: 320px;
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # Contact
