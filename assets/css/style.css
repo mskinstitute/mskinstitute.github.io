@@ -965,9 +965,8 @@ section {
   padding-top: 10px;
   font-size: xx-large;
 }
-.container .featurette .course-details{
-  padding-top: 10px;
-}
+
+
 @media (max-width: 768px){
   .container .featurette h2{
     font-size: 25px;
