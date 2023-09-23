@@ -368,6 +368,7 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  padding-top: 150px;
   width: 100%;
   height: 100vh;
   background: url("/assets/img/background.png") top center;
@@ -378,10 +379,9 @@ h6 {
 
 
 #hero .container {
-  padding-top: 72px;
+  padding: 50px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 50px;
-  padding: 50px;
   text-align: center;
 }
 
@@ -663,44 +663,6 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
-.features {
-  padding-top: 0px;
-}
-
-.features .icon-box {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  transition: 0.3s;
-  border: 1px solid #eef0ef;
-}
-
-.features .icon-box i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 1;
-}
-
-.features .icon-box h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-}
-
-.features .icon-box h3 a {
-  color: #37423b;
-  transition: 0.3s;
-}
-
-.features .icon-box:hover {
-  border-color: #5fcf80;
-}
-
-.features .icon-box:hover h3 a {
-  color: #5fcf80;
-}
 
 /*--------------------------------------------------------------
 # Courses
@@ -839,7 +801,7 @@ section {
 }
 
 .trainers .member .social a:hover {
-  color: #5fcf80;
+  color: black;
 }
 
 .trainers .member .social i {
@@ -864,7 +826,7 @@ section {
   padding: 30px 30px 30px 60px;
   margin: 30px 15px;
   min-height: 200px;
-  border: 1px solid #eef0ef;
+  border: 1px solid var(--bs-link-color);
   position: relative;
   background: #fff;
 }
@@ -886,13 +848,13 @@ section {
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #999;
+  color: var(--bs-link-color);
   margin: 0;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #c1ecce;
+  color: var(--bs-link-color);
   font-size: 26px;
 }
 
@@ -924,11 +886,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #5fcf80;
+  border: 1px solid var(--bs-link-color);
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #5fcf80;
+  background-color: var(--bs-link-hover-color);
 }
 
 @media (max-width: 767px) {
@@ -986,22 +948,21 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact {
-  padding-top: 5px;
-}
-
 .contact .info {
+  padding: 20px;
   width: 100%;
-  background: #fff;
+  height: 500px;
+  background: #f7f8f9;
+  border-radius: 10px;
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #5fcf80;
+  color: black;
   float: left;
   width: 44px;
   height: 44px;
-  background: #ecf9f0;
+  background: #eef7ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1009,19 +970,19 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h4 {
+.contact .info h4{
   padding: 0 0 0 60px;
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 5px;
-  color: #37423b;
+  margin-bottom: 1px;
+  color: #45505b;
 }
 
 .contact .info p {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #657a6d;
+  color: #728394;
 }
 
 .contact .info .email,
@@ -1032,101 +993,16 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #5fcf80;
+  background: var(--bs-link-color);
   color: #fff;
 }
 
 .contact .php-email-form {
+  padding: 20px;
   width: 100%;
-  background: #fff;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: #5fcf80;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #5fcf80;
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #3ac162;
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  height: 500px;
+  background: #f7f8f9;
+  border-radius: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1183,7 +1059,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #5fcf80;
+  color: var(--bs-link-color);
   font-size: 18px;
   line-height: 1;
 }
@@ -1207,7 +1083,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #5fcf80;
+  color: var(--bs-link-hover-color);
 }
 
 #footer .footer-newsletter {
@@ -1247,7 +1123,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px 2px 20px;
-  background: #5fcf80;
+  background: var(--bs-link-color);
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
@@ -1255,7 +1131,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #3ac162;
+  background: var(--bs-link-color);
 }
 
 #footer .credits {
@@ -1264,18 +1140,18 @@ section {
 }
 
 #footer .credits a {
-  color: #3ac162;
+  color: var(--bs-link-color);
   transition: 0.3s;
 }
 
 #footer .credits a:hover {
-  color: #5fcf80;
+  color: var(--bs-link-hover-color);
 }
 
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5fcf80;
+  background: var(--bs-link-color);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1288,7 +1164,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #3ac162;
+  background: var(--bs-link-hover-color);
   color: #fff;
   text-decoration: none;
 }
