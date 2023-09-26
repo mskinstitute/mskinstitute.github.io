@@ -10,8 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.ico" rel="icon">
 
   <!-- Google Fonts -->
   <link
@@ -49,9 +48,9 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="/">MSK !nstitute</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="/" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <h1 class="logo me-auto"><a href="/">MSK !nstitute</a></h1>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -480,11 +479,13 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <h4>Whatsapp Message</h4>
+            <p>We will never send any spam messages. Promise.</p>
+            <div>
+              <input id="message-input" type="text" name="text" placeholder="Enter message here..." width="500px"> 
+              <i onclick="sendMessage()" class="btn btn-primary bi bi-send"></i>
+
+            </div>
           </div>
 
         </div>

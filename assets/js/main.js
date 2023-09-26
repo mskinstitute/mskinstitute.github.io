@@ -1,10 +1,4 @@
-/**
-* Template Name: Mentor
-* Updated: Aug 30 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -133,3 +127,9 @@
   new PureCounter();
 
 })()
+
+function sendMessage(){
+  const message = document.getElementById("message-input").value;
+  const whatsappLink = "https://wa.me/918393042166?text=" + message;
+  window.open(whatsappLink)
+}
