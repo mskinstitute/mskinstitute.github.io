@@ -146,11 +146,10 @@ function setFavicon() {
 
     if (isAndroid) {
         faviconElement.classList.add("me-auto");
-        faviconElement.href = 'assets/img/logo.ico';
         textElement.innerHTML = "MSK!";
     } else {
         // Remove favicon for Windows (or other devices)
-        faviconElement.remove();
+        // faviconElement.remove();
     }
 }
 
