@@ -51,6 +51,7 @@
     onscroll(document, toggleBacktotop)
   }
 
+
   /**
    * Mobile nav toggle
    */
@@ -133,3 +134,25 @@ function sendMessage(){
   const whatsappLink = "https://wa.me/918393042166?text=" + message;
   window.open(whatsappLink)
 }
+
+
+// Check if the device is Android
+const isAndroid = /Android/i.test(navigator.userAgent);
+
+// Function to set or remove favicon based on device
+function setFavicon() {
+    const faviconElement = document.getElementById('imageLoge');
+    const textElement = document.getElementById('textLogo');
+
+    if (isAndroid) {
+        faviconElement.classList.add("me-auto");
+        faviconElement.href = 'assets/img/logo.ico';
+        textElement.innerHTML = "MSK!";
+    } else {
+        // Remove favicon for Windows (or other devices)
+        faviconElement.remove();
+    }
+}
+
+// Call the function when the page loads
+window.onload = setFavicon;
