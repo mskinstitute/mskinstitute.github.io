@@ -2,35 +2,32 @@
 # General
 --------------------------------------------------------------*/
 :root {
-  --header-color--: #00235c;
   --green-color: #219C90;
   --yellow-color: #E9B824;
-  --bs-gray1: #F0F0F0;
-  --bs-gray2: #adb5bd;
-  --primary: #00235c;
-  --secondary: #EC6854;
-  --third-sky-color: #0085d4;
-  --fourth-gray-color: #C0E3F4;
-  --link-color: #0d6efd;
-  --hover-color-primary: var(--secondary);
-  --hover-color-secondary: var(--primary);
+  --primary: #0d6efd;
+  --color-1: #00235c;
+  --color-2: #EC6854;
+  --hover-color-primary: var(--color-2);
+  --hover-color-secondary: var(--color-1);
+  --gray1: #F0F0F0;
+  --gray2: #adb5bd;  
 }
 
 .text-primary{
-  color: var(--primary);
+  color: var(--color-1);
 }
 .text-secondary{
-  color: var(--secondary);
+  color: var(--color-2);
 }
 .border-primary{
   padding: 5px 20px;
   border-radius: 50px;
-  border-color: var(--primary);
+  border-color: var(--color-1);
 }
 .border-secondary{
   padding: 5px 20px;
   border-radius: 50px;
-  border-color: var(--secondary);
+  border-color: var(--color-2);
 }
 
 
@@ -39,7 +36,7 @@ body {
 }
 
 a{
-  color: var(--link-color);
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -65,9 +62,9 @@ h6 {
   visibility: hidden;
   opacity: 0;
   right: 15px;
+  background: var(--primary);
   bottom: 15px;
   z-index: 996;
-  background: var(--link-color);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -80,7 +77,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: var(--secondary);
+  background: var(--color-2);
 }
 
 .back-to-top.active {
@@ -105,9 +102,9 @@ h6 {
 #preloader:before {
   content: "";
   position: fixed;
+  border: 6px solid var(--primary);
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid var(--link-color);
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -147,7 +144,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: var(--primary);
+  background: var(--color-1);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -166,7 +163,7 @@ h6 {
 }
 
 #header .logo a {
-  color: var(--link-color);
+  color: var(--primary);
 }
 
 #header .logo img {
@@ -183,14 +180,14 @@ h6 {
   padding: 5px 20px;
   white-space: nowrap;
   transition: 0.3s;
+  border: 2px solid var(--primary);
   font-size: 18px;
   display: inline-block;
-  border: 2px solid var(--link-color);
 }
 
 .get-started-btn:hover {
+  background: var(--primary);
   color: white;
-  background: var(--link-color);
 }
 
 @media (max-width: 768px) {
@@ -247,10 +244,10 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
+  color: var(--primary);
   font-size: 19px;
   padding: 0px 5px 0px 5px;
-  color: var(--link-color);
-  border-bottom: 2px solid var(--link-color);
+  border-bottom: 2px solid var(--primary);
 }
 
 /**
@@ -322,7 +319,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: var(--link-color);
+  color: var(--primary);
 }
 
 .navbar-mobile .getstarted,
@@ -363,12 +360,11 @@ h6 {
   font-size: 120px;
   font-weight: 700;
   line-height: 140px;
-  color: #bfdbfe;
   font-family: "Poppins", sans-serif;
 }
 
 #hero h2 span{
-  color: var(--secondary);
+  color: var(--color-2);
 }
 #hero h2 {
   color: #bfdbfe;
@@ -386,13 +382,13 @@ h6 {
   border-radius: 50px;
   transition: 0.5s;
   margin-top: 30px;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--color-2);
   color: #fff;
 }
 
 #hero .btn-get-started:hover {
   font-size: 18px;
-  background: var(--secondary);
+  background: var(--color-2);
 }
 
 @media (min-width: 1024px) {
@@ -426,10 +422,10 @@ section {
 }
 .sec-primary{
   color: white;
-  background-color: var(--primary);
+  background-color: var(--color-1);
 }
 .sec-secondary{
-  background-color: var(--secondary);
+  background-color: var(--color-2);
 }
 .sec-gray{
   color: black;
@@ -455,9 +451,9 @@ section {
 .section-title h2::after {
   content: "";
   width: 120px;
+  background: var(--primary);
   height: 1px;
   display: inline-block;
-  background: var(--link-color);
   margin: 4px 10px;
 }
 
@@ -475,9 +471,9 @@ section {
   color: #404040;
   margin-top: 60px;
   padding: 30px 0;
+  border-bottom: 2px solid var(--primary);
   border-radius: 0 0 100px 0;
   transition: 0.2s;
-  border-bottom: 2px solid var(--link-color);
 }
 
 @media (max-width: 992px) {
@@ -489,10 +485,10 @@ section {
 .breadcrumbs h2 {
   font-size: 32px;
   font-weight: 500;
+  color: var(--primary);
   width: 180px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: var(--link-color);
-  border-bottom: 2px solid var(--link-color);
+  border-bottom: 2px solid var(--primary);
 }
 
 .breadcrumbs p {
@@ -551,7 +547,7 @@ section {
 --------------------------------------------------------------*/
 .why-us .content {
   padding: 30px;
-  background: var(--secondary);
+  background: var(--color-2);
   border-radius: 4px;
 }
 
@@ -596,7 +592,7 @@ section {
   padding: 18px;
   color: white;
   margin-bottom: 30px;
-  background: var(--secondary);
+  background: var(--color-2);
   border-radius: 50px;
 }
 
@@ -621,16 +617,16 @@ section {
 .courses .course-item {
   border-radius: 20px;
   background-color: var(--bs-gray-100);
-  border: 2px solid var(--bs-gray2);
+  border: 2px solid var(--gray2);
 }
 
 .courses .course-item:hover{
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
 }
 .courses .course-item img{
+  border-bottom: 2px solid var(--primary);
   border-radius: 20px 20px 0px 0px;
-  background-color: var(--header-color--);
-  border-bottom: 2px solid var(--link-color);
+  background-color: var(--color-1);
 }
 
 .courses .container .row .align-items-stretch{
@@ -652,8 +648,8 @@ section {
 }
 
 .courses .course-content h4 {
+  background: var(--primary);
   font-size: 14px;
-  background: var(--link-color);
   padding: 7px 14px;
   color: #fff;
   margin: 0;
@@ -770,13 +766,13 @@ section {
   min-height: 200px;
   border: 1px solid white;
   position: relative;
-  background: var(--secondary);
+  background: var(--color-2);
 }
 
 .testimonials .testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 10px;
-  border: 6px solid var(--secondary);
+  border: 6px solid var(--color-2);
   position: absolute;
   left: -45px;
 }
@@ -827,7 +823,7 @@ section {
   width: 12px;
   height: 12px;
   opacity: 1;
-  background-color: var(--secondary);
+  background-color: var(--color-2);
   border: 1px solid #fff;
 }
 
@@ -861,9 +857,9 @@ section {
 # Course Details Tabs
 --------------------------------------------------------------*/
 .container .featurette h2{
+  color: var(--primary);
   font-size: 60px;
   padding-top: 10px;
-  color: var(--link-color);
 }
 .container .featurette h3{
   padding-top: 10px;
@@ -935,7 +931,7 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: var(--link-color);
+  background: var(--primary);
   color: #fff;
 }
 
@@ -952,7 +948,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
-  background: var(--primary);
+  background: var(--color-1);
 }
 
 #footer .footer-top {
@@ -993,7 +989,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: var(--secondary);
+  color: var(--color-2);
   font-size: 18px;
   line-height: 1;
 }
@@ -1016,7 +1012,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: var(--secondary);
+  color: var(--color-2);
 }
 
 #footer .footer-newsletter {
@@ -1030,14 +1026,14 @@ section {
   position: relative;
   border-radius: 50px;
   text-align: left;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--color-2);
 }
 
 
 #footer .social-links a {
+  background: var(--primary);
   font-size: 18px;
   display: inline-block;
-  background: var(--link-color);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1055,21 +1051,21 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: var(--secondary);
+  background: var(--color-2);
   text-decoration: none;
 }
 #footer .footer-newsletter i{
-  color: var(--secondary);
+  color: var(--color-2);
 }
 
 #footer .footer-newsletter .btn-primary{
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--color-2);
   background-color: var(--fourth-gray-color);
 }
 #footer .footer-newsletter i:hover,
 #footer .footer-newsletter .btn-primary:hover{
   color: white;
-  background-color: var(--secondary);
+  background-color: var(--color-2);
 }
 .btn-primary{
   border-radius: 50px;
