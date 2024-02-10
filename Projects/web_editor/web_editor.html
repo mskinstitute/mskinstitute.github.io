@@ -7,12 +7,13 @@
     <title>Web Editor</title>
 
     <script src="./package/min/vs/loader.js"></script>
-    
+
     <style>
-        *{
+        * {
             /* margin: 0; */
             padding: 0;
         }
+
         #toolbar {
             margin-bottom: 10px;
             width: 100vw;
@@ -28,9 +29,24 @@
             flex-basis: 60%;
         }
 
+        .lable {
+            box-sizing: border-box;
+            background-color: rgb(45, 31, 134);
+            color: aliceblue;
+            width: 100%;
+            height: 2.5%;
+            font-size: 100%;
+            padding: 0px 25px;
+        }
+
+        .editorBox {
+            height: 100%;
+            width: 100%;
+        }
+
         .editorContainer .editor {
-            margin-bottom: 5px;
-            height: 31.3%;
+            margin-bottom: 0.5%;
+            height: 29%;
             border: 1px solid;
         }
 
@@ -45,23 +61,17 @@
             height: 98vh;
             white-space: pre-wrap;
         }
+
         .previewModal {
             padding: 0;
             height: 100vh;
             width: 100vw;
-            border-radius: 10px;
             z-index: 10;
         }
+
         dialog::backdrop {
             background-color: rgba(42, 42, 42, 0.745);
         }
-        /* Style for the copy button */
-        .copyButton {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-        }
-        
     </style>
 </head>
 
@@ -77,17 +87,21 @@
 
     <div class="container">
         <div class="editorContainer">
-            <!-- Container for the editor -->
-            <div id="html_editor" onkeyup="updateLivePreview()" onclick="htmlSize()" class="editor"></div>
-            <div id="css_editor" onkeyup="updateLivePreview()" onclick="cssSize()" class="editor"></div>
-            <div id="js_editor" onkeyup="updateLivePreview()" onclick="jsSize()" class="editor"></div>
+            <div class="editorBox">
+                <div class="lable"><span style="width: 90%; display: inline-block;">HTML</span> <button onclick="copy(0)">Copy</button></div>
+                <div id="html_editor" onkeyup="updateLivePreview()" onclick="htmlSize()" class="editor"></div>
+                <div class="lable"><span style="width: 90%; display: inline-block;">CSS</span> <button onclick="copy(1)">Copy</button></div>
+                <div id="css_editor" onkeyup="updateLivePreview()" onclick="cssSize()" class="editor"></div>
+                <div class="lable"><span style="width: 90%; display: inline-block;">JavaScript</span> <button onclick="copy(2)">Copy</button></div>
+                <div id="js_editor" onkeyup="updateLivePreview()" onclick="jsSize()" class="editor"></div>
+            </div>
         </div>
         <div id="live-preview-container">
             <iframe id="live-preview" frameborder="1"></iframe>
         </div>
     </div>
     <dialog data-modal-preview class="previewModal">
-        <div class="previewHeading">Full Preview<button class="closeButton" onclick="closeLivePreviewDialog()">Close</button></div>
+        <div style="width: ;">Full Preview<button class="closeButton" onclick="closeLivePreviewDialog()">Close</button></div>
         <iframe id="full-preview" frameborder="0" style="width: 100%; height: 100%;"></iframe>
     </dialog>
 
@@ -100,12 +114,12 @@
             const js_editor = monaco.editor.create(document.getElementById('js_editor'), JS_Options);
 
             // Add F9 key binding to all editors
-            const addF9Binding = function(editor) {
+            const addF9Binding = function (editor) {
                 return editor.addCommand(monaco.KeyCode.F9, function () {
                     alert("F9 pressed!");
                 });
             };
-            const addAltLOBinding = function(editor) {
+            const addAltLOBinding = function (editor) {
                 editor.addCommand(monaco.KeyMod.Alt | monaco.KeyCode.KEY_L | monaco.KeyCode.KEY_O, function () {
                     document.querySelector("[data-modal-preview]").showModal();
                 });
@@ -117,9 +131,8 @@
             addAltLOBinding(html_editor);
             addAltLOBinding(css_editor);
             addAltLOBinding(js_editor);
-            
-        });
 
+        });
         function createEditorOptions(value, language) {
             return {
                 // fontSize: 30,
@@ -134,15 +147,14 @@
         }
 
         // Configuration 
-        const html_Options = createEditorOptions('<!-- HTML -->\n<h1>Welcome To MSK Web Editor</h1>', 'html');
-        const css_Options = createEditorOptions('/* CSS */\n', 'css');
-        const JS_Options = createEditorOptions('// JavaScript\n', 'javascript');
+        const html_Options = createEditorOptions('', 'html');
+        const css_Options = createEditorOptions('', 'css');
+        const JS_Options = createEditorOptions('', 'javascript');
 
         function changeTheme() {
             const selectedTheme = document.getElementById('theme').value;
             monaco.editor.setTheme(selectedTheme);
-        } 
-        
+        }
         // Function to update live preview
         function updateLivePreview() {
             const htmlContent = monaco.editor.getModels()[0].getValue();
@@ -150,12 +162,16 @@
             const jsContent = monaco.editor.getModels()[2].getValue();
 
             const livePreviewFrame = document.getElementById('live-preview');
-            livePreviewFrame.contentDocument.body.innerHTML = htmlContent+"<style>"+cssContent+"</style";
+            livePreviewFrame.contentDocument.body.innerHTML = htmlContent + "<style>" + cssContent + "</style";
             livePreviewFrame.contentWindow.eval(jsContent);
 
             const fullPreviewFrame = document.getElementById('full-preview');
-            fullPreviewFrame.contentDocument.body.innerHTML = htmlContent+"<style>"+cssContent+"</style";
-            fullPreviewFrame.contentWindow.eval(jsContent);            
+            fullPreviewFrame.contentDocument.body.innerHTML = htmlContent + "<style>" + cssContent + "</style";
+            fullPreviewFrame.contentWindow.eval(jsContent);
+        }
+        function copy(editorModelNumber) {
+            const htmlContent = monaco.editor.getModels()[editorModelNumber].getValue();
+            navigator.clipboard.writeText(htmlContent)
         }
 
         function openLivePreviewDialog() {
@@ -165,27 +181,26 @@
         function closeLivePreviewDialog() {
             document.querySelector("[data-modal-preview]").close();
         }
-
         function htmlSize() {
-            const html_editor = document.getElementById('html_editor').style.height = "500px";
-            const css_size = document.getElementById('css_editor').style.height = "100px"
-            const js_size = document.getElementById('js_editor').style.height = "100px"
+            const html_editor = document.getElementById('html_editor').style.height = "71%";
+            const css_size = document.getElementById('css_editor').style.height = "7.6%"
+            const js_size = document.getElementById('js_editor').style.height = "7.6%"
         }
         function cssSize() {
-            const html_editor = document.getElementById('html_editor').style.height = "100px";
-            const css_size = document.getElementById('css_editor').style.height = "500px"
-            const js_size = document.getElementById('js_editor').style.height = "100px"
+            const html_editor = document.getElementById('html_editor').style.height = "7.6%";
+            const css_size = document.getElementById('css_editor').style.height = "71%"
+            const js_size = document.getElementById('js_editor').style.height = "7.6%"
         }
         function jsSize() {
-            const html_editor = document.getElementById('html_editor').style.height = "100px";
-            const css_size = document.getElementById('css_editor').style.height = "100px"
-            const js_size = document.getElementById('js_editor').style.height = "500px"
+            const html_editor = document.getElementById('html_editor').style.height = "7.6%";
+            const css_size = document.getElementById('css_editor').style.height = "7.6%"
+            const js_size = document.getElementById('js_editor').style.height = "71%"
         }
 
-       // Add shortcut key to open and close the dialog
-       document.addEventListener('keydown', function(event) {
+        // Add shortcut key to open and close the dialog
+        document.addEventListener('keydown', function (event) {
             if (event.altKey && event.key === 'l') {
-                document.addEventListener('keydown', function(event) {
+                document.addEventListener('keydown', function (event) {
                     if (event.key === 'o') {
                         openLivePreviewDialog();
                     } else if (event.key === 'c') {
