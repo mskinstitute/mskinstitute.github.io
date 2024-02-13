@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Editor</title>
+    <title>MSK Web Editor</title>
 
     <script src="./package/min/vs/loader.js"></script>
 
@@ -15,9 +15,10 @@
         }
 
         #toolbar {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             width: 100vw;
-            background-color: gainsboro;
+            background-color: rgb(94, 82, 82);
+            padding: 6px;
         }
 
         .container {
@@ -82,7 +83,7 @@
             <option value="vs">Light</option>
             <option value="vs-dark" selected>Dark</option>
         </select>
-        <button open-modal-preview onclick='openLivePreviewDialog()'>Preview</button>
+        <button style="margin-left: 90%;" open-modal-preview onclick='openLivePreviewDialog()'>Preview</button>
     </div>
 
     <div class="container">
@@ -100,8 +101,8 @@
             <iframe id="live-preview" frameborder="1"></iframe>
         </div>
     </div>
-    <dialog data-modal-preview class="previewModal">
-        <div style="width: ;">Full Preview<button class="closeButton" onclick="closeLivePreviewDialog()">Close</button></div>
+    <dialog data-modal-preview class="previewModal" style="width: 100%;">
+        <div style="width: 97.6%; background-color: black; padding-left: 10px; box-sizing: border-box; color: white; position: fixed;">Full Preview<button class="closeButton" style="margin-left: 90%;" onclick="closeLivePreviewDialog()">Close</button></div>
         <iframe id="full-preview" frameborder="0" style="width: 100%; height: 100%;"></iframe>
     </dialog>
 
@@ -141,8 +142,13 @@
                 theme: 'vs-dark',
                 wordWrap: true,
                 mouseWheelZoom: true,
-                wordWrapBreakAfterCharacters: true,
+                wordWrapBreakAfterCharacters: false,
                 automaticLayout: true,
+                lineNumbers: "off",
+                autoClosingBrackets: "languageDefined",
+                autoClosingTags: true,
+                snippetSuggestions: "inline",
+                acceptSuggestionOnEnter: "on",
             };
         }
 

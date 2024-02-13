@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.png" rel="icon">
-  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -35,11 +35,11 @@
     integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link href="/assets/vendor/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 
 
 </head>
@@ -50,7 +50,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="/" class="logo img-fluid bg-light rounded" id="imageLoge"><img src="assets/img/logo.ico"></a>
+      <a href="/" class="logo img-fluid bg-light rounded" id="imageLoge"><img src="../assets/img/logo.ico"></a>
       <!-- Uncomment Up Line if you prefer to use an image logo -->
       <a href="/" class="logo me-auto" id="textLogo">MSK !nstitute</a>
 
@@ -58,13 +58,14 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="http://mrsumitkumar.github.io">About</a></li>
-          <li><a class="active" href="courses.html">Courses</a></li>
-          <!-- <li><a href="trainers.html">Trainers</a></li> -->
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="active" href="../courses.html">Courses</a></li>
+          <li><a href="../tutorials.html">Tutorial</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="courses.html" class="get-started-btn">Get Started</a>
+      <a href="../courses.html" class="get-started-btn">Get Started</a>
     </div>
   </header><!-- End Header -->
 
@@ -105,8 +106,8 @@
               <h1 class="card-title">Course Details</h1>
               <h4>Duration : <code class="text-primary">3 Months</code></h4>
               <h4>Language : <code class="text-primary">Hindi/English</code></h4>
-              <h4>Eligibility : <code class="text-primary">10<sup>th</sup> Passed</code></h4>
-              <h4>Fee : <code class="text-primary">Rs <strike>3,999</strike> 1,999 <b>50%</b></h4>
+              <h4>Eligibility : <code class="text-primary">8<sup>th</sup> Passed</code></h4>
+              <!-- <h4>Fee : <code class="text-primary">Rs <strike>3,999</strike> 1,999 <b>50%</b></h4> -->
             </div>
           </div>
         </div>
@@ -1186,12 +1187,12 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <div class="footer-top">
+    <div class="footer-top bg-light">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>MSK !nstitute</h3>
+            <h4>MSK !nstitute</h4>
             <p>
               Railway Station Road <br>
               Shikohabad, Firozabad<br>
@@ -1204,11 +1205,11 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><a href="#"><i class="bx bx-chevron-right"></i> Home</a></li>
+              <li><a href="#"><i class="bx bx-chevron-right"></i> About us</a></li>
+              <li><a href="#"><i class="bx bx-chevron-right"></i> Services</a></li>
+              <li><a href="#"><i class="bx bx-chevron-right"></i> Terms of service</a></li>
+              <li><a href="#"><i class="bx bx-chevron-right"></i> Privacy policy</a></li>
             </ul>
           </div>
 
@@ -1224,11 +1225,12 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <h4>Whatsapp Message</h4>
+            <p>We will never send any spam messages. Promise.</p>
+            <div>
+              <input id="message-input" type="text" name="text" placeholder="Enter message here..." width="500px">
+              <i onclick="sendMessage()" class="btn btn-primary bi bi-send"></i>
+            </div>
           </div>
 
         </div>
@@ -1236,10 +1238,9 @@
     </div>
 
     <div class="container d-md-flex py-4">
-
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch text-center px-5 py-3">
         <p>&copy; Copyright <strong><span>MSK !nstitute</span></strong>. All Rights Reserved <br>
-        Designed by <a href="https://bootstrapmade.com/">Mr Sumit Kumar</a></p>
+          Designed by <a href="http://mrsumitkumar.github.io">Mr Sumit Kumar</a></p>
       </div>
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch text-center py-3">
         <h6 class="px-5"><strong>“Education is the most powerful weapon with which you can change the world.”</strong>
@@ -1269,12 +1270,12 @@
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-  <script src="/assets/vendor/purecounter_vanilla.js"></script>
-  <script src="/assets/vendor/aos.js"></script>
-  <script src="/assets/vendor/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos.js"></script>
+  <script src="../assets/vendor/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 
 </body>
 
