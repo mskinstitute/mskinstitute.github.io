@@ -3,10 +3,9 @@
 const isAndroid = /Android/i.test(navigator.userAgent);
 
 if (isAndroid) {
-    var show = document.getElementById("laptop");
-    show.style.display = 'block'
+    document.getElementById("outerContainer").style.display = 'block';
+    document.getElementById("laptop").style.display = 'none';
 }
-
 
 function generateLink() {
     var roll_no = document.getElementById('roll_no').value;
@@ -16,22 +15,21 @@ function generateLink() {
     var amountNumber = parseFloat(amount);   // Convert the value to a number
     var discount = 0;
     // Percentage: a * b / 100;
-    if (amountNumber>=500 & amountNumber<2000 ) {
         discount = amountNumber * 0.5 / 100;  // Calculate the discount amount (0.5% of the original amount)
     }
-    else if (amountNumber>=2000 & amountNumber<3500) {
+    else if (amountNumber >= 2000 & amountNumber < 3500) {
         discount = amountNumber * 1 / 100;  // Calculate the discount amount (1% of the original amount)
     }
-    else if (amountNumber>=3500 & amountNumber<5000) {
+    else if (amountNumber >= 3500 & amountNumber < 5000) {
         discount = amountNumber * 1.5 / 100;  // Calculate the discount amount (1.5% of the original amount)
     }
-    else if (amountNumber>=5000 & amountNumber<7000) {
+    else if (amountNumber >= 5000 & amountNumber < 7000) {
         discount = amountNumber * 2 / 100;  // Calculate the discount amount (2% of the original amount)
     }
-    else if (amountNumber>=7000 & amountNumber<10000) {
+    else if (amountNumber >= 7000 & amountNumber < 10000) {
         discount = amountNumber * 2.5 / 100;  // Calculate the discount amount (2.5% of the original amount)
     }
-    else if (amountNumber>=10000 & amountNumber<=15000) {
+    else if (amountNumber >= 10000 & amountNumber <= 15000) {
         discount = amountNumber * 3 / 100;  // Calculate the discount amount (3% of the original amount
     }
     else {
@@ -46,7 +44,7 @@ function generateLink() {
         pay_button.style.display = 'block'; // Show the link
     }
     pay_button.href = upiLink;
-    
+
 
     generateQRCode(upiLink, "MSK Institute");
 }
