@@ -1,153 +1,113 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
+}
+
+.hideOnLaptop, .hideOnPhone{
+    display: none !important;
+}
+
+
+.title {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 100px;
+    padding: 50px;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'poppins', sans-serif;
-    background-color: #ffffff;
-    color: #66686C;
-    line-height: 1.6;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-}
-
-.outerContainer{
+#upiLogos {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 20px auto;
     display: flex;
-    flex-wrap: wrap; /* Allows children to wrap onto new lines */
-    justify-content: center; 
-    display: none;
-    
+    justify-content: space-evenly;
 }
 
-.container {
-    background: #fff;
-    border-radius: 30px;
-    box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 80%;
-    max-width: 500px;
-    margin:10px 30px 30px 30px;
-    border:1px solid #e7e7e7;
+#upiLogos>img {
+    width: 200px;
 }
 
-.QRDiv{
-    background: #fff;
-    border-radius: 30px;
+#note{
+    font-size: 40px;
     text-align: center;
-    box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    /* width: 30%; */
-    min-width: 400px;
-    margin:10px 30px 30px 30px;
-    border:1px solid #e7e7e7;
+    margin-top: 50px;
 }
 
-.title {
-    font-size: 2em;
-    color: #333;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 20px;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input {
+#PaymentContainer{
     width: 100%;
-    padding: 20px;
-    border: 1px solid #ddd;
+    height: 1300px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0px;
+    font-size: 50px;
+    /* background-color: lightgray; */
+}
+#PaymentContainer .top, .bottom {
+    width: 95%;
+    height: 48%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 40px;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+}
+
+#PaymentContainer>.top {
+    display: flex;
+    flex-direction: column;
+}
+#PaymentContainer> .top>.input-group {
+    /* background-color: red; */
+    width: 100%;
+    height: 150px;
+
+}
+#PaymentContainer> .top>.input-group>input {
+    width: 100%;
+    height: 50px;
     border-radius: 10px;
+    font-size: 30px;
+    padding-left: 15px;
+}
+#PaymentContainer> .top>button {
+    width: 60%;
+    height: 90px;
+    font-size: 50px;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Style the button */
-.button {
-    width: 100%;
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 12px 10px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 550;
+#PaymentContainer> .bottom>.left {
+    width: 48%;
+    float: left;
+}
+#PaymentContainer> .bottom>.right {
+    width: 48%;
+    float: right;
 }
 
-.button:hover {
-    background: #0056b3;
-}
-
-/* QR Code styles */
-#qrcode {
-    margin-top: 20px;
+#PaymentContainer> .bottom>.right>#qrcode {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin-bottom:10px;
+    align-items: center;
+    height: 360px;
+    background-color: #fff;
 }
 
-
-/* Adjustments for the UPI logos */
-.upi-logos {
-    display: flex;
-    justify-content:center;
-
-}
-
-.upi-logos img {
-    max-width: 140px; /* Adjust size as needed */
-    /* border-radius: 50%; Circular logos */
-    margin:-10px -15px;
-}
-
-.secondaryButton{
-    padding:10px 20px;
-    background:white;
-    border:2px solid #e7e7e7;
-    margin:10px 20px;
-    border-radius: 10px;
-
-}
-
-
-/*Focus Color for inputs     */
-button:focus, input:focus {
-    outline: none;
-    border: 1px solid #a2a2a2; /* Lighter border */
-}
-
-#Pay_Button {
+#PaymentContainer> .bottom>.right>#Pay_Button {
+    height: 80px;
     text-decoration: none;
-    background-color: lightgreen;
-    color: black;
-}
-
-#laptop {
     margin: 0 auto;
-    font-size: 60px;
+    background-color: greenyellow;
     text-align: center;
-}
-
-
-/* Targets screens smaller than 600px */
-@media (max-width: 450px) {
-    .outerContainer {
-        flex-direction: column; /* Stacks flex children vertically */
-        /* display: block; */
-    }
-    
-    .container,
-    .QRDiv {
-        width: 90%; /* Makes children take full width */
-        margin-bottom: 20px; /* Adds space between the stacked elements */
-    }
+    padding-top: 20px;
+    border-radius: 0  0 20px 20px;
 }

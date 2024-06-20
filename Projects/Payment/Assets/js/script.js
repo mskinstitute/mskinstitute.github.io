@@ -1,13 +1,16 @@
 
-// Check if the device is Android
 const isAndroid = /Android/i.test(navigator.userAgent);
 
 if (isAndroid) {
-    document.getElementById("outerContainer").style.display = 'block';
-    document.getElementById("laptop").style.display = 'none';
+    document.getElementById("upiLogos").classList.remove('hideOnLaptop');
+    document.getElementById("PaymentContainer").classList.remove('hideOnLaptop');
+} else {
+    document.getElementById("note").classList.remove('hideOnPhone');
+    
 }
 
 function generateLink() {
+    document.getElementById("result").classList.remove('hideOnLaptop');
     var roll_no = document.getElementById('roll_no').value;
     var student_name = document.getElementById('student_name').value;
     var amount = document.getElementById('amount').value;
@@ -16,22 +19,22 @@ function generateLink() {
     var discount = 0;
     // Percentage: a * b / 100;
     if (amountNumber >= 500 & amountNumber < 2000) {
-        discount = amountNumber * 0.5 / 100;  // Calculate the discount amount (0.5% of the original amount)
+        discount = amountNumber * 1 / 100;  // Calculate the discount amount (0.5% of the original amount)
     }
     else if (amountNumber >= 2000 & amountNumber < 3500) {
-        discount = amountNumber * 1 / 100;  // Calculate the discount amount (1% of the original amount)
+        discount = amountNumber * 2 / 100;  // Calculate the discount amount (1% of the original amount)
     }
     else if (amountNumber >= 3500 & amountNumber < 5000) {
-        discount = amountNumber * 1.5 / 100;  // Calculate the discount amount (1.5% of the original amount)
+        discount = amountNumber * 4 / 100;  // Calculate the discount amount (1.5% of the original amount)
     }
     else if (amountNumber >= 5000 & amountNumber < 7000) {
-        discount = amountNumber * 2 / 100;  // Calculate the discount amount (2% of the original amount)
+        discount = amountNumber * 6 / 100;  // Calculate the discount amount (2% of the original amount)
     }
     else if (amountNumber >= 7000 & amountNumber < 10000) {
-        discount = amountNumber * 2.5 / 100;  // Calculate the discount amount (2.5% of the original amount)
+        discount = amountNumber * 8 / 100;  // Calculate the discount amount (2.5% of the original amount)
     }
     else if (amountNumber >= 10000 & amountNumber <= 15000) {
-        discount = amountNumber * 3 / 100;  // Calculate the discount amount (3% of the original amount
+        discount = amountNumber * 10 / 100;  // Calculate the discount amount (3% of the original amount
     }
     else {
         var discount = 0;
