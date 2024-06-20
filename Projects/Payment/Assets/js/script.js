@@ -15,6 +15,7 @@ function generateLink() {
     var amountNumber = parseFloat(amount);   // Convert the value to a number
     var discount = 0;
     // Percentage: a * b / 100;
+    if (amountNumber >= 500 & amountNumber < 2000) {
         discount = amountNumber * 0.5 / 100;  // Calculate the discount amount (0.5% of the original amount)
     }
     else if (amountNumber >= 2000 & amountNumber < 3500) {
