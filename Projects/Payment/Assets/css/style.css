@@ -19,6 +19,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allows children to wrap onto new lines */
     justify-content: center; 
+    display: none;
     
 }
 
@@ -130,11 +131,18 @@ button:focus, input:focus {
     color: black;
 }
 
+#laptop {
+    margin: 0 auto;
+    font-size: 60px;
+    text-align: center;
+}
+
 
 /* Targets screens smaller than 600px */
-@media (max-width: 600px) {
+@media (max-width: 450px) {
     .outerContainer {
         flex-direction: column; /* Stacks flex children vertically */
+        /* display: block; */
     }
     
     .container,

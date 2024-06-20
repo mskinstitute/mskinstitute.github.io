@@ -1,4 +1,13 @@
 
+// Check if the device is Android
+const isAndroid = /Android/i.test(navigator.userAgent);
+
+if (isAndroid) {
+    var show = document.getElementById("laptop");
+    show.style.display = 'block'
+}
+
+
 function generateLink() {
     var roll_no = document.getElementById('roll_no').value;
     var student_name = document.getElementById('student_name').value;

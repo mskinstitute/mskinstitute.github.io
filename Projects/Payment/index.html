@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>MSK Institute : Pay Fee</title>
     <!-- Add CSS styles here -->
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
+
 <body>
-<div class="title">
-MSK Institute : Fee Payment
-</div>
-
-<div class="upi-logos">
-    <!-- Add your UPI logos here -->
-    <img src="Assets/BHIM_UPI.png" alt="BHIM">
-    <img src="Assets/GooglePay.png" alt="Google Pay">
-    <img src="Assets/Paytm.png" alt="Paytm">
-    <img src="Assets/PhonePe.png" alt="PhonePe">
-</div>
-<div class="outerContainer">
-    <div class="container">
-        <form id="upiForm">
-            <div class="input-group">
-                <label for="roll_no">Roll Number:</label>
-                <input type="number" id="roll_no" required maxlength="10">
-            </div>
-            <div class="input-group">
-                <label for="student_name">Student Name:</label>
-                <input type="text" id="student_name" required>
-            </div>
-            <div class="input-group">
-                <label for="amount">Amount:</label>
-                <input type="number" id="amount" required>
-            </div>
-            <button type="button" class="button" id="generateLinkButton" onclick="generateLink()">Generate QR Code</button>
-        </form>
+    <div class="title">
+        MSK Institute : Fee Payment
     </div>
 
-    <div class="QRDiv">
-        <h3 style="color:#66686C">QR Code</h3>
-        <div id="qrcode" title=""></div>
-    
-        <!-- Button to show the link -->
-        <a class="secondaryButton" id="Pay_Button" style="display: none;">Pay Now</a>
+    <div class="upi-logos">
+        <!-- Add your UPI logos here -->
+        <img src="Assets/BHIM_UPI.png" alt="BHIM">
+        <img src="Assets/GooglePay.png" alt="Google Pay">
+        <img src="Assets/Paytm.png" alt="Paytm">
+        <img src="Assets/PhonePe.png" alt="PhonePe">
     </div>
 
-</div>
+    <div class="outerContainer">
+        <div class="container">
+            <form id="upiForm">
+                <div class="input-group">
+                    <label for="roll_no">Roll Number:</label>
+                    <input type="number" id="roll_no" required maxlength="10">
+                </div>
+                <div class="input-group">
+                    <label for="student_name">Student Name:</label>
+                    <input type="text" id="student_name" required>
+                </div>
+                <div class="input-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" required>
+                </div>
+                <button type="button" class="button" id="generateLinkButton" onclick="generateLink()">Generate QR
+                    Code</button>
+            </form>
+        </div>
+
+        <div class="QRDiv">
+            <h3 style="color:#66686C">QR Code</h3>
+            <div id="qrcode" title=""></div>
+
+            <!-- Button to show the link -->
+            <a class="secondaryButton" id="Pay_Button" style="display: none;">Pay Now</a>
+        </div>
+
+    </div>
+
+    <div id="laptop">Payment Accepted Only Through Smartphone. 📱✅</div>
 
     <!-- Add JavaScript at the end of the body -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="Assets/js/script.js"></script>
 
 </body>
-</html>
 
+</html>
