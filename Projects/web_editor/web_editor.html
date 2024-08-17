@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSK Web Editor</title>
+
+    <script src="./package/min/vs/loader.js"></script>
+
+    <style>
+        * {
+            /* margin: 0; */
+            padding: 0;
+        }
+
+        #toolbar {
+            margin-bottom: 5px;
+            width: 100vw;
+            background-color: rgb(94, 82, 82);
+            padding: 6px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .editorContainer {
+            height: 100vh;
+            flex-basis: 60%;
+        }
+
+        .lable {
+            box-sizing: border-box;
+            background-color: rgb(45, 31, 134);
+            color: aliceblue;
+            width: 100%;
+            height: 2.5%;
+            font-size: 100%;
+            padding: 0px 25px;
+        }
+
+        .editorBox {
+            height: 100%;
+            width: 100%;
+        }
+
+        .editorContainer .editor {
+            margin-bottom: 0.5%;
+            height: 29%;
+            border: 1px solid;
+        }
+
+        #live-preview-container {
+            flex-basis: 40%;
+        }
+
+        iframe {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 98vh;
+            white-space: pre-wrap;
+        }
+
+        .previewModal {
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            z-index: 10;
+        }
+
+        dialog::backdrop {
+            background-color: rgba(42, 42, 42, 0.745);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Toolbar for additional features -->
+    <div id="toolbar">
+        <select id="theme" onchange="changeTheme()">
+            <option value="vs">Light</option>
+            <option value="vs-dark" selected>Dark</option>
+        </select>
+        <button style="margin-left: 90%;" open-modal-preview onclick='openLivePreviewDialog()'>Preview</button>
+    </div>
+
+    <div class="container">
+        <div class="editorContainer">
+            <div class="editorBox">
+                <div class="lable"><span style="width: 90%; display: inline-block;">HTML</span> <button onclick="copy(0)">Copy</button></div>
+                <div id="html_editor" onkeyup="updateLivePreview()" onclick="htmlSize()" class="editor"></div>
+                <div class="lable"><span style="width: 90%; display: inline-block;">CSS</span> <button onclick="copy(1)">Copy</button></div>
+                <div id="css_editor" onkeyup="updateLivePreview()" onclick="cssSize()" class="editor"></div>
+                <div class="lable"><span style="width: 90%; display: inline-block;">JavaScript</span> <button onclick="copy(2)">Copy</button></div>
+                <div id="js_editor" onkeyup="updateLivePreview()" onclick="jsSize()" class="editor"></div>
+            </div>
+        </div>
+        <div id="live-preview-container">
+            <iframe id="live-preview" frameborder="1"></iframe>
+        </div>
+    </div>
+    <dialog data-modal-preview class="previewModal" style="width: 100%;">
+        <div style="width: 97.6%; background-color: black; padding-left: 10px; box-sizing: border-box; color: white; position: fixed;">Full Preview<button class="closeButton" style="margin-left: 90%;" onclick="closeLivePreviewDialog()">Close</button></div>
+        <iframe id="full-preview" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+    </dialog>
+
+    <script>
+        require.config({ paths: { 'vs': './package/min/vs' } });
+
+        require(['vs/editor/editor.main'], () => {
+            const html_editor = monaco.editor.create(document.getElementById('html_editor'), html_Options);
+            const css_editor = monaco.editor.create(document.getElementById('css_editor'), css_Options);
+            const js_editor = monaco.editor.create(document.getElementById('js_editor'), JS_Options);
+
+            // Add F9 key binding to all editors
+            const addF9Binding = function (editor) {
+                return editor.addCommand(monaco.KeyCode.F9, function () {
+                    alert("F9 pressed!");
+                });
+            };
+            const addAltLOBinding = function (editor) {
+                editor.addCommand(monaco.KeyMod.Alt | monaco.KeyCode.KEY_L | monaco.KeyCode.KEY_O, function () {
+                    document.querySelector("[data-modal-preview]").showModal();
+                });
+            };
+
+            addF9Binding(html_editor);
+            addF9Binding(css_editor);
+            addF9Binding(js_editor);
+            addAltLOBinding(html_editor);
+            addAltLOBinding(css_editor);
+            addAltLOBinding(js_editor);
+
+        });
+        function createEditorOptions(value, language) {
+            return {
+                // fontSize: 30,
+                value,
+                language,
+                theme: 'vs-dark',
+                wordWrap: true,
+                mouseWheelZoom: true,
+                wordWrapBreakAfterCharacters: false,
+                automaticLayout: true,
+                lineNumbers: "off",
+                autoClosingBrackets: "languageDefined",
+                autoClosingTags: true,
+                snippetSuggestions: "inline",
+                acceptSuggestionOnEnter: "on",
+            };
+        }
+
+        // Configuration 
+        const html_Options = createEditorOptions('', 'html');
+        const css_Options = createEditorOptions('', 'css');
+        const JS_Options = createEditorOptions('', 'javascript');
+
+        function changeTheme() {
+            const selectedTheme = document.getElementById('theme').value;
+            monaco.editor.setTheme(selectedTheme);
+        }
+        // Function to update live preview
+        function updateLivePreview() {
+            const htmlContent = monaco.editor.getModels()[0].getValue();
+            const cssContent = monaco.editor.getModels()[1].getValue();
+            const jsContent = monaco.editor.getModels()[2].getValue();
+
+            const livePreviewFrame = document.getElementById('live-preview');
+            livePreviewFrame.contentDocument.body.innerHTML = htmlContent + "<style>" + cssContent + "</style";
+            livePreviewFrame.contentWindow.eval(jsContent);
+
+            const fullPreviewFrame = document.getElementById('full-preview');
+            fullPreviewFrame.contentDocument.body.innerHTML = htmlContent + "<style>" + cssContent + "</style";
+            fullPreviewFrame.contentWindow.eval(jsContent);
+        }
+        function copy(editorModelNumber) {
+            const htmlContent = monaco.editor.getModels()[editorModelNumber].getValue();
+            navigator.clipboard.writeText(htmlContent)
+        }
+
+        function openLivePreviewDialog() {
+            document.querySelector("[data-modal-preview]").showModal();
+        }
+        // Function to close the dialog
+        function closeLivePreviewDialog() {
+            document.querySelector("[data-modal-preview]").close();
+        }
+        function htmlSize() {
+            const html_editor = document.getElementById('html_editor').style.height = "71%";
+            const css_size = document.getElementById('css_editor').style.height = "7.6%"
+            const js_size = document.getElementById('js_editor').style.height = "7.6%"
+        }
+        function cssSize() {
+            const html_editor = document.getElementById('html_editor').style.height = "7.6%";
+            const css_size = document.getElementById('css_editor').style.height = "71%"
+            const js_size = document.getElementById('js_editor').style.height = "7.6%"
+        }
+        function jsSize() {
+            const html_editor = document.getElementById('html_editor').style.height = "7.6%";
+            const css_size = document.getElementById('css_editor').style.height = "7.6%"
+            const js_size = document.getElementById('js_editor').style.height = "71%"
+        }
+
+        // Add shortcut key to open and close the dialog
+        document.addEventListener('keydown', function (event) {
+            if (event.altKey && event.key === 'l') {
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === 'o') {
+                        openLivePreviewDialog();
+                    } else if (event.key === 'c') {
+                        closeLivePreviewDialog();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
