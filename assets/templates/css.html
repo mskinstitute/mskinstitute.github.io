@@ -11,9 +11,7 @@
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Lora:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;family=Nunito:wght@400;700&amp;display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Lora:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;family=Nunito:wght@400;700&amp;display=swap" rel="stylesheet">
 
     <!-- Libs CSS -->
     <link rel="stylesheet" href="../fonts/fontawesome/fontawesome.css">
@@ -25,6 +23,7 @@
     <link rel="stylesheet" href="../libs/highlightjs/styles/vs2015.css">
     <link rel="stylesheet" href="../libs/jarallax/dist/jarallax.css">
     <link rel="stylesheet" href="../libs/quill/dist/quill.core.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Map -->
     <link href=' ../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
@@ -44,15 +43,43 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+
+    <style>
+        #referral_code_dialog {
+            margin: auto;
+            padding: 10px;
+            width: 500px;
+            height: 150px;
+            border-radius: 10px;
+            border: none;
+            /* z-index: 10; */
+            button {
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+            #referralCodeInput{
+                width: 65%;
+                border-radius: 5px;
+                padding: 2px 10px;
+            }
+        }
+
+        dialog::backdrop {
+            background-color: hsla(241, 97%, 47%, 0.336);
+        }
+    </style>
+
 </head>
 
 <body>
+
 
     <header class="navbar navbar-expand-xl navbar-light">
         <div class="container">
 
             <!-- Brand -->
-            <a class="navbar-brand" href="/" style="font-family: Arial, Helvetica, sans-serif;">
+            <a class="navbar-brand" href="index.html" style="font-family: Arial, Helvetica, sans-serif;">
                 MSK !nstitute
             </a>
 
@@ -82,54 +109,63 @@
 
                     </li>
                     <li class="nav-item dropdown dropdown-full-width">
-                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="{% url 'Courses' %}">
+                        <a style="padding-right: 0px;" class="nav-link text-gigas active" href="../../courses.html">
                             Courses
                         </a>
                     </li>
                     <li class="nav-item dropdown dropdown-full-width">
-                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="#">
+                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="../../notes.html">
                             Notes
                         </a>
                     </li>
                     <li class="nav-item dropdown dropdown-full-width">
-                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="{% url 'About' %}">
+                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="../../about.html">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown dropdown-full-width">
-                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="{% url 'Contact' %}">
+                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="../../contact.html">
                             Contact Us
                         </a>
                     </li>
+
                 </ul>
             </div>
 
-            <!-- Toggler -->
-            <button
-                class="navbar-toggler ms-4 ms-md-5 shadow-none bg-primary text-white icon-xs p-0 outline-0 h-40p w-40p d-flex d-xl-none place-flex-center"
-                type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <!-- Icon -->
-                <svg width="25" height="17" viewBox="0 0 25 17" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="25" height="1" fill="currentColor" />
-                    <rect y="8" width="15" height="1" fill="currentColor" />
-                    <rect y="16" width="20" height="1" fill="currentColor" />
-                </svg>
+            <div class="box sm-w-50 d-flex justify-content-end">
 
-            </button>
+                <a class="rounded btn btn-outline-primary px-3 py-1 mx-3" href="admission.html"
+                    onMouseOver="this.style.color='white'" onMouseOut="this.style.color='navy'">
+                    Admission
+                </a>
+                <!-- Toggler -->
+                <button
+                    class="navbar-toggler ms-md-5 shadow-none bg-primary text-white icon-xs p-0 outline-0 h-40p w-40p d-flex d-xl-none place-flex-center"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Icon -->
+                    <svg width="25" height="17" viewBox="0 0 25 17" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="25" height="1" fill="currentColor" />
+                        <rect y="8" width="15" height="1" fill="currentColor" />
+                        <rect y="16" width="20" height="1" fill="currentColor" />
+                    </svg>
+
+                </button>
+            </div>
         </div>
     </header>
 
+
+
     <!-------------------------- Start Course Details Page ------------------------->
-    
+
     <div class="bg-primary pb-9 pt-8 pt-md-11">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <a href="https://www.youtube.com/watch?v=9I-Y6VQ6tyI"
-                        class="d-block sk-thumbnail img-ratio-1 rounded mb-5" data-fancybox="">
-                        <div
-                            class="h-60p w-60p rounded-circle bg-white size-20-all d-inline-flex align-items-center justify-content-center position-absolute center z-index-1">
+                    <!-- href="https://www.youtube.com/watch?v=9I-Y6VQ6tyI" -->
+                    <a class="d-block sk-thumbnail img-ratio-1 rounded mb-5" data-fancybox="">
+                        <div class="h-60p w-60p rounded-circle bg-white size-20-all d-inline-flex align-items-center justify-content-center position-absolute center z-index-1">
                             <!-- Icon -->
                             <svg width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -138,14 +174,16 @@
                             </svg>
 
                         </div>
-                        <img class="rounded shadow-light-lg" src="../img/products/css.png" alt="...">
+                        <img class="rounded shadow-light-lg" id="course_image"  alt="Course Image">
                     </a>
 
+                    <!-- Start Course Fee -->
                     <div class="d-flex align-items-center mb-2">
-                        <ins class="h2 mb-0 text-white">₹ 2199</ins>
-                        <del class="ms-3">₹ 3999</del>
-                        <div class="badge badge-lg badge-purple text-white ms-auto fw-normal">91% Off</div>
+                        <ins class="h2 mb-0 text-white" id="course_discount_fee">₹ 99.60</ins>
+                        <del class="ms-3" id="course_fee">₹ 299</del>
+                        <div class="badge badge-lg badge-purple text-white ms-auto fw-normal" id="course_discount">60% Off</div>
                     </div>
+                    <!-- End Course Fee -->
 
                     <div class="d-flex align-items-center mb-6">
                         <!-- Icon -->
@@ -169,25 +207,22 @@
                                 d="M18.9673 1.92072C17.6194 0.573026 15.4053 0.570721 14.0318 1.91564C13.9 2.04489 13.8252 2.22142 13.8242 2.40595C13.8233 2.59052 13.8963 2.76794 14.0268 2.89833L17.9899 6.86144C18.1247 6.99648 18.3016 7.06398 18.4786 7.06398C18.6532 7.06398 18.8279 6.99831 18.9622 6.86628C19.6263 6.21628 19.9945 5.34672 19.9993 4.41789C20.0042 3.47809 19.6376 2.59122 18.9673 1.92072ZM18.4028 5.3193L15.5807 2.4972C16.3729 2.12114 17.3459 2.25458 17.9899 2.89856C18.3973 3.30594 18.6199 3.84301 18.6169 4.41102C18.6152 4.73152 18.5413 5.04051 18.4028 5.3193Z"
                                 fill="currentColor"></path>
                         </svg>
-
-                        <span class="ms-2">2 days left at this price!</span>
+                        <span class="ms-2">10 days left at this price!</span>
                     </div>
 
-                    <div class="d-md-flex">
-                        <button class="btn btn-blue btn-wide mb-4 mb-md-0 me-md-3 flex-grow-1" type="button"
-                            name="button">Book Demo Class</button>
-                        <button class="btn btn-orange btn-wide mb-4 mb-md-0 ms-md-3 flex-grow-1" type="button"
-                            name="button">Enroll Now</button>
+                    <div class="row">
+                        <a target="_blank" id="book_demo_button" class="btn btn-blue btn-wide mx-3 mb-4 col"> Book Demo Class </a>
+                        <a target="_blank" id="enroll_now_button" class="btn btn-success btn-wide mx-3 mb-4 col"> Enroll Now </a>
                     </div>
+
+
                 </div>
                 <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-                    <h1 class="me-8 text-white">
-                        CSS Full Course
-                    </h1>
-                    <p class="me-xl-8 mb-5 text-white">Unleash your web design potential with the CSS course at MSK Institute in Shikohabad. Dive into the fundamentals of Cascading Style Sheets (CSS) and transform …</p>
+                    <h1 class="me-8 text-white" id="course_name"> Python </h1>
+                    <p class="me-xl-8 mb-5 text-white" id="course_basic_description">Begin your journey with our Beginner to Intermediate Python
+                        course at MSK Institute. </p>
 
-                    <a href="#"
-                        class="badge badge-lg badge-rounded-circle badge-secondary font-size-base badge-float badge-float-inside top-0 text-white">
+                    <a href="#" class="badge badge-lg badge-rounded-circle badge-secondary font-size-base badge-float badge-float-inside top-0 text-white">
                         <i class="far fa-heart"></i>
                     </a>
 
@@ -208,7 +243,7 @@
 
                             </div>
                             <h6 class="mb-0 ms-3 me-auto text-white">Duration</h6>
-                            <span>2 Months</span>
+                            <span id="course_duration"> Month</span>
                         </li>
                         <li
                             class="list-group-item d-flex align-items-center py-3 text-white bg-transparent border-white-10">
@@ -221,8 +256,8 @@
                                 </svg>
 
                             </div>
-                            <h6 class="mb-0 ms-3 me-auto text-white">Lectures</h6>
-                            <span>32</span>
+                            <h6 class="mb-0 ms-3 me-auto text-white">Chapters</h6>
+                            <span id="course_lectures"></span>
                         </li>
                         <li
                             class="list-group-item d-flex align-items-center py-3 text-white bg-transparent border-white-10">
@@ -237,7 +272,7 @@
 
                             </div>
                             <h6 class="mb-0 ms-3 me-auto text-white">Enrolled</h6>
-                            <span>0 students</span>
+                            <span id="course_enrolled"></span>
                         </li>
                         <li
                             class="list-group-item d-flex align-items-center py-3 text-white bg-transparent border-white-10">
@@ -258,7 +293,7 @@
 
                             </div>
                             <h6 class="mb-0 ms-3 me-auto text-white">Language</h6>
-                            <span>Hindi</span>
+                            <span id="course_language">English</span>
                         </li>
                         <li
                             class="list-group-item d-flex align-items-center py-3 text-white bg-transparent border-white-10">
@@ -278,7 +313,7 @@
 
                             </div>
                             <h6 class="mb-0 ms-3 me-auto text-white">Skill level</h6>
-                            <span>Advanced</span>
+                            <span id="course_skill_level">Intermediate</span>
                         </li>
                         <li
                             class="list-group-item d-flex align-items-center py-3 text-white bg-transparent border-white-10">
@@ -310,7 +345,7 @@
 
                             </div>
                             <h6 class="mb-0 ms-3 me-auto text-white">Deadline</h6>
-                            <span>06 April 2020</span>
+                            <span id="course_deadline">3 Months</span>
                         </li>
                         <li
                             class="list-group-item d-flex align-items-center py-3 text-white bg-transparent border-white-10">
@@ -327,8 +362,9 @@
 
                             </div>
                             <h6 class="mb-0 ms-3 me-auto text-white">Certificate</h6>
-                            <span>Yes</span>
+                            <span id="course_certificate">Yes</span>
                         </li>
+                        
                         <li class="list-group-item d-flex align-items-center py-4 bg-transparent border-white-10">
                             <a href="#" class="mx-auto text-white fw-medium d-flex align-items-center mt-2">
                                 <!-- Icon -->
@@ -351,7 +387,17 @@
                                         fill="currentColor"></path>
                                 </svg>
 
-                                <span class="ms-3">Share this course</span>
+
+                                 <span onclick="document.getElementById('referral_code_dialog').showModal()" class="ms-3">Share this course</span>
+
+                                <dialog id="referral_code_dialog">
+                                    <h1>Enter your referral code:</h1> 
+                                    <input type="text" id="referralCodeInput" maxlength="10" placeholder="Enter 10 Digits Referral Code..." autofocus autocomplete="tel">
+                                    <button class="btn-danger" onclick="document.getElementById('referral_code_dialog').close()">Cancel</button>
+                                    <button onclick="shareWithReferralCode()" class="btn-success">Share</button>
+                                </dialog>
+
+
                             </a>
                         </li>
                     </ul>
@@ -372,19 +418,26 @@
                             role="tab" aria-controls="pills-curriculum" aria-selected="false">Curriculum</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-reviews-tab" data-bs-toggle="pill" href="#pills-reviews"
-                            role="tab" aria-controls="pills-reviews" aria-selected="false">Reviews</a>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" id="pills-reviews-tab" data-bs-toggle="pill" href="#pills-reviews" role="tab" aria-controls="pills-reviews" aria-selected="false">Reviews</a>
                     </li>
+                     -->
                 </ul>
             </div>
             <div class="tab-content" id="pills-tabContent">
+                <!-- Start Course Overview -->
                 <div class="tab-pane fade active show" id="pills-overview" role="tabpanel"
                     aria-labelledby="pills-overview-tab">
                     <h3 class="">Course Description</h3>
-                    <p class="mb-6 line-height-md">Unleash your web design potential with the CSS course at MSK Institute in Shikohabad. Dive into the fundamentals of Cascading Style Sheets (CSS) and transform static web pages into dynamic, visually stunning creations. Our comprehensive 150-hour course covers everything from basic syntax to advanced techniques, equipping you with the skills to manipulate layout, typography, color schemes, and more</p>
-                    <p class="mb-6 line-height-md">.Led by seasoned industry professionals, our hands-on approach ensures you grasp concepts thoroughly and apply them effectively in real-world scenarios. Through practical exercises and projects, you'll learn to craft responsive designs compatible across various devices, enhancing user experience and accessibility. Whether you're a beginner seeking to enter the world of web development or a seasoned professional aiming to refine your skills, our CSS course caters to all skill levels. Join us at MSK Institute and unlock the power of CSS to revolutionize your web design journey.</p>
-                    
+
+                    <p class="mb-6 line-height-md" id="course_full_start_description">
+                        Begin your journey with our Beginner to Intermediate Python course at MSK Institute. 
+                    </p>
+                    <p class="collapse mb-6 line-height-md" id="readcollapseExample">
+                        Progress to intermediate topics such as working with modules, handling exceptions, and
+                        understanding more advanced Python constructs.
+                    </p>
+
                     <a class="text-teal read-more h6 d-inline-block mb-8" data-bs-toggle="collapse"
                         href="#readcollapseExample" role="button" aria-expanded="false"
                         aria-controls="readcollapseExample">
@@ -408,1208 +461,47 @@
                     <div class="row row-cols-lg-2 mb-8">
                         <div class="col-md">
                             <ul class="list-style-v1 list-unstyled">
-                                <li>CSS fundamentals including selectors, properties, and values.</li>
-                                <li>Responsive web design techniques for creating adaptable layouts.</li>
-                                <li>Advanced styling concepts like flexbox, grid, and animations.</li>
-                                <li>Customizing and optimizing CSS for cross-browser compatibility.</li>
-                                <li>Integrating CSS frameworks like Bootstrap and Tailwind CSS.</li>
+                                <li>Introduction to Python</li>
+                                <li>Basic Data Types and Operations</li>
+                                <li>Control Structures (if statements, loops)</li>
+                                <li>Functions and Modules</li>
+                                <li>Exception Handling</li>
+                                <li>Object-Oriented Programming</li>
+                                <li>File Handling</li>
+                                <li>Data Manipulation with NumPy</li>
                             </ul>
                         </div>
 
                         <div class="col-md">
                             <ul class="list-style-v1 list-unstyled ms-xl-6">
-                                <li>Best practices for organizing and maintaining CSS codebase.</li>
-                                <li>Accessibility considerations and techniques for inclusive design.</li>
+                                <!-- Add additional items here if needed -->
                             </ul>
                         </div>
                     </div>
 
                     <h3 class="mb-5">Requirements</h3>
                     <ul class="list-style-v2 list-unstyled">
-                        <li>Basic understanding of HTML and familiarity with web development concepts.</li>
-                        <li>No prior CSS experience required, suitable for beginners.</li>
+                        <li>Basic computer knowledge</li>
+                        <li>Class 8th pass</li>
+                        <li>Familiarity with basic computer operations</li>
+                        <li>A laptop or PC with Python installed</li>
+                        <li>Basic understanding of programming concepts (optional but helpful)</li>
                     </ul>
                 </div>
+                <!-- End Course Overview -->
+
+                <!-- Start Course Curriculum -->
 
                 <div class="tab-pane fade" id="pills-curriculum" role="tabpanel" aria-labelledby="pills-curriculum-tab">
+
                     <div id="accordionCurriculum">
-                        <div class="border rounded shadow mb-6 overflow-hidden">
-                            <div class="d-flex align-items-center" id="curriculumheadingOne">
-                                <h5 class="mb-0 w-100">
-                                    <button
-                                        class="d-flex align-items-center p-5 min-height-80 text-dark fw-medium collapse-accordion-toggle line-height-one"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#CurriculumcollapseOne"
-                                        aria-expanded="true" aria-controls="CurriculumcollapseOne">
-                                        <span class="me-4 text-dark d-flex">
-                                            <!-- Icon -->
-                                            <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="15" height="2" fill="currentColor"></rect>
-                                            </svg>
-
-                                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 7H15V9H0V7Z" fill="currentColor"></path>
-                                                <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"></path>
-                                            </svg>
-
-                                        </span>
-
-                                        Introduction
-                                    </button>
-                                </h5>
-                            </div>
-
-                            <div id="CurriculumcollapseOne" class="collapse show" aria-labelledby="curriculumheadingOne"
-                                data-parent="#accordionCurriculum">
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Introduction to the course
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge text-dark-70 bg-orange-40 me-5 font-size-sm fw-normal py-2">3
-                                            question</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Introduction
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Structure of the course
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Required Tools
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="me-5 font-size-sm">12 lectures</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Get Your Free E-book
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge text-dark-70 bg-orange-40 me-5 font-size-sm fw-normal py-2">3
-                                            question</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="border rounded shadow mb-6 overflow-hidden">
-                            <div class="d-flex align-items-center" id="curriculumheadingTwo">
-                                <h5 class="mb-0 w-100">
-                                    <button
-                                        class="d-flex align-items-center p-5 min-height-80 text-dark fw-medium collapse-accordion-toggle line-height-one"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#CurriculumcollapseTwo"
-                                        aria-expanded="true" aria-controls="CurriculumcollapseTwo">
-                                        <span class="me-4 text-dark d-flex">
-                                            <!-- Icon -->
-                                            <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="15" height="2" fill="currentColor"></rect>
-                                            </svg>
-
-                                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 7H15V9H0V7Z" fill="currentColor"></path>
-                                                <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"></path>
-                                            </svg>
-
-                                        </span>
-
-                                        Design Basics
-                                    </button>
-                                </h5>
-                            </div>
-
-                            <div id="CurriculumcollapseTwo" class="collapse show" aria-labelledby="curriculumheadingTwo"
-                                data-parent="#accordionCurriculum">
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Intro to Design Basics
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Layout
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="me-5 font-size-sm">12 lectures</div>
-                                        <div class="badge text-dark-70 bg-orange-40 me-5 font-size-sm fw-normal py-2">5
-                                            question</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">45 min</div>
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Visual hierarchy
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <button class="btn btn-sm btn-blue-soft me-5 font-size-sm fw-normal py-1">30
-                                            min</button>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Visual noise
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="me-5 font-size-sm">12 lectures</div>
-                                        <div class="badge text-dark-70 bg-orange-40 me-5 font-size-sm fw-normal py-2">5
-                                            question</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">45 min</div>
-
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Iconography
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Typography
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="border rounded shadow mb-6 overflow-hidden">
-                            <div class="d-flex align-items-center" id="curriculumheadingThree">
-                                <h5 class="mb-0 w-100">
-                                    <button
-                                        class="d-flex align-items-center p-5 min-height-80 text-dark fw-medium collapse-accordion-toggle line-height-one"
-                                        type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#CurriculumcollapseThree" aria-expanded="false"
-                                        aria-controls="CurriculumcollapseThree">
-                                        <span class="me-4 text-dark d-flex">
-                                            <!-- Icon -->
-                                            <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="15" height="2" fill="currentColor"></rect>
-                                            </svg>
-
-                                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 7H15V9H0V7Z" fill="currentColor"></path>
-                                                <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"></path>
-                                            </svg>
-
-                                        </span>
-
-                                        Figma Academy
-                                    </button>
-                                </h5>
-                            </div>
-
-                            <div id="CurriculumcollapseThree" class="collapse" aria-labelledby="curriculumheadingThree"
-                                data-parent="#accordionCurriculum">
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Introduction to the course
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge text-dark-70 bg-orange-40 me-5 font-size-sm fw-normal py-2">3
-                                            question</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Introduction
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Structure of the course
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Required Tools
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="me-5 font-size-sm">12 lectures</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Get Your Free E-book
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge text-dark-70 bg-orange-40 me-5 font-size-sm fw-normal py-2">3
-                                            question</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="border rounded shadow mb-6 overflow-hidden">
-                            <div class="d-flex align-items-center" id="curriculumheadingFour">
-                                <h5 class="mb-0 w-100">
-                                    <button
-                                        class="d-flex align-items-center p-5 min-height-80 text-dark fw-medium collapse-accordion-toggle line-height-one"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#CurriculumcollapseFour"
-                                        aria-expanded="false" aria-controls="CurriculumcollapseFour">
-                                        <span class="me-4 text-dark d-flex">
-                                            <!-- Icon -->
-                                            <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="15" height="2" fill="currentColor"></rect>
-                                            </svg>
-
-                                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 7H15V9H0V7Z" fill="currentColor"></path>
-                                                <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"></path>
-                                            </svg>
-
-                                        </span>
-
-                                        UI Elements
-                                    </button>
-                                </h5>
-                            </div>
-
-                            <div id="CurriculumcollapseFour" class="collapse" aria-labelledby="curriculumheadingFour"
-                                data-parent="#accordionCurriculum">
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Intro to Design Basics
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Layout
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="me-5 font-size-sm">12 lectures</div>
-                                        <div class="badge text-dark-70 bg-orange-40 me-5 font-size-sm fw-normal py-2">5
-                                            question</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">45 min</div>
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Visual hierarchy
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">30 min</div>
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Visual noise
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="me-5 font-size-sm">12 lectures</div>
-                                        <div class="badge text-dark-70 bg-orange-40 me-5 font-size-sm fw-normal py-2">5
-                                            question</div>
-                                        <div class="badge btn-blue-soft me-5 font-size-sm fw-normal py-2">45 min</div>
-
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Iconography
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <a href="#" class="text-secondary">
-                                            <!-- Icon -->
-                                            <svg width="14" height="16" viewBox="0 0 14 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="border-top px-5 py-4 min-height-70 d-md-flex align-items-center bg-gray-100">
-                                    <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
-                                        <div class="text-secondary d-flex">
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M14.3164 4.20996C13.985 4.37028 13.8464 4.76904 14.0067 5.10026C14.4447 6.00505 14.6667 6.98031 14.6667 8C14.6667 11.6759 11.6759 14.6667 8 14.6667C4.32406 14.6667 1.33333 11.6759 1.33333 8C1.33333 4.32406 4.32406 1.33333 8 1.33333C9.52328 1.33333 10.9543 1.83073 12.1387 2.77165C12.4259 3.00098 12.846 2.95296 13.0754 2.66471C13.3047 2.37663 13.2567 1.95703 12.9683 1.72803C11.5661 0.613607 9.8016 0 8 0C3.58903 0 0 3.58903 0 8C0 12.411 3.58903 16 8 16C12.411 16 16 12.411 16 8C16 6.77767 15.7331 5.60628 15.2067 4.51969C15.0467 4.18766 14.6466 4.04932 14.3164 4.20996Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M7.99967 2.66663C7.63167 2.66663 7.33301 2.96529 7.33301 3.33329V7.99996C7.33301 8.36796 7.63167 8.66663 7.99967 8.66663H11.333C11.701 8.66663 11.9997 8.36796 11.9997 7.99996C11.9997 7.63196 11.701 7.33329 11.333 7.33329H8.66634V3.33329C8.66634 2.96529 8.36768 2.66663 7.99967 2.66663Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-
-                                        <div class="ms-4">
-                                            Typography
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="d-flex align-items-center overflow-auto overflow-md-visible flex-shrink-all">
-                                        <div class="text-secondary d-flex">
-                                            <!-- Icon -->
-                                            <svg width="20" height="20" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.625 7.34375H7.3423V4.13164C7.3423 2.715 8.53391 1.5625 9.99855 1.5625C11.4632 1.5625 12.6548 2.715 12.6548 4.13164V5.625H14.2173V4.13164C14.2173 1.85344 12.3248 0 9.99855 0C7.67234 0 5.7798 1.85344 5.7798 4.13164V7.34375H4.375C3.08266 7.34375 2.03125 8.39516 2.03125 9.6875V17.6562C2.03125 18.9486 3.08266 20 4.375 20H15.625C16.9173 20 17.9688 18.9486 17.9688 17.6562V9.6875C17.9688 8.39516 16.9173 7.34375 15.625 7.34375ZM16.4062 17.6562C16.4062 18.087 16.0558 18.4375 15.625 18.4375H4.375C3.94422 18.4375 3.59375 18.087 3.59375 17.6562V9.6875C3.59375 9.25672 3.94422 8.90625 4.375 8.90625H15.625C16.0558 8.90625 16.4062 9.25672 16.4062 9.6875V17.6562Z"
-                                                    fill="currentColor"></path>
-                                                <path
-                                                    d="M10 11.1719C9.20176 11.1719 8.55469 11.8189 8.55469 12.6172C8.55469 13.1269 8.81875 13.5746 9.2173 13.832V15.5469C9.2173 15.9783 9.56707 16.3281 9.99855 16.3281C10.43 16.3281 10.7798 15.9783 10.7798 15.5469V13.8338C11.18 13.5768 11.4453 13.1281 11.4453 12.6172C11.4453 11.8189 10.7982 11.1719 10 11.1719Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
+                <!-- End Course Curriculum -->
 
-                <div class="tab-pane fade" id="pills-instructor" role="tabpanel" aria-labelledby="pills-instructor-tab">
-                    <h3 class="mb-6">About the instructor</h3>
-
-                    <div class="d-flex align-items-center mb-6">
-                        <div class="d-inline-block rounded-circle border me-6 p-2">
-                            <div class="avatar avatar-size-120">
-                                <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="mb-0">Lauren Handerson</h4>
-                            <span>iOS Developer &amp; UI Designer</span>
-                        </div>
-                    </div>
-
-                    <div class="row mx-xl-n5 mb-6">
-                        <div class="col-12 col-md-auto mb-3 mb-md-0 px-xl-5">
-                            <div class="d-flex align-items-center">
-                                <div class="me-3 d-flex text-secondary icon-uxs">
-                                    <!-- Icon -->
-                                    <svg width="16px" height="16px" viewBox="0 -10 511.98685 511"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill="currentColor"
-                                            d="m114.59375 491.140625c-5.609375 0-11.179688-1.75-15.933594-5.1875-8.855468-6.417969-12.992187-17.449219-10.582031-28.09375l32.9375-145.089844-111.703125-97.960937c-8.210938-7.167969-11.347656-18.519532-7.976562-28.90625 3.371093-10.367188 12.542968-17.707032 23.402343-18.710938l147.796875-13.417968 58.433594-136.746094c4.308594-10.046875 14.121094-16.535156 25.023438-16.535156 10.902343 0 20.714843 6.488281 25.023437 16.511718l58.433594 136.769532 147.773437 13.417968c10.882813.980469 20.054688 8.34375 23.425782 18.710938 3.371093 10.367187.253906 21.738281-7.957032 28.90625l-111.703125 97.941406 32.9375 145.085938c2.414063 10.667968-1.726562 21.699218-10.578125 28.097656-8.832031 6.398437-20.609375 6.890625-29.910156 1.300781l-127.445312-76.160156-127.445313 76.203125c-4.308594 2.558594-9.109375 3.863281-13.953125 3.863281zm141.398438-112.875c4.84375 0 9.640624 1.300781 13.953124 3.859375l120.277344 71.9375-31.085937-136.941406c-2.21875-9.746094 1.089843-19.921875 8.621093-26.515625l105.472657-92.5-139.542969-12.671875c-10.046875-.917969-18.6875-7.234375-22.613281-16.492188l-55.082031-129.046875-55.148438 129.066407c-3.882812 9.195312-12.523438 15.511718-22.546875 16.429687l-139.5625 12.671875 105.46875 92.5c7.554687 6.613281 10.859375 16.769531 8.621094 26.539062l-31.0625 136.9375 120.277343-71.914062c4.308594-2.558594 9.109376-3.859375 13.953126-3.859375zm-84.585938-221.847656s0 .023437-.023438.042969zm169.128906-.0625.023438.042969c0-.023438 0-.023438-.023438-.042969zm0 0">
-                                        </path>
-                                    </svg>
-
-                                </div>
-                                4.87 Instructor rating
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-auto mb-3 mb-md-0 px-xl-5">
-                            <div class="d-flex align-items-center">
-                                <div class="me-3 d-flex text-secondary icon-uxs">
-                                    <!-- Icon -->
-                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.96092 7.89061C10.3924 7.89061 10.7422 8.24034 10.7422 8.67186C10.7422 9.10338 10.3924 9.45311 9.96092 9.45311C9.5294 9.45311 9.17967 9.10338 9.17967 8.67186C9.17967 8.24034 9.5294 7.89061 9.96092 7.89061ZM12.6953 8.67186C12.6953 9.10338 13.045 9.45311 13.4765 9.45311C13.9081 9.45311 14.2578 9.10338 14.2578 8.67186C14.2578 8.24034 13.9081 7.89061 13.4765 7.89061C13.045 7.89061 12.6953 8.24034 12.6953 8.67186ZM5.66405 8.67186C5.66405 9.10338 6.01378 9.45311 6.4453 9.45311C6.87682 9.45311 7.22655 9.10338 7.22655 8.67186C7.22655 8.24034 6.87682 7.89061 6.4453 7.89061C6.01378 7.89061 5.66405 8.24034 5.66405 8.67186ZM19.313 15.9985C20.2273 16.9128 20.2273 18.3996 19.3135 19.3135C18.8566 19.7703 18.2563 19.9989 17.6562 19.9989C17.0561 19.9989 16.4558 19.7703 15.999 19.3135L11.7103 15.0345C11.6192 14.9435 11.5521 14.8317 11.5147 14.7084L10.5806 11.6333C10.4977 11.3606 10.5699 11.0646 10.7689 10.8606C10.9678 10.6567 11.262 10.5774 11.5367 10.6534L14.6899 11.5268C14.8198 11.5628 14.938 11.6316 15.0334 11.7268L19.313 15.9985ZM12.9527 14.0667L15.8468 16.9545L16.9519 15.8494L14.0748 12.9779L12.4885 12.5384L12.9527 14.0667ZM18.2086 17.1038L18.0578 16.9532L16.9529 18.0581L17.1032 18.208C17.4084 18.5133 17.904 18.5133 18.2086 18.2086C18.5133 17.904 18.5133 17.4084 18.2086 17.1038ZM10.4346 16.1895C10.2902 16.1958 10.144 16.199 9.99998 16.199C8.74373 16.199 7.53432 15.9651 6.40547 15.5038C6.21321 15.4254 5.99746 15.4266 5.80611 15.5073L2.24884 17.0089L3.44741 14.1697C3.5646 13.8922 3.51165 13.5718 3.31115 13.3465C2.1672 12.0614 1.5625 10.5238 1.5625 8.90028C1.5625 4.85427 5.34759 1.5625 9.99998 1.5625C14.6524 1.5625 18.4375 4.85427 18.4375 8.90028C18.4375 9.85975 18.2019 10.823 17.7371 11.7631C17.5459 12.1499 17.7044 12.6185 18.0912 12.8097C18.4781 13.0009 18.9466 12.8424 19.1378 12.4556C19.7099 11.2982 20 10.1021 20 8.90028C20 3.99261 15.514 0 9.99998 0C4.48608 0 0 3.99261 0 8.90028C0 10.7527 0.628051 12.507 1.82174 14.0031L0.0614928 18.1727C-0.0621032 18.4655 0.00411988 18.8041 0.228881 19.0289C0.378417 19.1784 0.578154 19.2578 0.781401 19.2578C0.883787 19.2578 0.987089 19.2376 1.08505 19.1963L6.12136 17.0703C7.34969 17.5291 8.65294 17.7615 9.99998 17.7615C10.1666 17.7615 10.3358 17.7577 10.5029 17.7505C10.934 17.7316 11.2681 17.3669 11.2492 16.9359C11.2304 16.5048 10.865 16.1696 10.4346 16.1895Z"
-                                            fill="currentColor"></path>
-                                    </svg>
-
-                                </div>
-                                1,533 reviews
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-auto mb-3 mb-md-0 px-xl-5">
-                            <div class="d-flex align-items-center">
-                                <div class="me-3 d-flex text-secondary icon-uxs">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M17.1947 7.06802L14.6315 7.9985C14.2476 7.31186 13.712 6.71921 13.0544 6.25992C12.8525 6.11877 12.6421 5.99365 12.4252 5.88303C13.0586 5.25955 13.452 4.39255 13.452 3.43521C13.452 1.54098 11.9124 -1.90735e-06 10.0197 -1.90735e-06C8.12714 -1.90735e-06 6.58738 1.54098 6.58738 3.43521C6.58738 4.39255 6.98075 5.25955 7.61414 5.88303C7.39731 5.99365 7.1869 6.11877 6.98502 6.25992C6.32752 6.71921 5.79178 7.31186 5.40787 7.9985L2.8447 7.06802C2.33612 6.88339 1.79688 7.26044 1.79688 7.80243V16.5178C1.79688 16.8465 2.00256 17.14 2.31155 17.2522L9.75312 19.9536C9.93073 20.018 10.1227 20.0128 10.2863 19.9536L17.7278 17.2522C18.0368 17.14 18.2425 16.8465 18.2425 16.5178V7.80243C18.2425 7.26135 17.704 6.88309 17.1947 7.06802ZM10.0197 1.5625C11.0507 1.5625 11.8895 2.40265 11.8895 3.43521C11.8895 4.46777 11.0507 5.30792 10.0197 5.30792C8.98866 5.30792 8.14988 4.46777 8.14988 3.43521C8.14988 2.40265 8.98866 1.5625 10.0197 1.5625ZM9.23844 18.1044L3.35938 15.9703V8.91724L9.23844 11.0513V18.1044ZM10.0197 9.67255L6.90644 8.54248C7.58164 7.51892 8.75184 6.87042 10.0197 6.87042C11.2875 6.87042 12.4577 7.51892 13.1329 8.54248L10.0197 9.67255ZM16.68 15.9703L10.8009 18.1044V11.0513L16.68 8.91724V15.9703Z"
-                                            fill="currentColor"></path>
-                                    </svg>
-
-                                </div>
-                                23,912 students
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-auto mb-3 mb-md-0 px-xl-5">
-                            <div class="d-flex align-items-center">
-                                <div class="me-3 d-flex text-secondary icon-uxs">
-                                    <!-- Icon -->
-                                    <svg width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z"
-                                            fill="currentColor"></path>
-                                    </svg>
-
-                                </div>
-                                29 courses
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="mb-6 line-height-md">I am a UI/UX designer and an iOS developer with having almost six
-                        years of experience in application development and also ten years of graphic design and User
-                        Interface design.</p>
-                    <p class="mb-6 line-height-md">My passion is helping people to learn new skills in a short-term
-                        course and achieve their goals. I've been designing for more than ten years and developing iOS
-                        apps for four years. It's my honor if I could help you learn to program in a simple word. I
-                        currently am teaching iOS 13, Swift 5, ARKit 3, Sketch 5, Illustrator, Photoshop, Cinema 4D,
-                        HTML, CSS, JavaScript, etc.</p>
-                </div>
-
-                <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
+                <!-- Start Course Reviews -->
+                <!-- <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
                     <h3 class="mb-6">Student feedback</h3>
                     <div class="row align-items-center mb-8">
                         <div class="col-md-auto mb-5 mb-md-0">
@@ -1801,7 +693,8 @@
                             <button type="submit" class="btn btn-primary btn-block mw-md-300p">SUBMIT REVIEW</button>
                         </form>
                     </div>
-                </div>
+                </div> -->
+                <!-- End Course Reviews -->
             </div>
         </div>
     </div>
@@ -2142,8 +1035,8 @@
         </div> <!-- / .container -->
     </footer>
 
-    <!-- JAVASCRIPT
-    ================================================== -->
+    <!-- JAVASCRIPT ================================================== -->
+
     <!-- Libs JS -->
     <script src="../libs/jquery/dist/jquery.min.js"></script>
     <script src="../libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -2164,12 +1057,184 @@
     <script src="../libs/quill/dist/quill.min.js"></script>
     <script src="../libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
     <script src="../libs/typed.js/lib/typed.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script> -->
 
     <!-- Map -->
     <script src='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
     <!-- Theme JS -->
     <script src="../js/theme.min.js"></script>
+
+
+    <script>
+        fetch('../js/courses.json')
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok ' + res.statusText);
+                }
+                return res.json();
+            })
+            .then(data => {
+                const keys = Object.keys(data);
+                const course = data['0005'];
+                
+                document.getElementById('course_image').src  = '../'+course['featured_image']
+                .split('/')
+                .slice(1, )
+                .join('/');
+                document.querySelector('title').innerText = 'MSK Institute: ' + course['name'];
+                document.getElementById('course_fee').innerText = course['fee'];
+
+                const cal_course_discount_fee =  course['fee'] - (parseInt(course['fee']) * parseInt(course['discount'])) / 100;
+                document.getElementById('course_discount_fee').innerText = Math.floor( cal_course_discount_fee );
+
+                document.getElementById('course_discount').innerText = course['discount']+'% Off';
+                document.getElementById('course_name').innerText = course['name'];
+                document.getElementById('course_basic_description').innerText = course['description']
+                .split(' ')                // Split description into an array of words
+                .slice(0, 35)             // Get the first 200 words
+                .join(' ') + '...';        // Join the words back into a string and add "..." at the end
+                document.getElementById('course_full_start_description').innerText = course['description']
+                .split(' ')
+                .slice(0, 130)
+                .join(' ') + '...';
+                document.getElementById('readcollapseExample').innerText = course['description']
+                .split(' ')
+                .slice(130, )
+                .join(' ');
+                document.getElementById('course_duration').innerText = course['duration'] ;
+                document.getElementById('course_lectures').innerText = course['lectures'] ;
+                document.getElementById('course_enrolled').innerText = course['enrolled'] + ' Students';
+                document.getElementById('course_language').innerText = course['language'];
+                document.getElementById('course_skill_level').innerText = course['skill_level'];
+                document.getElementById('course_deadline').innerText = course['deadline'];
+
+                document.getElementById('enroll_now_button').href = 'https://wa.me/918393042166?text=Hi, I want to Book Demo Class for ' + course['name'];
+                document.getElementById('book_demo_button').href = 'https://wa.me/918393042166?text=Hi, I want to Enroll Now for ' + course['name'];
+                
+                // document.getElementById('course_certificate').innerText = course['certificate'];
+                
+
+
+                const chapters = Object.keys(course['curiculam']);
+
+                chapters.forEach((chapter, index) => {
+                    const Chapter_Items = document.getElementById('accordionCurriculum');
+
+                    // Unique IDs for each chapter and heading
+                    const chapterId = `curriculumheading${index}`;
+                    const collapseId = `Curriculumcollapse${index}`;
+
+                    // Chapter template
+                    const Chapter_item = `
+                        <div class="d-flex align-items-center" id="${chapterId}">
+                            <h5 class="mb-0 w-100">
+                                <button class="d-flex align-items-center p-5 min-height-80 text-dark fw-medium collapse-accordion-toggle line-height-one" 
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="true" aria-controls="${collapseId}">
+                                    <span class="me-4 text-dark d-flex">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"></rect>
+                                        </svg>
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"></path>
+                                            <path d="M6 16L6 0L8 0L8 16H6Z" fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                    ${chapter}
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="${collapseId}" class="collapse show" aria-labelledby="${chapterId}" data-parent="#accordionCurriculum"></div>
+                    `;
+
+                    // Create chapter element
+                    const chapter_El = document.createElement('div');
+                    chapter_El.classList.add('border', 'rounded', 'shadow', 'mb-6', 'overflow-hidden');
+                    chapter_El.innerHTML = Chapter_item;
+
+                    const headings = course['curiculam'][chapter]; // Get headings for the current chapter
+
+                    // Append headings for the chapter
+                    const collapseDiv = chapter_El.querySelector(`#${collapseId}`);
+                    headings.forEach((heading, idx) => {
+                        const heading_item = `
+                            <div class="d-flex align-items-center me-auto mb-4 mb-md-0">
+                                <div class="text-secondary d-flex">
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5717 0H4.16956C4.05379 0.00594643 3.94322 0.0496071 3.85456 0.124286L0.413131 3.57857C0.328167 3.65957 0.280113 3.77191 0.280274 3.88929V16.8514C0.281452 17.4853 0.794988 17.9988 1.42885 18H12.5717C13.1981 17.9989 13.7086 17.497 13.7203 16.8707V1.14857C13.7191 0.514714 13.2056 0.00117857 12.5717 0ZM8.18099 0.857143H10.6988V4.87714L9.80527 3.45214C9.76906 3.39182 9.71859 3.3413 9.65827 3.30514C9.45529 3.18337 9.19204 3.24916 9.07027 3.45214L8.18099 4.87071V0.857143ZM3.7367 1.46786V2.66143C3.73552 3.10002 3.38029 3.45525 2.9417 3.45643H1.74813L3.7367 1.46786ZM12.8546 16.86C12.8534 17.0157 12.7274 17.1417 12.5717 17.1429H1.42885C1.42665 17.1429 1.42445 17.143 1.42226 17.143C1.26486 17.1441 1.13635 17.0174 1.13527 16.86V4.32214H2.9417C3.85793 4.31979 4.60006 3.57766 4.60242 2.66143V0.857143H7.31527V5.23286C7.31345 5.42593 7.37688 5.61391 7.49527 5.76643C7.67533 5.99539 7.98036 6.08561 8.25599 5.99143L8.28813 5.98071C8.49272 5.89484 8.66356 5.7443 8.77456 5.55214L9.44099 4.48071L10.1074 5.55214C10.2184 5.7443 10.3893 5.89484 10.5938 5.98071C10.8764 6.0922 11.1987 6.00509 11.3867 5.76643C11.5051 5.61391 11.5685 5.42593 11.5667 5.23286V0.857143H12.5717C12.7266 0.858268 12.8523 0.982982 12.8546 1.13786V16.86Z" fill="currentColor"></path>
+                                        <path d="M10.7761 14.3143H3.22252C2.98584 14.3143 2.79395 14.5062 2.79395 14.7429C2.79395 14.9796 2.98584 15.1715 3.22252 15.1715H10.7761C11.0128 15.1715 11.2047 14.9796 11.2047 14.7429C11.2047 14.5062 11.0128 14.3143 10.7761 14.3143Z" fill="currentColor"></path>
+                                        <path d="M10.7761 12.2035H3.22252C2.98584 12.2035 2.79395 12.3954 2.79395 12.6321C2.79395 12.8687 2.98584 13.0606 3.22252 13.0606H10.7761C11.0128 13.0606 11.2047 12.8687 11.2047 12.6321C11.2047 12.3954 11.0128 12.2035 10.7761 12.2035Z" fill="currentColor"></path>
+                                        <path d="M10.7761 10.0928H3.22252C2.98584 10.0928 2.79395 10.2847 2.79395 10.5213C2.79395 10.758 2.98584 10.9499 3.22252 10.9499H10.7761C11.0128 10.9499 11.2047 10.758 11.2047 10.5213C11.2047 10.2847 11.0128 10.0928 10.7761 10.0928Z" fill="currentColor"></path>
+                                        <path d="M10.7761 7.98218H3.22252C2.98584 7.98218 2.79395 8.17407 2.79395 8.41075C2.79395 8.64743 2.98584 8.83932 3.22252 8.83932H10.7761C11.0128 8.83932 11.2047 8.64743 11.2047 8.41075C11.2047 8.17407 11.0128 7.98218 10.7761 7.98218Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                <div class="ms-4">
+                                    ${idx + 1}. ${heading}
+                                </div>
+                            </div>
+                        `;
+
+                        // Create heading element
+                        const heading_EL = document.createElement('div');
+                        heading_EL.classList.add('border-top', 'px-5', 'py-4', 'min-height-70', 'd-md-flex', 'align-items-center', 'bg-gray-100');
+                        heading_EL.innerHTML = heading_item;
+
+                        // Append heading to the corresponding chapter
+                        collapseDiv.appendChild(heading_EL);
+                    });
+
+                    // Append the chapter element to the main accordion
+                    Chapter_Items.appendChild(chapter_El);
+                });
+
+
+
+
+
+
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+
+
+
+            
+            function shareWithReferralCode() {
+                const referralCode = document.getElementById('referralCodeInput').value;
+
+                if (!referralCode) {
+                    alert('Please enter your referral code.');
+                    return;
+                }
+
+                const courseImage = document.getElementById('course_image').src;  // Get the image URL          *Course Image 🖼️:* ${courseImage}\n\n
+                const courseName = document.getElementById('course_name').innerText;
+                const courseDescription = document.getElementById('course_basic_description').innerText;
+                const courseLink = window.location.href;
+                const referralInfo = `Use My Referral Code 👉 *${referralCode}* to get a *10% discount* on all MSK Institute's Courses.`;
+
+                // Prepare the message content with proper URL encoding
+                const message = `*Course Name:* ${courseName}\n\n*Course📘 Description:* ${courseDescription}\n\nCheck ✅ Out this 👇 \n\n*Course Link 🔗:* ${courseLink}\n*All Courses 📚*: https://mskinstitute.github.io/courses.html \n*Website 🌐*: https://mskinstitute.github.io \n\n${referralInfo}`;
+                const encodedMessage = encodeURIComponent(message); // Encode the message for URL
+
+                const whatsappURL = `https://api.whatsapp.com/send?text=${encodedMessage}`;
+                
+                // Open the WhatsApp share window in a new tab
+                window.open(whatsappURL, '_blank');
+                
+                // Close the referral dialog modal after sharing
+                document.getElementById('referral_code_dialog').close();
+            }
+
+
+
+    </script>
+
+
+
 </body>
 
 

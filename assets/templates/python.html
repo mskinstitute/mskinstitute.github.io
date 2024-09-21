@@ -211,10 +211,8 @@
                     </div>
 
                     <div class="row">
-                        <a target="_blank" href="https://wa.me/918393042166?text=Hi, I want to book Demo Class for Python Basic Course."
-                            class="btn btn-blue btn-wide mx-3 mb-4 col"> Book Demo Class </a>
-                        <a target="_blank" href="https://wa.me/918393042166?text=Hi, I want to Enroll Now for Python Basic Course."
-                            class="btn btn-success btn-wide mx-3 mb-4 col"> Enroll Now </a>
+                        <a target="_blank" id="book_demo_button" class="btn btn-blue btn-wide mx-3 mb-4 col"> Book Demo Class </a>
+                        <a target="_blank" id="enroll_now_button" class="btn btn-success btn-wide mx-3 mb-4 col"> Enroll Now </a>
                     </div>
 
 
@@ -1111,6 +1109,10 @@
                 document.getElementById('course_language').innerText = course['language'];
                 document.getElementById('course_skill_level').innerText = course['skill_level'];
                 document.getElementById('course_deadline').innerText = course['deadline'];
+
+                document.getElementById('enroll_now_button').href = 'https://wa.me/918393042166?text=Hi, I want to Book Demo Class for ' + course['name'];
+                document.getElementById('book_demo_button').href = 'https://wa.me/918393042166?text=Hi, I want to Enroll Now for ' + course['name'];
+                
                 // document.getElementById('course_certificate').innerText = course['certificate'];
                 
 
