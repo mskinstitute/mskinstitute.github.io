@@ -50,7 +50,7 @@ course_list = {
     },
     '0002': {
         'name': 'MS-PowerPoint: Beginner',
-        'featured_image': 'assets/img/products/powerpoint.png',
+        'featured_image': 'assets/img/products/word.png',
         'featured_video': 'youtube_video_link_powerpoint',
         'description': '''Learn how to create dynamic presentations with MS-PowerPoint at MSK Institute. This course takes you through the basics of presentation design, including slide layout, transitions, animations, and integrating multimedia elements. By the end, you will be capable of delivering impactful presentations that captivate audiences.
 
@@ -374,7 +374,7 @@ course_list = {
     },
     '0008': {
         'name'          : 'Python Basic: Beginner',
-        'featured_image': 'assets/img/products/python.png',
+        'featured_image': '../img/products/python.png',
         'featured_video': 'youtube_video_link',
         'description'   : '''Welcome to MSK Institute's Python Basic course, designed specifically for aspiring programmers seeking a structured path to mastering Python. As a premier coding institute, MSK Institute is committed to providing high-quality education that prepares students for the demands of the modern tech landscape. This course takes you from the fundamentals to an intermediate level, ensuring you gain a solid understanding of Python and its versatile applications.
         
@@ -759,7 +759,7 @@ course_list = {
     },
     '0014': {
         'name': 'CorelDRAW: Beginner',
-        'featured_image': 'assets/img/products/coreldraw.png',
+        'featured_image': '../img/products/coreldraw.png',
         'featured_video': 'youtube_video_link_coreldraw',
         'description': '''MSK Institute's CorelDRAW course is designed for those looking to master vector graphic design. You will learn to use CorelDRAW’s tools to create illustrations, logos, brochures, and more.
 
@@ -810,7 +810,7 @@ course_list = {
     },
     '0015': {
         'name': 'Tally: Beginner',
-        'featured_image': 'assets/img/products/tally.png',
+        'featured_image': '../img/products/tally.png',
         'featured_video': 'youtube_video_link_tally',
         'description': '''MSK Institute's Tally course offers a comprehensive guide to accounting and financial management using Tally software. This course is designed to help you manage business accounts, inventory, and taxes effectively.
 

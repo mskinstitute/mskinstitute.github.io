@@ -45,7 +45,7 @@
     },
     "0002": {
         "name": "MS-PowerPoint: Beginner",
-        "featured_image": "assets/img/products/powerpoint.png",
+        "featured_image": "assets/img/products/word.png",
         "featured_video": "youtube_video_link_powerpoint",
         "description": "Learn how to create dynamic presentations with MS-PowerPoint at MSK Institute. This course takes you through the basics of presentation design, including slide layout, transitions, animations, and integrating multimedia elements. By the end, you will be capable of delivering impactful presentations that captivate audiences.\n\n        You will also explore advanced features like using master slides, customizing themes, and collaborating on presentations to take your skills to the next level.",
         "parent_course": "MS Office Suite",
@@ -357,7 +357,7 @@
     },
     "0008": {
         "name": "Python Basic: Beginner",
-        "featured_image": "assets/img/products/python.png",
+        "featured_image": "../img/products/python.png",
         "featured_video": "youtube_video_link",
         "description": "Welcome to MSK Institute's Python Basic course, designed specifically for aspiring programmers seeking a structured path to mastering Python. As a premier coding institute, MSK Institute is committed to providing high-quality education that prepares students for the demands of the modern tech landscape. This course takes you from the fundamentals to an intermediate level, ensuring you gain a solid understanding of Python and its versatile applications.\n        \n        Whether you're new to programming or looking to build your skills, this course covers all the essential topics to help you grow as a confident Python developer. Starting with an easy-to-follow setup guide, we ensure you can install Python and configure the right tools to run your code smoothly. From there, you'll be introduced to Python's intuitive syntax and the basics of programming, such as variables, data types, and operators.\n        \n        At MSK Institute, we believe in hands-on learning. That's why this course includes numerous exercises to give you practical experience working with Python. You'll dive into core programming structures like loops, conditional statements, and functions, which form the backbone of any Python application. You'll also work with data structures like lists, tuples, sets, and dictionaries, ensuring you're ready to handle data effectively.\n        \n        As you progress, our curriculum covers more advanced topics, such as Object-Oriented Programming (OOP). You will learn about classes, inheritance, and polymorphism, which are crucial for writing efficient, reusable, and scalable code. Additionally, we focus on real-world tasks, such as file handling, where you will learn to read from and write to files, work with different formats, and manage data securely.\n        \n        By the end of the course, you will have the confidence to build Python applications independently, reinforced by projects that allow you to apply your skills in a practical context. At MSK Institute, we don't just offer knowledge; we offer career-building skills that align with industry demands. Upon completion, you will receive an official MSK Institute certification, demonstrating your proficiency and commitment to learning.\n        ",
         "parent_course": "Python Development",
@@ -723,7 +723,7 @@
     },
     "0014": {
         "name": "CorelDRAW: Beginner",
-        "featured_image": "assets/img/products/coreldraw.png",
+        "featured_image": "../img/products/coreldraw.png",
         "featured_video": "youtube_video_link_coreldraw",
         "description": "MSK Institute's CorelDRAW course is designed for those looking to master vector graphic design. You will learn to use CorelDRAW\u2019s tools to create illustrations, logos, brochures, and more.\n\n        By the end of this course, you will be proficient in creating professional-quality vector graphics and layouts for print and web media. This course offers a complete guide from the basics to more advanced techniques.",
         "parent_course": "Graphic Design",
@@ -772,7 +772,7 @@
     },
     "0015": {
         "name": "Tally: Beginner",
-        "featured_image": "assets/img/products/tally.png",
+        "featured_image": "../img/products/tally.png",
         "featured_video": "youtube_video_link_tally",
         "description": "MSK Institute's Tally course offers a comprehensive guide to accounting and financial management using Tally software. This course is designed to help you manage business accounts, inventory, and taxes effectively.\n\n        By the end of this course, you will have a strong foundation in using Tally for business and financial management, including GST compliance, voucher entry, and generating financial reports.",
         "parent_course": "Accounting",
