@@ -20,7 +20,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 12,
-        'link': 'assets/templates/word.html',
+        'link': 'course/word.html',
         'curiculam': {
             '01 Introduction': [
                 '1.1 What is MS-Word?',
@@ -46,7 +46,17 @@ course_list = {
                 '6.1 Creating a Formal Report',
                 '6.2 Resume Building Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Join our Microsoft Word course at MSK Institute in Shikohabad. Learn essential skills for office productivity and document creation.",
+            "keywords": "Microsoft Word course, MSK Institute, computer courses, Shikohabad, office productivity, learn MS Word, document creation, software skills",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Microsoft Word Course at MSK Institute",
+            "og:description": "Enhance your skills with our Microsoft Word course at MSK Institute, Shikohabad. Perfect for beginners and professionals alike!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/msword.html"
+        },
+        
     },
     '0002': {
         'name': 'MS-PowerPoint: Beginner',
@@ -66,7 +76,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 10,
-        'link': 'assets/templates/powerpoint.html',
+        'link': 'course/powerpoint.html',
         'curiculam': {
             '01 Introduction': [
                 '1.1 What is MS-PowerPoint?',
@@ -92,7 +102,16 @@ course_list = {
                 '6.1 Creating a Business Presentation',
                 '6.2 Educational Presentation Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Enroll in our Microsoft PowerPoint course at MSK Institute in Shikohabad. Learn to create engaging presentations and enhance your communication skills.",
+            "keywords": "Microsoft PowerPoint course, MSK Institute, computer courses, Shikohabad, presentation skills, learn PowerPoint, software skills",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Microsoft PowerPoint Course at MSK Institute",
+            "og:description": "Master presentation techniques with our Microsoft PowerPoint course at MSK Institute, Shikohabad. Ideal for all skill levels!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/mspowerpoint.html"
+        }, 
     },
     '0003': {
         'name': 'MS-Excel: Beginner',
@@ -112,7 +131,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 15,
-        'link': 'assets/templates/excel.html',
+        'link': 'course/excel.html',
         'curiculam': {
             '01 Introduction': [
                 '1.1 What is MS-Excel?',
@@ -138,7 +157,17 @@ course_list = {
                 '6.1 Financial Spreadsheet Project',
                 '6.2 Data Analysis Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Join our Microsoft Excel course at MSK Institute in Shikohabad. Learn data analysis and spreadsheet management skills for effective decision-making.",
+            "keywords": "Microsoft Excel course, MSK Institute, computer courses, Shikohabad, data analysis, learn Excel, spreadsheet skills, software skills",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Microsoft Excel Course at MSK Institute",
+            "og:description": "Boost your analytical skills with our Microsoft Excel course at MSK Institute, Shikohabad. Perfect for beginners and advanced users!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/msexcel.html"
+        },
+        
     },
     '0004': {
         'name': 'HTML: Beginner',
@@ -158,7 +187,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 15,
-        'link': 'assets/templates/html.html',
+        'link': 'course/html.html',
         'curiculam': {
             '01 Introduction': [
                 '1.1 Introduction to HTML',
@@ -201,7 +230,17 @@ course_list = {
                 '10.1 Basic Webpage Project',
                 '10.2 Intermediate Webpage Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Enroll in our HTML course at MSK Institute in Shikohabad. Learn the fundamentals of web development and create stunning websites.",
+            "keywords": "HTML course, MSK Institute, computer courses, Shikohabad, web development, learn HTML, coding skills",
+            "author": "Mr Sumit Kumar",
+            "og:title": "HTML Course at MSK Institute",
+            "og:description": "Start your web development journey with our HTML course at MSK Institute, Shikohabad. Great for beginners!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/html.html"
+        },
+        
     },
     '0005': {
         'name': 'CSS: Beginner',
@@ -221,7 +260,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 18,
-        'link': 'assets/templates/css.html',
+        'link': 'course/css.html',
         'curiculam': {
             '01 Introduction to CSS': [
                 '1.1 What is CSS?',
@@ -261,7 +300,17 @@ course_list = {
                 '9.1 Styling a Simple Web Page',
                 '9.2 Responsive Web Design Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Join our CSS course at MSK Institute in Shikohabad. Learn how to style websites and enhance user experiences.",
+            "keywords": "CSS course, MSK Institute, computer courses, Shikohabad, web design, learn CSS, styling skills",
+            "author": "Mr Sumit Kumar",
+            "og:title": "CSS Course at MSK Institute",
+            "og:description": "Transform your web pages with our CSS course at MSK Institute, Shikohabad. Ideal for aspiring web designers!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/css.html"
+        },
+        
     },
     '0006': {
         'name': 'Bootstrap 5: Beginner',
@@ -281,7 +330,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 18,
-        'link': 'assets/templates/bootstrap.html',
+        'link': 'course/bootstrap.html',
         'curiculam': {
             '01 Introduction to Bootstrap 5': [
                 '1.1 What is Bootstrap 5?',
@@ -307,7 +356,16 @@ course_list = {
                 '6.1 Basic Bootstrap Project',
                 '6.2 Advanced Bootstrap Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Enroll in our Bootstrap course at MSK Institute in Shikohabad. Learn to create responsive websites quickly and efficiently.",
+            "keywords": "Bootstrap course, MSK Institute, computer courses, Shikohabad, responsive design, learn Bootstrap, web development",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Bootstrap Course at MSK Institute",
+            "og:description": "Create responsive websites with ease in our Bootstrap course at MSK Institute, Shikohabad. Perfect for all skill levels!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/bootstrap.html"
+        },
     },
     '0007': {
         'name': 'JavaScript: Beginner',
@@ -327,7 +385,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 25,
-        'link': 'assets/templates/javascript.html',
+        'link': 'course/javascript.html',
         'curiculam': {
             '01 Introduction to JavaScript': [
                 '1.1 JavaScript Overview',
@@ -370,7 +428,17 @@ course_list = {
                 '10.1 Basic JavaScript App',
                 '10.2 Intermediate JavaScript Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Join our JavaScript course at MSK Institute in Shikohabad. Learn to make your websites interactive and dynamic.",
+            "keywords": "JavaScript course, MSK Institute, computer courses, Shikohabad, web development, learn JavaScript, coding skills",
+            "author": "Mr Sumit Kumar",
+            "og:title": "JavaScript Course at MSK Institute",
+            "og:description": "Enhance your web development skills with our JavaScript course at MSK Institute, Shikohabad. Ideal for beginners!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/javascript.html"
+        },
+        
     },
     '0008': {
         'name'          : 'Python Basic: Beginner',
@@ -397,7 +465,7 @@ course_list = {
         'certificate'   : True,
         'public_status' : True,
         'lectures'      : 21,
-        'link'          : 'assets/templates/python.html',
+        'link'          : 'course/python.html',
         'curiculam'     : {
             '01 Introduction': [ 
                 '1.1 Course Introduction', 
@@ -508,7 +576,16 @@ course_list = {
                 '22.2 Intermediate Project Ideas', 
                 '22.3 Project Development Best Practices'
             ]
-        }
+        },
+        "seo": {
+            "description": "Enroll in our Python course at MSK Institute in Shikohabad. Learn programming and data analysis with Python.",
+            "keywords": "Python course, MSK Institute, computer courses, Shikohabad, programming, learn Python, data analysis",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Python Course at MSK Institute",
+            "og:description": "Start your programming journey with our Python course at MSK Institute, Shikohabad. Great for all skill levels!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/python.html"
+        },
     },
     '0009': {
         'name': 'SQL: Beginner',
@@ -528,7 +605,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 20,
-        'link': 'assets/templates/sql.html',
+        'link': 'course/sql.html',
         'curiculam': {
             '01 Introduction to SQL': [
                 '1.1 What is SQL?',
@@ -559,7 +636,17 @@ course_list = {
                 '7.1 Basic SQL Project',
                 '7.2 Advanced SQL Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Join our SQL course at MSK Institute in Shikohabad. Learn to manage and manipulate databases using SQL.",
+            "keywords": "SQL course, MSK Institute, computer courses, Shikohabad, database management, learn SQL, data analysis",
+            "author": "Mr Sumit Kumar",
+            "og:title": "SQL Course at MSK Institute",
+            "og:description": "Master database management with our SQL course at MSK Institute, Shikohabad. Perfect for aspiring data analysts!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/sql.html"
+        },
+        
     },
     '0010': {
         'name': 'NumPy: Beginner',
@@ -579,7 +666,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 15,
-        'link': 'assets/templates/numpy.html',
+        'link': 'course/numpy.html',
         'curiculam': {
             '01 Introduction to NumPy': [
                 '1.1 What is NumPy?',
@@ -604,7 +691,16 @@ course_list = {
                 '5.1 NumPy for Data Analysis Project',
                 '5.2 NumPy for Machine Learning Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Enroll in our NumPy course at MSK Institute in Shikohabad. Learn numerical computing and data manipulation with Python's NumPy library.",
+            "keywords": "NumPy course, MSK Institute, computer courses, Shikohabad, data analysis, learn NumPy, numerical computing",
+            "author": "Mr Sumit Kumar",
+            "og:title": "NumPy Course at MSK Institute",
+            "og:description": "Master numerical computing with our NumPy course at MSK Institute, Shikohabad. Ideal for data scientists!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/numpy.html"
+        },
     },
     '0011': {
         'name': 'Power BI: Beginner',
@@ -624,7 +720,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 18,
-        'link': 'assets/templates/powerbi.html',
+        'link': 'course/powerbi.html',
         'curiculam': {
             '01 Introduction to Power BI': [
                 '1.1 What is Power BI?',
@@ -650,7 +746,16 @@ course_list = {
                 '6.1 Building a Business Intelligence Dashboard',
                 '6.2 Advanced Data Analysis Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Enroll in our Power BI course at MSK Institute in Shikohabad. Learn to visualize data and create interactive reports using Microsoft Power BI.",
+            "keywords": "Power BI course, MSK Institute, computer courses, Shikohabad, data visualization, learn Power BI, business intelligence",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Power BI Course at MSK Institute",
+            "og:description": "Master data visualization and reporting with our Power BI course at MSK Institute, Shikohabad. Perfect for aspiring data analysts!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/powerbi.html"
+        },
     },
     '0012': {
         'name': 'Photoshop: Beginner',
@@ -670,7 +775,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 25,
-        'link': 'assets/templates/coming_soon.html',
+        'link': 'course/coming_soon.html',
         'curiculam': {
             '01 Introduction to Photoshop': [
                 '1.1 Interface Overview',
@@ -704,7 +809,18 @@ course_list = {
                 '7.1 Basic Design Project',
                 '7.2 Intermediate Design Project'
             ]
-        }
+        },
+        
+        "seo": {
+            "description": "Join our Photoshop course at MSK Institute in Shikohabad. Learn graphic design techniques and photo editing skills using Adobe Photoshop.",
+            "keywords": "Photoshop course, MSK Institute, computer courses, Shikohabad, graphic design, learn Photoshop, photo editing",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Photoshop Course at MSK Institute",
+            "og:description": "Enhance your graphic design skills with our Photoshop course at MSK Institute, Shikohabad. Suitable for beginners and professionals!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/photoshop.html"
+        },
+        
     },
     '0013': {
         'name': 'Illustrator: Beginner',
@@ -724,7 +840,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 22,
-        'link': 'assets/templates/coming_soon.html',
+        'link': 'course/coming_soon.html',
         'curiculam': {
             '01 Introduction to Illustrator': [
                 '1.1 What is Adobe Illustrator?',
@@ -755,7 +871,17 @@ course_list = {
                 '7.1 Logo Design Project',
                 '7.2 Illustration Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Join our Illustrator course at MSK Institute in Shikohabad. Learn how to create beautiful illustrations and designs using Adobe Illustrator.",
+            "keywords": "Illustrator course, MSK Institute, computer courses, Shikohabad, graphic design, learn Illustrator, digital art",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Illustrator Course at MSK Institute",
+            "og:description": "Master digital illustration with our Illustrator course at MSK Institute, Shikohabad. Perfect for artists and designers alike!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/illustrator.html"
+        },
+        
     },
     '0014': {
         'name': 'CorelDRAW: Beginner',
@@ -775,7 +901,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 24,
-        'link': 'assets/templates/coming_soon.html',
+        'link': 'course/coming_soon.html',
         'curiculam': {
             '01 Introduction to CorelDRAW': [
                 '1.1 Overview of CorelDRAW Interface',
@@ -806,7 +932,17 @@ course_list = {
                 '7.1 Logo Design',
                 '7.2 Brochure Design'
             ]
-        }
+        },
+        "seo": {
+            "description": "Enroll in our CorelDRAW course at MSK Institute in Shikohabad. Learn vector graphic design and create stunning visuals.",
+            "keywords": "CorelDRAW course, MSK Institute, computer courses, Shikohabad, graphic design, learn CorelDRAW, vector graphics",
+            "author": "Mr Sumit Kumar",
+            "og:title": "CorelDRAW Course at MSK Institute",
+            "og:description": "Discover the art of vector graphics with our CorelDRAW course at MSK Institute, Shikohabad. Ideal for aspiring graphic designers!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/coreldraw.html"
+        },
+        
     },
     '0015': {
         'name': 'Tally: Beginner',
@@ -826,7 +962,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 20,
-        'link': 'assets/templates/coming_soon.html',
+        'link': 'course/coming_soon.html',
         'curiculam': {
             '01 Introduction to Tally': [
                 '1.1 Overview of Tally ERP',
@@ -853,7 +989,16 @@ course_list = {
                 '6.1 Accounting and Inventory Project',
                 '6.2 GST Filing Project'
             ]
-        }
+        },
+        "seo": {
+            "description": "Enroll in our Tally course at MSK Institute in Shikohabad. Learn accounting software skills for effective financial management.",
+            "keywords": "Tally course, MSK Institute, computer courses, Shikohabad, accounting software, learn Tally, financial management",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Tally Course at MSK Institute",
+            "og:description": "Gain essential accounting skills with our Tally course at MSK Institute, Shikohabad. Ideal for aspiring accountants and business owners!",
+            "og:image": "https://mskinstitute.github.io/assets/img/hello.png",
+            "og:url": "https://mskinstitute.github.io/course/tally.html"
+        },
     },
 
 }
