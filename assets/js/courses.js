@@ -23,7 +23,7 @@ fetch('assets/js/courses.json')
       const course_link = data[key]['link'];
       const course_curiculam = data[key]['curiculam'];
 
-      const courses_El = document.querySelector('#courses');
+      const courses_El = document.querySelector('#courses_page_courses');
       
       const course_item = `
                     <div class="card border rounded-xl shadow p-2 lift sk-fade">

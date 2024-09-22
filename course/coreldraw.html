@@ -1062,7 +1062,7 @@
             })
             .then(data => {
                 const keys = Object.keys(data);
-                const course = data['0002'];
+                const course = data['0014'];
                 
                 document.getElementById('course_image').src  = '../'+course['featured_image'];
                 document.querySelector('title').innerText = 'MSK Institute: ' + course['name'];

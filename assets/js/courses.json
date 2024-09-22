@@ -15,7 +15,7 @@
         "certificate": true,
         "public_status": true,
         "lectures": 12,
-        "link": "course/word.html",
+        "link": "course/msword.html",
         "curiculam": {
             "01 Introduction": [
                 "1.1 What is MS-Word?",
@@ -68,7 +68,7 @@
         "certificate": true,
         "public_status": true,
         "lectures": 10,
-        "link": "course/powerpoint.html",
+        "link": "course/mspowerpoint.html",
         "curiculam": {
             "01 Introduction": [
                 "1.1 What is MS-PowerPoint?",
@@ -121,7 +121,7 @@
         "certificate": true,
         "public_status": true,
         "lectures": 15,
-        "link": "course/excel.html",
+        "link": "course/msexcel.html",
         "curiculam": {
             "01 Introduction": [
                 "1.1 What is MS-Excel?",
@@ -735,7 +735,7 @@
         "certificate": true,
         "public_status": true,
         "lectures": 25,
-        "link": "course/coming_soon.html",
+        "link": "course/photoshop.html",
         "curiculam": {
             "01 Introduction to Photoshop": [
                 "1.1 Interface Overview",
@@ -854,7 +854,7 @@
         "certificate": true,
         "public_status": true,
         "lectures": 24,
-        "link": "course/coming_soon.html",
+        "link": "course/coreldraw.html",
         "curiculam": {
             "01 Introduction to CorelDRAW": [
                 "1.1 Overview of CorelDRAW Interface",
@@ -912,7 +912,7 @@
         "certificate": true,
         "public_status": true,
         "lectures": 20,
-        "link": "course/coming_soon.html",
+        "link": "course/tally.html",
         "curiculam": {
             "01 Introduction to Tally": [
                 "1.1 Overview of Tally ERP",

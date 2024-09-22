@@ -20,7 +20,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 12,
-        'link': 'course/word.html',
+        'link': 'course/msword.html',
         'curiculam': {
             '01 Introduction': [
                 '1.1 What is MS-Word?',
@@ -76,7 +76,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 10,
-        'link': 'course/powerpoint.html',
+        'link': 'course/mspowerpoint.html',
         'curiculam': {
             '01 Introduction': [
                 '1.1 What is MS-PowerPoint?',
@@ -131,7 +131,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 15,
-        'link': 'course/excel.html',
+        'link': 'course/msexcel.html',
         'curiculam': {
             '01 Introduction': [
                 '1.1 What is MS-Excel?',
@@ -775,7 +775,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 25,
-        'link': 'course/coming_soon.html',
+        'link': 'course/photoshop.html',
         'curiculam': {
             '01 Introduction to Photoshop': [
                 '1.1 Interface Overview',
@@ -901,7 +901,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 24,
-        'link': 'course/coming_soon.html',
+        'link': 'course/coreldraw.html',
         'curiculam': {
             '01 Introduction to CorelDRAW': [
                 '1.1 Overview of CorelDRAW Interface',
@@ -962,7 +962,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 20,
-        'link': 'course/coming_soon.html',
+        'link': 'course/tally.html',
         'curiculam': {
             '01 Introduction to Tally': [
                 '1.1 Overview of Tally ERP',
