@@ -6,9 +6,31 @@ course_list = {
         'name': 'MS-Word: Beginner',
         'featured_image': 'assets/img/products/word.png',
         'featured_video': 'youtube_video_link_word',
-        'description': '''Unlock the full potential of MS-Word with MSK Institute's comprehensive course, designed for beginners and those looking to improve their skills. From creating professional documents to using advanced formatting and editing features, you will become proficient in handling word processing tasks efficiently.
+        'description': '''Welcome to the MS Word course at MSK Institute, where we empower learners with essential skills to master one of the most widely used word processing applications in the world. This course is designed for individuals at all levels—whether you're a complete beginner or looking to enhance your existing skills.
 
-        By the end of the course, you will be able to create reports, letters, resumes, and other documents that are polished, well-structured, and professional. Gain insights into features such as mail merge, templates, styles, and collaboration tools.''',
+Throughout this course, you will gain a thorough understanding of Microsoft Word's interface and its powerful features, enabling you to create, format, and edit documents efficiently. We start with the basics, introducing you to the MS Word environment, including menus, toolbars, and essential navigation techniques. You will learn how to create professional documents from scratch, as well as how to use templates to save time.
+
+As we progress, you will explore various formatting options, including text styles, paragraph alignment, and page layout techniques. You will learn how to insert and manipulate images, tables, and other elements to enhance your documents visually. Our hands-on approach ensures that you gain practical experience, allowing you to apply what you've learned in real-world scenarios.
+
+We also cover advanced features such as mail merge, which streamlines the process of creating personalized documents, and collaboration tools that facilitate teamwork and document sharing. By the end of the course, you will be equipped with skills to create polished reports, resumes, letters, and more, all tailored to meet professional standards.
+
+At MSK Institute, our commitment to quality education means you will receive personalized support from experienced instructors, along with access to a wealth of resources to further your learning. Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in MS Word and your readiness to tackle various document-related tasks in any professional setting.
+
+Join us at MSK Institute and take your first step toward becoming an MS Word expert!''',
+        'what_you_learn' : [
+            'Navigate the MS Word interface and toolbars.',
+            'Create, format, and edit documents effectively.',
+            'Work with tables, images, and charts in Word.',
+            'Utilize styles, themes, and templates for professional documents.',
+            'Implement advanced formatting techniques such as headers, footers, and page numbers.',
+            'Perform document proofing, track changes, and collaborate with others.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with MS Word installed (Office 2013 or later).',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
         'parent_course': 'MS Office Suite',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -62,9 +84,33 @@ course_list = {
         'name': 'MS-PowerPoint: Beginner',
         'featured_image': 'assets/img/products/powerpoint.png',
         'featured_video': 'youtube_video_link_powerpoint',
-        'description': '''Learn how to create dynamic presentations with MS-PowerPoint at MSK Institute. This course takes you through the basics of presentation design, including slide layout, transitions, animations, and integrating multimedia elements. By the end, you will be capable of delivering impactful presentations that captivate audiences.
+        'description': '''Welcome to the MS PowerPoint course at MSK Institute, designed to equip you with the essential skills to create impactful presentations. Whether you're a novice looking to learn the basics or an intermediate user aiming to refine your skills, this course offers a structured approach to mastering PowerPoint.
 
-        You will also explore advanced features like using master slides, customizing themes, and collaborating on presentations to take your skills to the next level.''',
+Throughout this course, you will gain a thorough understanding of the PowerPoint interface and its powerful features, enabling you to create visually engaging presentations that effectively communicate your ideas. We start with the fundamentals, guiding you through the process of creating a new presentation, choosing templates, and understanding slide layouts.
+
+As you progress, you will explore various design elements, including themes, colors, and fonts, to ensure your presentations are not only professional but also visually appealing. You will learn how to incorporate multimedia elements such as images, videos, and audio clips to enhance your message and captivate your audience.
+
+Our hands-on approach allows you to practice essential skills, such as creating custom animations and transitions, which can make your presentations more dynamic and engaging. You will also learn how to organize your content logically and effectively, using tools like bullet points, charts, and SmartArt graphics to convey information clearly.
+
+In addition to basic presentation skills, we will cover advanced features such as collaboration tools, which enable you to work seamlessly with others on shared presentations. By the end of the course, you will have the confidence to deliver compelling presentations that leave a lasting impression.
+
+At MSK Institute, our commitment to high-quality education means you will receive personalized support from experienced instructors, along with access to a variety of resources to enhance your learning experience. Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in MS PowerPoint and your readiness to present ideas effectively in any professional context.
+
+Join us at MSK Institute and take your presentation skills to the next level!''',
+        'what_you_learn' : [
+            'Navigate the MS PowerPoint interface and design tools.',
+            'Create professional presentations with slides, text, and images.',
+            'Use transitions, animations, and multimedia elements to enhance presentations.',
+            'Design effective slide layouts using themes and templates.',
+            'Work with charts, graphs, and SmartArt for data representation.',
+            'Collaborate with others and deliver engaging presentations.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with MS PowerPoint installed (Office 2013 or later).',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
         'parent_course': 'MS Office Suite',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -117,9 +163,33 @@ course_list = {
         'name': 'MS-Excel: Beginner',
         'featured_image': 'assets/img/products/excel.png',
         'featured_video': 'youtube_video_link_excel',
-        'description': '''Master the powerful spreadsheet software MS-Excel with MSK Institute's course designed to help you understand data management, calculations, and analysis. Starting from the basics of spreadsheet navigation to more advanced topics like pivot tables, charts, and functions, you will become proficient in data handling and reporting.
+        'description': '''Welcome to the MS Excel course at MSK Institute, where we empower learners to harness the full potential of one of the most powerful spreadsheet applications in the world. Whether you’re a beginner looking to understand the basics or an intermediate user aiming to enhance your skills, this course is designed to meet your needs.
 
-        This course emphasizes practical applications, ensuring you can use Excel to solve real-world problems, from personal finance to business analysis.''',
+Throughout this course, you will gain a deep understanding of the Excel interface and its versatile features, enabling you to efficiently organize, analyze, and visualize data. We begin with the fundamentals, introducing you to Excel’s grid system, essential functions, and basic formulas that form the backbone of spreadsheet functionality.
+
+As you progress, you will explore advanced data manipulation techniques, including sorting, filtering, and using pivot tables, which will allow you to draw meaningful insights from your data. You will learn how to create dynamic charts and graphs that visually represent your data, making it easier to communicate your findings effectively.
+
+Our hands-on approach ensures you will engage in practical exercises that reinforce your learning, allowing you to apply Excel’s capabilities in real-world scenarios. You’ll also discover essential functions such as VLOOKUP, HLOOKUP, and conditional formatting, which enhance your data analysis and presentation skills.
+
+In addition, we cover time-saving features like macros and data validation, which streamline repetitive tasks and improve the accuracy of your data entry. By the end of the course, you will feel confident in your ability to handle a variety of Excel tasks, from budgeting and financial analysis to project management and data reporting.
+
+At MSK Institute, we are dedicated to providing high-quality education, which includes personalized support from experienced instructors and access to a wealth of learning resources. Upon completion of the course, you will receive a certificate from MSK Institute, validating your proficiency in MS Excel and preparing you to tackle any data-related challenge in a professional environment.
+
+Join us at MSK Institute and unlock the power of Excel for your personal and professional growth!''',
+        'what_you_learn' : [
+            'Navigate the MS Excel interface and understand basic functions.',
+            'Work with cells, rows, and columns to organize data.',
+            'Create and format spreadsheets for data analysis.',
+            'Use formulas and functions to perform calculations.',
+            'Create charts and graphs for data visualization.',
+            'Work with pivot tables and advanced data analysis tools.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with MS Excel installed (Office 2013 or later).',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
         'parent_course': 'MS Office Suite',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -173,9 +243,33 @@ course_list = {
         'name': 'HTML: Beginner',
         'featured_image': 'assets/img/products/html.png',
         'featured_video': 'youtube_video_link_html',
-        'description': '''Welcome to MSK Institute's HTML course. This course is designed for those who are stepping into the world of web development. At MSK Institute, we provide high-quality training to ensure you understand how HTML structures websites and applications. Starting with the basics, you will learn to create structured, accessible web pages, advancing to more complex topics like forms, multimedia embedding, and SEO best practices.
-        
-        You will gain hands-on experience, building fully functional websites, ensuring your skills are aligned with industry standards. From writing your first HTML tag to mastering semantic HTML, this course will make you a confident web developer.''',
+        'description': '''Welcome to the HTML course at MSK Institute, designed to introduce you to the foundational building blocks of web development. Whether you are a complete beginner or looking to enhance your existing skills, this course provides a structured approach to mastering HTML and creating engaging web pages.
+
+Throughout this course, you will gain a thorough understanding of HTML (Hypertext Markup Language) and its role in web development. We start with the basics, covering the structure of an HTML document, essential tags, and how to properly format text and images. You’ll learn how to create headings, paragraphs, lists, links, and multimedia elements that make up a web page.
+
+As you progress, you will explore advanced HTML concepts, including forms and input elements, which are crucial for creating interactive web applications. You will understand the importance of semantic HTML and accessibility, ensuring that your websites are user-friendly and compliant with modern web standards.
+
+Our hands-on approach allows you to practice essential skills through engaging exercises and projects, helping you to apply what you've learned in real-world scenarios. You’ll learn how to create responsive layouts using HTML, setting the stage for future learning in CSS and JavaScript.
+
+By the end of the course, you will have the confidence to build well-structured, visually appealing web pages from scratch. At MSK Institute, we believe in the power of practical learning, and our experienced instructors will provide personalized support throughout your journey.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in HTML and your readiness to take on more advanced web development topics.
+
+Join us at MSK Institute and start your journey toward becoming a skilled web developer today!''',
+        'what_you_learn' : [
+            'Create and structure HTML documents.',
+            'Use essential HTML tags for text, links, images, and lists.',
+            'Build forms and input elements for user interaction.',
+            'Understand the importance of semantic HTML.',
+            'Implement basic accessibility standards in web design.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with a text editor (e.g., Notepad, Visual Studio Code).',
+            'Internet connection for accessing online resources.',
+        ],
+
         'parent_course': 'Web Designing',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -246,9 +340,32 @@ course_list = {
         'name': 'CSS: Beginner',
         'featured_image': 'assets/img/products/css.png',
         'featured_video': 'youtube_video_link_css',
-        'description': '''MSK Institute's CSS course is designed to teach you how to style and layout web pages with precision. Through hands-on exercises and projects, you will master the art of responsive design, typography, color schemes, animations, and modern CSS techniques. Whether you're a beginner or have some experience, this course will elevate your web design skills.
+        'description': '''Welcome to the CSS course at MSK Institute, where we empower you to enhance your web development skills by mastering Cascading Style Sheets (CSS). This course is designed for individuals at all levels—whether you’re a complete beginner or an intermediate user looking to refine your skills in web design.
 
-        By the end of the course, you will be able to create visually appealing, user-friendly websites that adapt to different screen sizes and devices. The course also focuses on industry best practices and tools for modern web development.''',
+Throughout this course, you will gain a deep understanding of CSS and its critical role in styling and layout of web pages. We start with the basics, introducing you to fundamental concepts such as selectors, properties, and values. You’ll learn how to apply styles to HTML elements, enabling you to change colors, fonts, spacing, and much more.
+
+As you progress, you will explore advanced CSS techniques, including the Box Model, Flexbox, and Grid Layout. These powerful tools allow you to create responsive and dynamic web layouts that adapt seamlessly to different screen sizes and devices. You will also learn about CSS animations and transitions, adding visual flair to your web projects.
+
+Our hands-on approach ensures that you engage in practical exercises and real-world projects, giving you the opportunity to apply your skills and build a portfolio of work. You will discover best practices for writing clean and maintainable CSS, as well as techniques for troubleshooting common styling issues.
+
+By the end of the course, you will have the confidence to create visually appealing and user-friendly web designs. At MSK Institute, we are dedicated to providing high-quality education, which includes personalized support from experienced instructors and access to a variety of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in CSS and your readiness to tackle more advanced web development topics.
+
+Join us at MSK Institute and take your first step towards becoming a skilled web designer today!''',
+        'what_you_learn' : [
+            'Apply styles to HTML elements using CSS.',
+            'Create layouts using the Box Model, Flexbox, and Grid.',
+            'Use colors, fonts, and backgrounds effectively.',
+            'Implement responsive design techniques for various devices.',
+            'Create animations and transitions to enhance user experience.',
+        ],
+
+        'requirements' : [
+            'Basic knowledge of HTML.',
+            'A laptop or desktop with a text editor.',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
         'parent_course': 'Web Designing',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -316,9 +433,32 @@ course_list = {
         'name': 'Bootstrap 5: Beginner',
         'featured_image': 'assets/img/products/bootstrap.png',
         'featured_video': 'youtube_video_link_bootstrap',
-        'description': '''Join MSK Institute's Bootstrap 5 course and enhance your front-end development skills by learning one of the most popular frameworks for creating responsive websites. This course covers everything from the fundamentals of Bootstrap to advanced topics like custom components, layout systems, and utility classes.
+        'description': '''Welcome to the Bootstrap course at MSK Institute, where we equip you with the skills to create responsive and visually appealing web designs using one of the most popular front-end frameworks. This course is ideal for beginners who want to learn the fundamentals of Bootstrap, as well as for intermediate users looking to enhance their web development toolkit.
 
-        By the end of the course, you will be able to quickly design and build responsive websites with modern layouts and components that are optimized for both desktop and mobile devices.''',
+Throughout this course, you will gain a solid understanding of Bootstrap and how it simplifies the process of building responsive websites. We start with the basics, introducing you to the Bootstrap framework, its components, and how to set it up in your projects. You’ll learn about the grid system, which allows you to create flexible layouts that adapt seamlessly to various screen sizes.
+
+As you progress, you will explore Bootstrap’s extensive library of pre-designed components, such as navigation bars, buttons, forms, and modals. You will learn how to customize these components to fit your design needs while ensuring consistency and usability across your web pages.
+
+Our hands-on approach ensures that you engage in practical exercises and projects, giving you the opportunity to apply your skills in real-world scenarios. You’ll discover best practices for responsive design, including how to leverage Bootstrap’s utility classes for quick styling and layout adjustments.
+
+By the end of the course, you will have the confidence to create professional-quality websites using Bootstrap, streamlining your development process and enhancing your efficiency. At MSK Institute, we are committed to providing high-quality education, which includes personalized support from experienced instructors and access to a wealth of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in Bootstrap and your readiness to tackle advanced web development challenges.
+
+Join us at MSK Institute and take your web design skills to the next level with Bootstrap today!''',
+        'what_you_learn' : [
+            'Understand the Bootstrap framework and its components.',
+            'Utilize the grid system for responsive design.',
+            'Implement pre-designed components such as navigation bars and buttons.',
+            'Customize Bootstrap styles to match your project’s branding.',
+            'Create interactive and user-friendly web interfaces.',
+        ],
+
+        'requirements' : [
+            'Basic knowledge of HTML and CSS.',
+            'A laptop or desktop with a text editor.',
+            'Internet connection for accessing Bootstrap documentation and resources.',
+        ],
         'parent_course': 'Web Development',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -371,9 +511,31 @@ course_list = {
         'name': 'JavaScript: Beginner',
         'featured_image': 'assets/img/products/javascript.png',
         'featured_video': 'youtube_video_link_javascript',
-        'description': '''Master JavaScript with MSK Institute's comprehensive course designed to transform beginners into proficient developers. As a powerful tool for creating interactive and dynamic web content, JavaScript is essential for any web developer. Our course provides in-depth coverage of JavaScript basics and more advanced topics like DOM manipulation, event handling, and working with APIs.
-        
-        You will also learn essential programming concepts like functions, loops, and objects, all while building hands-on projects. With MSK Institute's guidance, you'll be equipped to tackle real-world web development challenges.''',
+        'description': '''Welcome to the JavaScript course at MSK Institute, where we empower you to become a proficient web developer by mastering one of the most essential programming languages for the web. This course is designed for individuals at all levels—whether you’re a complete beginner eager to learn programming or an intermediate user looking to deepen your understanding of JavaScript.
+
+Throughout this course, you will gain a thorough understanding of JavaScript and its role in creating interactive and dynamic web applications. We begin with the fundamentals, covering essential concepts such as variables, data types, operators, and control structures. You’ll learn how to write clean and efficient code, enabling you to build functional applications from scratch.
+
+As you progress, you will explore advanced topics, including functions, objects, and arrays, which are crucial for effective JavaScript programming. You will also learn about the Document Object Model (DOM), allowing you to manipulate web page elements in real time, enhancing user experience through interactivity.
+
+Our hands-on approach ensures that you engage in practical exercises and real-world projects, providing you with the opportunity to apply your skills in various scenarios. You’ll discover how to handle events, validate forms, and make asynchronous calls using AJAX, which are essential for creating modern web applications.
+
+By the end of the course, you will have the confidence to build complex applications using JavaScript, along with a solid understanding of programming best practices. At MSK Institute, we are committed to delivering high-quality education, which includes personalized support from experienced instructors and access to a variety of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, validating your proficiency in JavaScript and your readiness to tackle more advanced web development challenges.
+
+Join us at MSK Institute and take the first step toward becoming a skilled JavaScript developer today!''',
+        'what_you_learn' : [
+            'Learn the basics of JavaScript programming and syntax.',
+            'Work with variables, data types, and operators.',
+            'Manipulate the DOM to create dynamic web content.',
+            'Implement functions, arrays, and objects effectively.',
+            'Understand event handling and AJAX for asynchronous programming.',
+        ],
+        'requirements' : [
+            'Basic knowledge of HTML and CSS.',
+            'A laptop or desktop with a text editor.',
+            'Internet connection for accessing online resources and exercises.',
+        ],
         'parent_course': 'Web Development',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -454,6 +616,21 @@ course_list = {
         
         By the end of the course, you will have the confidence to build Python applications independently, reinforced by projects that allow you to apply your skills in a practical context. At MSK Institute, we don't just offer knowledge; we offer career-building skills that align with industry demands. Upon completion, you will receive an official MSK Institute certification, demonstrating your proficiency and commitment to learning.
         ''',
+        'what_you_learn' : [
+            'Understand the fundamentals of Python programming.',
+            'Work with variables, data types, and operators.',
+            'Implement control structures and functions.',
+            'Manipulate data with lists, tuples, sets, and dictionaries.',
+            'Explore file handling and basic object-oriented programming.',
+            'Solve problems using algorithms and data structures.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with Python installed (preferably the latest version).',
+            'Internet connection for accessing resources and exercises.',
+        ],
+
         'parent_course' : "Python Development",
         'skill_level'    : "Beginner to Intermediate",
         'language'      : "Hindi/English",
@@ -591,9 +768,33 @@ course_list = {
         'name': 'SQL: Beginner',
         'featured_image': 'assets/img/products/sql.png',
         'featured_video': 'youtube_video_link_sql',
-        'description': '''MSK Institute's SQL course is designed to teach you how to manage databases effectively. You will learn the fundamentals of database management, SQL syntax, and how to write queries for real-world applications. This course covers everything from basic data retrieval to complex joins, subqueries, and performance optimization.
+        'description': '''Welcome to the SQL course at MSK Institute, where we equip you with the essential skills to manage and analyze data using one of the most powerful database languages. This course is perfect for beginners who want to learn the basics of SQL, as well as for intermediate users looking to enhance their data management skills.
 
-        By the end of the course, you will be able to create, manage, and query databases to handle large-scale data sets, preparing you for roles in data analysis and backend development.''',
+Throughout this course, you will gain a deep understanding of SQL (Structured Query Language) and its critical role in database management. We start with the fundamentals, introducing you to database concepts, relational databases, and the SQL syntax. You’ll learn how to create, read, update, and delete (CRUD) data in a database, enabling you to interact with data effectively.
+
+As you progress, you will explore advanced SQL features, including joins, subqueries, and aggregate functions, which allow you to manipulate and analyze data across multiple tables. You will also learn about indexing, data integrity, and transaction management, which are essential for maintaining efficient and reliable databases.
+
+Our hands-on approach ensures you engage in practical exercises and real-world projects, giving you the opportunity to apply your skills in various scenarios. You’ll discover how to write complex queries to extract meaningful insights from large datasets, preparing you for data-driven decision-making in any professional environment.
+
+By the end of the course, you will have the confidence to design and manage databases, as well as the skills to perform advanced data analysis using SQL. At MSK Institute, we are dedicated to providing high-quality education, which includes personalized support from experienced instructors and access to a wealth of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in SQL and your readiness to tackle data management challenges in a professional setting.
+
+Join us at MSK Institute and unlock the power of data with SQL today!''',
+        'what_you_learn' : [
+            'Understand database concepts and relational databases.',
+            'Write SQL queries to create, read, update, and delete data.',
+            'Use joins and subqueries for complex data retrieval.',
+            'Implement aggregate functions for data analysis.',
+            'Learn about indexing and transaction management for efficiency.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with a SQL database management system (e.g., MySQL, SQLite).',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
+
         'parent_course': 'Database Management',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -652,9 +853,34 @@ course_list = {
         'name': 'NumPy: Beginner',
         'featured_image': 'assets/img/products/numpy.png',
         'featured_video': 'youtube_video_link_numpy',
-        'description': '''MSK Institute's NumPy course is designed for individuals looking to gain proficiency in numerical computing using Python. This course covers the essential aspects of the NumPy library, which is fundamental for data science, machine learning, and scientific computing.
+        'description': '''NumPy: Comprehensive Course for Beginners to Intermediate Users
 
-        From creating and manipulating arrays to performing advanced mathematical operations, you will learn to leverage NumPy’s capabilities for real-world data processing. By the end of the course, you will be well-equipped to use NumPy in conjunction with other Python libraries for data analysis and machine learning.''',
+Welcome to the NumPy course at MSK Institute, where we empower you to harness the power of numerical computing with one of the most essential libraries in Python. This course is designed for individuals at all levels—whether you’re a complete beginner eager to dive into data analysis or an intermediate user looking to enhance your skills in scientific computing.
+
+Throughout this course, you will gain a thorough understanding of NumPy (Numerical Python) and its fundamental role in data manipulation and analysis. We begin with the basics, introducing you to the NumPy library, its installation, and core concepts such as arrays and their operations. You’ll learn how to create, reshape, and index arrays, enabling you to work with large datasets efficiently.
+
+As you progress, you will explore advanced features of NumPy, including mathematical functions, statistical analysis, and array broadcasting. You will learn how to perform complex calculations, manipulate multi-dimensional arrays, and utilize NumPy’s powerful tools for linear algebra, Fourier transforms, and random number generation.
+
+Our hands-on approach ensures that you engage in practical exercises and real-world projects, allowing you to apply your skills to solve actual problems. You’ll discover how to integrate NumPy with other libraries like Pandas and Matplotlib, enhancing your ability to analyze and visualize data effectively.
+
+By the end of the course, you will have the confidence to perform high-level mathematical computations and data analysis using NumPy. At MSK Institute, we are dedicated to providing high-quality education, which includes personalized support from experienced instructors and access to a variety of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, validating your proficiency in NumPy and your readiness to tackle more advanced data science and analytics challenges.
+
+Join us at MSK Institute and unlock the full potential of numerical computing with NumPy today!''',
+        'what_you_learn' : [
+            'Create and manipulate arrays using NumPy.',
+            'Perform mathematical and statistical operations on arrays.',
+            'Understand array broadcasting and its applications.',
+            'Utilize linear algebra functions and random number generation.',
+            'Integrate NumPy with other libraries for data analysis.',
+        ],
+
+        'requirements' : [
+            'Basic knowledge of Python programming.',
+            'A laptop or desktop with Python and NumPy installed.',
+            'Internet connection for accessing online resources and exercises.',
+        ],
         'parent_course': 'Python Development',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -706,9 +932,33 @@ course_list = {
         'name': 'Power BI: Beginner',
         'featured_image': 'assets/img/products/powerbi.png',
         'featured_video': 'youtube_video_link_powerbi',
-        'description': '''MSK Institute's Power BI course teaches you how to create interactive visualizations and business intelligence reports. This course covers data import, modeling, and visualization, enabling you to transform raw data into insightful dashboards and reports.
+        'description': '''Welcome to the Power BI course at MSK Institute, where we equip you with the essential skills to transform data into insightful visualizations and reports using Microsoft Power BI. This course is designed for individuals at all levels—whether you’re a complete beginner looking to explore data analytics or an intermediate user aiming to enhance your data visualization skills.
 
-        You will learn to connect to various data sources, create customized visuals, and share your reports with others. By the end of this course, you will be able to use Power BI to analyze and visualize data for business decision-making.''',
+Throughout this course, you will gain a thorough understanding of Power BI and its powerful capabilities for data analysis and reporting. We start with the basics, introducing you to the Power BI interface, the different components (Power BI Desktop, Power BI Service, and Power BI Mobile), and how to set up your first project. You’ll learn how to connect to various data sources, including Excel, SQL databases, and cloud services.
+
+As you progress, you will explore advanced features such as data modeling, DAX (Data Analysis Expressions) for calculations, and creating relationships between datasets. You will learn how to design interactive dashboards and reports that effectively communicate insights and support data-driven decision-making.
+
+Our hands-on approach ensures you engage in practical exercises and real-world projects, giving you the opportunity to apply your skills to solve actual business problems. You’ll discover how to create visualizations such as charts, graphs, and maps, and how to customize them to meet your specific reporting needs.
+
+By the end of the course, you will have the confidence to analyze data, create compelling reports, and share your insights with stakeholders using Power BI. At MSK Institute, we are committed to providing high-quality education, which includes personalized support from experienced instructors and access to a wealth of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in Power BI and your readiness to tackle advanced data analytics challenges.
+
+Join us at MSK Institute and unlock the power of data visualization with Power BI today!
+''',
+        'what_you_learn' : [
+            'Navigate the Power BI interface and its components.',
+            'Connect to various data sources and transform data.',
+            'Create interactive reports and dashboards.',
+            'Use DAX for data calculations and analysis.',
+            'Share insights and collaborate using Power BI Service.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with Power BI Desktop installed.',
+            'Internet connection for accessing online resources and Power BI service.',
+        ],
         'parent_course': 'Data Analysis',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -761,9 +1011,32 @@ course_list = {
         'name': 'Photoshop: Beginner',
         'featured_image': 'assets/img/products/photoshop.png',
         'featured_video': 'youtube_video_link_photoshop',
-        'description': '''MSK Institute's Photoshop course is designed for individuals looking to enhance their graphic design skills. This course will take you through the basics of image editing, manipulation, and graphic creation. You'll explore Photoshop's wide range of tools, including layers, filters, and effects.
+        'description': '''Welcome to the Photoshop course at MSK Institute, where we empower you to unleash your creativity and master one of the most powerful graphic design tools available. This course is perfect for beginners who want to learn the fundamentals of Photoshop, as well as for intermediate users looking to refine their skills and explore advanced techniques.
 
-        By the end of this course, you will be proficient in creating professional-grade designs, enhancing photos, and preparing digital assets for various media platforms. Whether you're a beginner or looking to refine your design skills, this course will give you the hands-on experience needed to succeed.''',
+Throughout this course, you will gain a thorough understanding of Adobe Photoshop and its versatile features for photo editing, graphic design, and digital art. We begin with the basics, introducing you to the Photoshop interface, essential tools, and key concepts such as layers, masks, and selections. You’ll learn how to navigate the workspace, edit images, and create stunning compositions from scratch.
+
+As you progress, you will explore advanced techniques, including retouching, color correction, and blending modes, which will enhance your ability to create professional-quality images. You will learn how to use filters, effects, and typography to add depth and creativity to your projects, as well as how to prepare your designs for print and web use.
+
+Our hands-on approach ensures that you engage in practical exercises and real-world projects, providing you with the opportunity to apply your skills and build a portfolio of work. You’ll discover tips and tricks from industry professionals that will help you work efficiently and effectively within Photoshop.
+
+By the end of the course, you will have the confidence to create and edit a variety of visual content, from promotional materials and social media graphics to digital artwork and photo retouching. At MSK Institute, we are committed to delivering high-quality education, which includes personalized support from experienced instructors and access to a variety of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, validating your proficiency in Photoshop and your readiness to tackle graphic design challenges in any professional setting.
+
+Join us at MSK Institute and take your design skills to the next level with Photoshop today!''',
+        'what_you_learn' : [
+            'Navigate the Photoshop interface and essential tools.',
+            'Edit and enhance photos using various techniques.',
+            'Create compositions and designs from scratch.',
+            'Work with layers, masks, and text effectively.',
+            'Prepare designs for print and digital media.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with Adobe Photoshop installed (trial version acceptable).',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
         'parent_course': 'Graphic Design',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -826,9 +1099,32 @@ course_list = {
         'name': 'Illustrator: Beginner',
         'featured_image': 'assets/img/products/illustrator.png',
         'featured_video': 'youtube_video_link_illustrator',
-        'description': '''MSK Institute's Illustrator course equips you with the skills to create stunning vector graphics for both print and digital media. Learn to use Illustrator's powerful tools to design logos, icons, and illustrations with precision.
+        'description': '''Welcome to the Illustrator course at MSK Institute, where we empower you to master the art of vector graphic design using Adobe Illustrator. This course is designed for individuals at all levels—whether you’re a complete beginner eager to learn the fundamentals or an intermediate user looking to enhance your design skills.
 
-        This course covers everything from basic shape creation to more advanced techniques like working with typography and gradients. By the end of this course, you'll be able to produce high-quality vector artwork for professional use.''',
+Throughout this course, you will gain a thorough understanding of Adobe Illustrator and its powerful capabilities for creating stunning vector graphics. We start with the basics, introducing you to the Illustrator interface, essential tools, and core concepts such as artboards, paths, and shapes. You’ll learn how to navigate the workspace, create illustrations, and design graphics from scratch.
+
+As you progress, you will explore advanced techniques, including the use of color, gradients, and patterns, allowing you to add depth and creativity to your designs. You will learn about layers, text manipulation, and how to create complex illustrations with precision and ease.
+
+Our hands-on approach ensures that you engage in practical exercises and real-world projects, providing you with the opportunity to apply your skills and build a diverse portfolio. You’ll discover tips and tricks from industry professionals that will help you streamline your workflow and enhance your creative process.
+
+By the end of the course, you will have the confidence to create a variety of visual content, from logos and branding materials to illustrations and infographics. At MSK Institute, we are committed to providing high-quality education, which includes personalized support from experienced instructors and access to a wealth of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in Adobe Illustrator and your readiness to tackle graphic design challenges in any professional setting.
+
+Join us at MSK Institute and elevate your design skills with Illustrator today!''',
+        'what_you_learn' : [
+            'Master the Illustrator interface and vector graphic tools.',
+            'Create and manipulate shapes, paths, and colors.',
+            'Design logos, icons, and illustrations with precision.',
+            'Utilize typography and effects to enhance your designs.',
+            'Prepare artwork for various applications and media.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with Adobe Illustrator installed (trial version acceptable).',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
         'parent_course': 'Graphic Design',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -840,7 +1136,7 @@ course_list = {
         'certificate': True,
         'public_status': True,
         'lectures': 22,
-        'link': 'course/coming_soon.html',
+        'link': 'course/illustrator.html',
         'curiculam': {
             '01 Introduction to Illustrator': [
                 '1.1 What is Adobe Illustrator?',
@@ -887,9 +1183,34 @@ course_list = {
         'name': 'CorelDRAW: Beginner',
         'featured_image': 'assets/img/products/coreldraw.png',
         'featured_video': 'youtube_video_link_coreldraw',
-        'description': '''MSK Institute's CorelDRAW course is designed for those looking to master vector graphic design. You will learn to use CorelDRAW’s tools to create illustrations, logos, brochures, and more.
+        'description': '''Welcome to the CorelDRAW course at MSK Institute, where we empower you to create stunning vector graphics and designs using one of the leading graphic design software programs. This course is ideal for individuals at all levels—whether you’re a complete beginner eager to learn the basics or an intermediate user looking to enhance your design skills.
 
-        By the end of this course, you will be proficient in creating professional-quality vector graphics and layouts for print and web media. This course offers a complete guide from the basics to more advanced techniques.''',
+Throughout this course, you will gain a solid understanding of CorelDRAW and its powerful tools for graphic design. We begin with the fundamentals, introducing you to the CorelDRAW interface, essential tools, and core concepts such as object creation, manipulation, and layers. You’ll learn how to navigate the workspace, design illustrations, and create layouts from scratch.
+
+As you progress, you will explore advanced techniques, including the use of typography, color theory, and effects to enhance your designs. You will learn how to create logos, business cards, brochures, and other marketing materials, focusing on both creativity and technical proficiency.
+
+Our hands-on approach ensures that you engage in practical exercises and real-world projects, providing you with the opportunity to apply your skills and build a diverse portfolio. You’ll discover tips and tricks from industry professionals that will help you streamline your workflow and maximize your creative potential.
+
+By the end of the course, you will have the confidence to produce high-quality graphics and designs tailored to various needs, whether for print or digital media. At MSK Institute, we are dedicated to providing high-quality education, which includes personalized support from experienced instructors and access to a variety of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in CorelDRAW and your readiness to tackle graphic design challenges in any professional setting.
+
+Join us at MSK Institute and take your design skills to the next level with CorelDRAW today!
+
+''',
+        'what_you_learn' : [
+            'Understand the CorelDRAW interface and its tools.',
+            'Create and manipulate vector graphics and illustrations.',
+            'Design marketing materials like brochures and business cards.',
+            'Utilize color theory and typography effectively.',
+            'Prepare designs for print and digital formats.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with CorelDRAW installed (trial version acceptable).',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
         'parent_course': 'Graphic Design',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
@@ -948,9 +1269,32 @@ course_list = {
         'name': 'Tally: Beginner',
         'featured_image': 'assets/img/products/tally.png',
         'featured_video': 'youtube_video_link_tally',
-        'description': '''MSK Institute's Tally course offers a comprehensive guide to accounting and financial management using Tally software. This course is designed to help you manage business accounts, inventory, and taxes effectively.
+        'description': '''Welcome to the Tally course at MSK Institute, where we empower you to master one of the leading accounting software solutions used by businesses worldwide. This course is designed for individuals at all levels—whether you’re a complete beginner looking to understand the basics of accounting software or an intermediate user aiming to enhance your financial management skills.
 
-        By the end of this course, you will have a strong foundation in using Tally for business and financial management, including GST compliance, voucher entry, and generating financial reports.''',
+Throughout this course, you will gain a thorough understanding of Tally and its features for effective accounting, inventory management, and financial reporting. We start with the fundamentals, introducing you to the Tally interface, basic navigation, and key concepts such as creating and managing ledgers, vouchers, and financial statements.
+
+As you progress, you will explore advanced functionalities, including GST compliance, payroll management, and inventory control. You will learn how to generate detailed reports, analyze financial data, and maintain accurate records to support informed decision-making in a business environment.
+
+Our hands-on approach ensures that you engage in practical exercises and real-world projects, providing you with the opportunity to apply your skills in various scenarios. You’ll discover tips and best practices from industry professionals that will help you work efficiently and accurately within Tally.
+
+By the end of the course, you will have the confidence to manage accounting tasks, prepare financial statements, and navigate the complexities of business finance using Tally. At MSK Institute, we are committed to providing high-quality education, which includes personalized support from experienced instructors and access to a wealth of resources to enhance your learning experience.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, showcasing your proficiency in Tally and your readiness to tackle accounting challenges in any professional setting.
+
+Join us at MSK Institute and elevate your accounting skills with Tally today!''',
+        'what_you_learn' : [
+            'Navigate the Tally interface and its functionalities.',
+            'Manage ledgers, vouchers, and financial statements.',
+            'Ensure GST compliance and manage payroll effectively.',
+            'Generate detailed financial reports for analysis.',
+            'Maintain accurate records for informed decision-making.',
+        ],
+
+        'requirements' : [
+            'Basic computer skills.',
+            'A laptop or desktop with Tally installed (trial version acceptable).',
+            'Internet connection for accessing online resources and tutorials.',
+        ],
         'parent_course': 'Accounting',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',

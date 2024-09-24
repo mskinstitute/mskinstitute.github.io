@@ -450,15 +450,9 @@
                     <h3 class="mb-5">What you'll learn</h3>
                     <div class="row row-cols-lg-2 mb-8">
                         <div class="col-md">
-                            <ul class="list-style-v1 list-unstyled">
-                                <li>Introduction to Python</li>
-                                <li>Basic Data Types and Operations</li>
-                                <li>Control Structures (if statements, loops)</li>
-                                <li>Functions and Modules</li>
-                                <li>Exception Handling</li>
-                                <li>Object-Oriented Programming</li>
-                                <li>File Handling</li>
-                                <li>Data Manipulation with NumPy</li>
+                            <ul class="list-style-v1 list-unstyled" id="what_you_learn">
+                                <!-- <li>Introduction to Python</li>
+                                <li>Basic Data Types and Operations</li> -->
                             </ul>
                         </div>
 
@@ -470,12 +464,9 @@
                     </div>
 
                     <h3 class="mb-5">Requirements</h3>
-                    <ul class="list-style-v2 list-unstyled">
-                        <li>Basic computer knowledge</li>
-                        <li>Class 8th pass</li>
-                        <li>Familiarity with basic computer operations</li>
-                        <li>A laptop or PC with Python installed</li>
-                        <li>Basic understanding of programming concepts (optional but helpful)</li>
+                    <ul class="list-style-v2 list-unstyled" id="requirements">
+                        <!-- <li>Basic computer knowledge</li>
+                        <li>Class 8th pass</li> -->
                     </ul>
                 </div>
                 <!-- End Course Overview -->
@@ -1096,6 +1087,22 @@
                 document.getElementById('book_demo_button').href = 'https://wa.me/918393042166?text=Hi, I want to Enroll Now for ' + course['name'];
                 
                 const chapters = Object.keys(course['curiculam']);
+                const what_you_learn = Object.keys(course['what_you_learn']);
+                const requirements = Object.keys(course['requirements']);
+
+                what_you_learn.forEach( (item, index) => {
+                    const what_you_learn_tag = document.getElementById('what_you_learn');
+                    const what_you_learn_item_tag = document.createElement('li');
+                    what_you_learn_item_tag.innerText = course['what_you_learn'][item];
+                    what_you_learn_tag.appendChild(what_you_learn_item_tag);
+                } )
+
+                requirements.forEach( (item, index) => {
+                    const requirements_tag = document.getElementById('requirements');
+                    const requirements_item_tag = document.createElement('li');
+                    requirements_item_tag.innerText = course['requirements'][item];
+                    requirements_tag.appendChild(requirements_item_tag);
+                } )                
 
                 chapters.forEach((chapter, index) => {
                     const Chapter_Items = document.getElementById('accordionCurriculum');
