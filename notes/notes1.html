@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Markdown Notes with Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .notes {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        #editor {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+        }
+        .copy-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .copy-btn i {
+            margin-right: 5px;
+        }
+        .copy-success {
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="notes">
+        <h1>HTML Introduction</h1>
+        <h2>What is HTML?</h2>
+        <ul>
+            <li>HTML stands for <code>Hyper Text Markup Language</code></li>
+            <li>HTML is the standard markup language for <code>creating Web pages</code></li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+        </ul>
+        <h2>Example Code:</h2>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Page Title&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;MSK Institute&lt;/h1&gt;
+      &lt;p&gt;MSK Institute is the best&lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+    </div>
+
+    <h2>Edit the Code in Monaco Editor</h2>
+    <!-- Monaco Editor Container -->
+    <div id="editor"></div>
+
+    <!-- Copy Code Button -->
+    <button class="copy-btn" onclick="copyCode()">
+        <i class="fas fa-copy"></i> Copy Code
+    </button>
+    <span class="copy-success">Code copied to clipboard!</span>
+
+    <!-- Load Monaco Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.min.js"></script>
+    <script>
+        // Monaco Editor Setup
+        require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs' }});
+        require(['vs/editor/editor.main'], function () {
+            var editor = monaco.editor.create(document.getElementById('editor'), {
+                value: `<!DOCTYPE html>
+<html>
+   <head>
+       <title>Page Title</title>
+   </head>
+   <body>
+      <h1>MSK Institute</h1>
+      <p>MSK Institute is the best</p>
+   </body>
+</html>`,
+                language: 'html',
+                theme: 'vs-dark'
+            });
+            
+            // Function to copy code from editor
+            window.copyCode = function () {
+                var code = editor.getValue();
+                navigator.clipboard.writeText(code).then(function () {
+                    document.querySelector('.copy-success').style.display = 'inline';
+                    setTimeout(function () {
+                        document.querySelector('.copy-success').style.display = 'none';
+                    }, 2000);
+                }, function () {
+                    alert('Failed to copy text.');
+                });
+            };
+        });
+    </script>
+</body>
+</html>

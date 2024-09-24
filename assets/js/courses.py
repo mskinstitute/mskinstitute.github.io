@@ -44,6 +44,7 @@ Join us at MSK Institute and take your first step toward becoming an MS Word exp
         'lectures': 12,
         'link': 'course/msword.html',
         'curiculam': {
+            
             '01 Introduction': [
                 '1.1 What is MS-Word?',
                 '1.2 Overview of the Word Interface'
