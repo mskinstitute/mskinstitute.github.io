@@ -68,7 +68,8 @@ Join us at MSK Institute and take your first step toward becoming an MS Word exp
             '06 Projects': [
                 '6.1 Creating a Formal Report',
                 '6.2 Resume Building Project'
-            ]
+            ],
+            
         },
         "seo": {
             "description": "Join our Microsoft Word course at MSK Institute in Shikohabad. Learn essential skills for office productivity and document creation.",
