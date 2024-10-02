@@ -461,7 +461,7 @@ Join us at MSK Institute and take your web design skills to the next level with 
             'A laptop or desktop with a text editor.',
             'Internet connection for accessing Bootstrap documentation and resources.',
         ],
-        'parent_course': 'Web Development',
+        'parent_course': 'Web Designing',
         'skill_level': 'Beginner to Intermediate',
         'language': 'Hindi/English',
         'duration': '1.5 Months',
@@ -1346,11 +1346,75 @@ Join us at MSK Institute and elevate your accounting skills with Tally today!'''
             "og:url": "https://mskinstitute.github.io/course/tally.html"
         },
     },
+    '0016': {
+        'name': 'Web Designing: Beginner',
+        'featured_image': 'assets/img/products/web_designing.png',
+        'featured_video': 'youtube_video_link_tally',
+        'description': '''
+Welcome to the Web Designing: Beginner course at MSK Institute, where we introduce you to the world of web development and equip you with the essential tools to build modern, responsive websites. This course is designed for absolute beginners eager to learn how websites are built from scratch, using the core technologies: HTML, CSS, and Bootstrap 5.
+
+Throughout this course, you will gain a comprehensive understanding of the web design process, starting with HTML (HyperText Markup Language), the backbone of any website. You’ll learn how to structure web pages, create headings, paragraphs, lists, tables, and embed images and links, giving you the foundation to develop any web page layout.
+
+Next, we dive into CSS (Cascading Style Sheets), where you will learn how to style and format your HTML content, transforming plain structures into visually appealing web pages. You’ll explore essential concepts like selectors, colors, fonts, box models, layouts, and more, allowing you to customize the look and feel of your site.
+
+Finally, we introduce Bootstrap 5, the latest version of the popular front-end framework, designed to help you create responsive and mobile-first websites. You will learn how to integrate Bootstrap’s ready-to-use components such as navigation bars, grids, forms, and buttons, making it easier to design a professional website without writing extensive custom code.
+
+Our hands-on approach ensures you engage in practical exercises and projects, where you’ll apply your learning by creating fully functional websites that work across different devices and screen sizes. With personalized guidance from experienced instructors and access to a wealth of resources, you’ll gain the skills needed to build your own websites confidently.
+
+By the end of the course, you will have the knowledge to design simple yet effective websites and the confidence to continue exploring more advanced web development topics. At MSK Institute, we are committed to providing high-quality education and helping you kickstart your web design journey.
+
+Upon completion of the course, you will receive a certificate from MSK Institute, validating your proficiency in web designing with HTML, CSS, and Bootstrap 5.
+
+Join us at MSK Institute and start building beautiful websites today!        
+''',
+        'what_you_learn' : [
+            'Introduction to Web Design.',
+            'HTML Basics: Structuring web pages with elements, links, and media.',
+            'CSS Fundamentals: Styling and formatting web content.',
+            'Responsive Web Design: Adapting layouts for different devices.',
+            'Bootstrap 5 Components: Utilizing grids, forms, and navigation bars.',
+            'Creating Mobile-Friendly Websites.',
+            'Implementing Web Design Best Practices.',
+            'Debugging and Testing Websites Across Browsers.',
+        ],
+
+        'requirements' : [
+            'No prior web design or coding experience required.',
+            'Basic computer skills (browsing the web, using a text editor).',
+            'A computer with internet access.',
+            'Willingness to learn and practice coding.',
+            'Google Chrome or any modern web browser installed.',
+            'A code editor (e.g., VSCode, Sublime Text, or Notepad++).',
+        ],
+        'parent_course': 'Designing',
+        'skill_level': 'Beginner to Advance',
+        'language': 'Hindi/English',
+        'duration': '6 Months',
+        'deadline': '3 Months',
+        'enrolled': 18,
+        'discount': 25,
+        'fee': 7999,
+        'certificate': True,
+        'public_status': True,
+        'lectures': 51,
+        'link': 'combo-course/web-designing.html',
+        'curiculam': [ '0004', '0005', '0006'],
+        "seo": {
+            "description": "Join the Web Designing: Beginner course at MSK Institute in Shikohabad. Learn HTML, CSS, and responsive design to create stunning websites.",
+            "keywords": "Web Designing course, MSK Institute, computer courses, Shikohabad, learn web design, HTML, CSS, responsive design, beginner web design",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Web Designing Course at MSK Institute",
+            "og:description": "Start your journey into web design with our beginner course at MSK Institute, Shikohabad. Master HTML, CSS, and responsive design!",
+            "og:image": "https://mskinstitute.github.io/assets/img/webdesign.png",
+            "og:url": "https://mskinstitute.github.io/course/webdesign.html"
+        }
+
+    },
 
 }
 
 
-# print( course_list['0002'][ 'curiculam' ][ '02 Basic Tags' ][1]  )
 
+# print( course_list['0002'][ 'curiculam' ][ '02 Basic Tags' ][1]  )
 f = open('assets/js/courses.json', 'w')
 f.write(json.dumps(course_list, indent=4))

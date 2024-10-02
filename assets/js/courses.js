@@ -90,7 +90,7 @@ fetch('assets/js/courses.json')
                                                         </svg>
 
                                                     </div>
-                                                    <div class="font-size-sm">${course_duration} Month</div>
+                                                    <div class="font-size-sm">${course_duration}</div>
                                                 </div>
                                             </li>
                                         </ul>
