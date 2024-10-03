@@ -7,22 +7,26 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
 
+    <meta name="msapplication-config" content="browserconfig.xml" />
+    <link rel="manifest" href="manifest.json">
+
     <!-- Favicon -->
-    <meta name="msapplication-TileImage" content="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png">
-    <link rel="icon" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png" sizes="any" />
-    <link rel="icon" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png" sizes="any" />
+    <link rel="shortcut icon" href="/assets/img/brand/favicon.ico" type="image/x-icon">
+
+    <!-- Favicon for legacy browsers -->
     <link rel="icon" sizes="32x32" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png">
-    <link rel="icon" sizes="192x192" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png">
-    <link rel="shortcut icon" sizes="80x80" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png" />
+
+    <!-- Apple Touch Icons for iOS devices -->
     <link rel="apple-touch-icon" sizes="16x16" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png" />
     <link rel="apple-touch-icon" sizes="80x80" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/brand/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-icon-180x180.png" />
+       
+    <!-- Optional: For Windows Pinned Tiles (if needed for older Edge/IE) -->
+    <meta name="msapplication-TileImage" content="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png">
 
 
-
-
-    
+    <!-- Basic Meta Tags -->
     <meta name="author" content="Mr Sumit Kumar">
     <meta property="title" content="MSK Institute: Best For Learn Coding and Computer Courses in Shikohabad">
     <meta name="description" content="MSK Institute in Shikohabad provides training on all Computer Courses &amp; Coding Classes like python development, web development, full-stak development, programming languages &amp; Basic Computer Course. MSK Institute is the best for lean coding in Shikohabad.">
@@ -31,21 +35,55 @@
     <meta property="url" content="https://mskinstitute.github.io/">
     <meta property="site_name" content="MSK Institute">
     <meta property="image" content="assets/img/hello.png">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Python, Coding classes, computer courses, Shikohabad, MSK, MSK Institute, learn coding, programming, web development, software engineering">
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, Python, Coding classes, computer courses, Shikohabad, MSK, MSK Institute, learn coding, programming, web development, software engineering">
 
     <!-- <meta http-equiv="refresh" content="60"> -->
+
+    <!-- General Open Graph Meta Tags -->
+
+    <!-- Site Information -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MSK Institute">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://mskinstitute.github.io/">
+    
+    <meta property="og:image" content="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="MSK Institute Logo">
 
     <meta name="og:author" content="Mr Sumit Kumar">
     <meta property="og:title" content="MSK Institute: Best For Learn Coding and Computer Courses in Shikohabad">
     <meta name="og:description" content="MSK Institute in Shikohabad provides training on all Computer Courses &amp; Coding Classes like python development, web development, full-stak development, programming languages &amp; Basic Computer Course. MSK Institute is the best for lean coding in Shikohabad.">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mskinstitute.github.io/">
-    <meta property="og:site_name" content="MSK Institute">
-    <meta property="og:image" content="assets/img/Brand_logo/Logo_With_Laptop_&_Hi.png">
-    <meta name="og:keywords" content="HTML, CSS, JavaScript, Python, Coding classes, computer courses, Shikohabad, MSK, MSK Institute, learn coding, programming, web development, software engineering">
+
+    <meta name="og:keywords" content="HTML, CSS, JavaScript, Python, Coding classes, computer courses, Shikohabad, coaching, MSK, MSK Institute, learn coding, programming, web development, software engineering">
+
+    <!-- Video Meta Tags -->
+    <!-- <meta property="og:video" content="https://www.mskinstitute.com/promo-video.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="1280">
+    <meta property="og:video:height" content="720"> -->
+
+    <!-- Audio Meta Tags -->
+    <!-- <meta property="og:audio" content="https://www.mskinstitute.com/audio-file.mp3">
+    <meta property="og:audio:type" content="audio/mpeg"> -->
 
 
+    <!-- Twitter Specific (uses OG) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MSK Institute - Learn Coding & Web Development">
+    <meta name="twitter:description" content="Join MSK Institute to learn coding, web development, and IT skills.">
+    <!-- <meta name="twitter:image" content="https://www.mskinstitute.com/twitter-card.png"> -->
+    <meta name="twitter:url" content="https://www.mskinstitute.github.io">
+
+    <!-- LinkedIn Specific (uses OG) -->
+    <meta property="og:title" content="MSK Institute - Coding & Web Development Courses">
+    <meta property="og:image" content="https://www.mskinstitute.com/linkedin-image.png">
+
+    <!-- Other Social Media Platforms -->
+    <meta property="og:title" content="MSK Institute - Learn to Code">
+    <meta property="og:description" content="MSK Institute offers coding courses to help you build IT skills for your career.">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,8 +154,9 @@
 <body>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript> 
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSFLPQJP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSFLPQJP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
@@ -209,14 +248,13 @@
                 <div class="col-md-6 col-xl-5 order-md-1 pt-4 pb-10 pt-md-11 pb-md-12">
                     <!-- Heading -->
                     <h1 class="display-2 fw-medium" data-aos="fade-left" data-aos-duration="150"
-                    style="font-size: 2.5rem;">MSK Institute</h1>
-                    
+                        style="font-size: 2.5rem;">MSK Institute</h1>
+
                     <!-- Pre Heading -->
                     <h4 class="mb-0" data-aos="fade-left" data-aos-duration="150">Computer Training Institute</h4>
 
                     <!-- Text -->
-                    <p class="text-dark mb-5" data-aos="fade-up" data-aos-duration="200"
-                        style="font-size: 1.2rem;">
+                    <p class="text-dark mb-5" data-aos="fade-up" data-aos-duration="200" style="font-size: 1.2rem;">
                         Best for learning coding in Shikohabad
                     </p>
                     <!-- Buttons -->
@@ -224,7 +262,7 @@
                         data-aos-duration="200" style="font-size: 1rem; padding: 10px 20px;">Join Now</a>
                 </div>
             </div>
-        </div> 
+        </div>
 
         <!-- Add responsive scaling -->
         <style>
@@ -246,7 +284,11 @@
         <div class="container">
             <div class="mb-md-8 mb-6 text-center">
                 <h1 class="mb-1">How Can I Help You</h1>
-                <p class="font-size-lg mb-0 text-capitalize">We offer both online and in-person classes, ensuring flexibility for your learning needs. From beginner-friendly coding tutorials to advanced data analysis, we provide the tools, support, and certifications to boost your career. Let us know your goals, and we'll help you achieve them with personalized guidance and hands-on learning experiences.</p>
+                <p class="font-size-lg mb-0 text-capitalize">We offer both online and in-person classes, ensuring
+                    flexibility for your learning needs. From beginner-friendly coding tutorials to advanced data
+                    analysis, we provide the tools, support, and certifications to boost your career. Let us know your
+                    goals, and we'll help you achieve them with personalized guidance and hands-on learning experiences.
+                </p>
             </div>
 
             <div class="row">
@@ -303,7 +345,9 @@
 
                         <div class="media-body">
                             <h5 class="mt-0">Consultative Training</h5>
-                            <p class="text-capitalize pe-xl-6 line-height-sm">Our consultative training provides tailored, hands-on guidance, empowering you with practical skills and real-world insights to achieve success.</p>
+                            <p class="text-capitalize pe-xl-6 line-height-sm">Our consultative training provides
+                                tailored, hands-on guidance, empowering you with practical skills and real-world
+                                insights to achieve success.</p>
                         </div>
                     </div>
                 </div>
@@ -346,7 +390,9 @@
 
                         <div class="media-body">
                             <h5 class="mt-0">Real Deal Coaching</h5>
-                            <p class="text-capitalize pe-xl-6 line-height-sm">Our "Real Deal Coaching" offers genuine, result-oriented guidance, focusing on practical skills and real-world applications to boost your success.</p>
+                            <p class="text-capitalize pe-xl-6 line-height-sm">Our "Real Deal Coaching" offers genuine,
+                                result-oriented guidance, focusing on practical skills and real-world applications to
+                                boost your success.</p>
                         </div>
                     </div>
                 </div>
@@ -383,7 +429,9 @@
 
                         <div class="media-body">
                             <h5 class="mt-0">Advisor Training Program</h5>
-                            <p class="text-capitalize pe-xl-6 line-height-sm">Our Advisor Training Program delivers expert mentorship, fostering leadership skills and strategic thinking to help you guide others towards success effectively.</p>
+                            <p class="text-capitalize pe-xl-6 line-height-sm">Our Advisor Training Program delivers
+                                expert mentorship, fostering leadership skills and strategic thinking to help you guide
+                                others towards success effectively.</p>
                         </div>
                     </div>
                 </div>
@@ -414,7 +462,9 @@
 
                         <div class="media-body">
                             <h5 class="mt-0">Training Coach</h5>
-                            <p class="text-capitalize pe-xl-6 line-height-sm">Our Training Coach program offers personalized guidance, practical coaching techniques, and expert support to help you achieve professional growth and success.</p>
+                            <p class="text-capitalize pe-xl-6 line-height-sm">Our Training Coach program offers
+                                personalized guidance, practical coaching techniques, and expert support to help you
+                                achieve professional growth and success.</p>
                         </div>
                     </div>
                 </div>
@@ -762,11 +812,13 @@
                         <!-- Footer -->
                         <div class="card-footer px-2 pb-2 mb-1 pt-4 position-relative">
 
-                            <a href="course/msword.html"><span class="mb-1 d-inline-block text-gray-800">MS-Office</span></a>
+                            <a href="course/msword.html"><span
+                                    class="mb-1 d-inline-block text-gray-800">MS-Office</span></a>
 
                             <div class="position-relative">
                                 <a href="course/msword.html" class="d-block stretched-link">
-                                    <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">Microsoft Word Basic</h4>
+                                    <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">Microsoft
+                                        Word Basic</h4>
                                 </a>
 
                                 <div class="d-lg-flex align-items-end flex-wrap mb-n1">
@@ -839,7 +891,8 @@
                                 <img class="rounded shadow-light-lg" src="assets/img/products/powerpoint.png" alt="...">
                             </a>
 
-                            <span class="badge sk-fade-bottom badge-lg badge-purple badge-pill badge-float bottom-0 left-0 mb-4 ms-4">
+                            <span
+                                class="badge sk-fade-bottom badge-lg badge-purple badge-pill badge-float bottom-0 left-0 mb-4 ms-4">
                                 <span class="text-white text-uppercase fw-bold font-size-xs">Intermediate</span>
                             </span>
                         </div>
@@ -849,12 +902,14 @@
 
 
                             <!-- Preheading -->
-                            <a href="course/mspowerpoint.html"><span class="mb-1 d-inline-block text-gray-800">MS-Office</span></a>
+                            <a href="course/mspowerpoint.html"><span
+                                    class="mb-1 d-inline-block text-gray-800">MS-Office</span></a>
 
                             <!-- Heading -->
                             <div class="position-relative">
                                 <a href="course/mspowerpoint.html" class="d-block stretched-link">
-                                    <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">Microsoft PowerPoint Basic</h4>
+                                    <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">Microsoft
+                                        PowerPoint Basic</h4>
                                 </a>
 
                                 <div class="d-lg-flex align-items-end flex-wrap mb-n1">
@@ -1108,12 +1163,14 @@
 
 
                             <!-- Preheading -->
-                            <a href="course/css.html"><span class="mb-1 d-inline-block text-gray-800">Web Designing</span></a>
+                            <a href="course/css.html"><span class="mb-1 d-inline-block text-gray-800">Web
+                                    Designing</span></a>
 
                             <!-- Heading -->
                             <div class="position-relative">
                                 <a href="course/css.html" class="d-block stretched-link">
-                                    <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">CSS Basic </h4>
+                                    <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">CSS Basic
+                                    </h4>
                                 </a>
 
                                 <div class="d-lg-flex align-items-end flex-wrap mb-n1">
