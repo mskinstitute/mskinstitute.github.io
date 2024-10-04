@@ -8,8 +8,7 @@
 
     <title>Study Notes & Resources - MSK Institute Shikohabad</title>
 
-    <!-- Meta Tags for SEO -->
-    
+    <!-- Meta Tags for SEO -->    
     <meta name="description" content="Access a variety of study notes and resources for coding and computer courses at MSK Institute in Shikohabad. Enhance your learning with our curated materials.">
     <meta name="keywords" content="study notes, resources, coding courses, computer courses, MSK Institute, Shikohabad, educational materials, programming notes, Python notes, web development resources">
     <meta name="author" content="Mr Sumit Kumar">
@@ -39,8 +38,7 @@
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Lora:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;family=Nunito:wght@400;700&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Lora:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;family=Nunito:wght@400;700&amp;display=swap"
         rel="stylesheet">
 
     <!-- Libs CSS -->
@@ -607,6 +605,17 @@
     </footer>
 
 
+
+    <div id="footer"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
 
     <!-- JAVASCRIPT
     ================================================== -->

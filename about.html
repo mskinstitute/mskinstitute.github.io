@@ -132,6 +132,17 @@
     About...
 
 
+    <div id="footer"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+
     <!-- FOOTER
     ================================================== -->
     <footer class="pt-8 pt-md-11 bg-cloud-burst bg-darken white-100 white-img-100">
