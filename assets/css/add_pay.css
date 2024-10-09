@@ -1,0 +1,84 @@
+.form-container {
+    margin: 50px auto;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.form-container h2 {
+    text-align: center;
+    color: #002060;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #002060;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: #003e8a;
+}
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e6f7ff;
+    border: 1px solid #b3e5fc;
+    border-radius: 5px;
+}
+.result p {
+    margin: 5px 0;
+}
+.qr-code {
+    margin-top: 20px;
+    text-align: center;
+}
+#payButton {
+    width: 40%;
+    padding: 10px;
+    background-color: greenyellow;
+    color: black;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+    &:hover {
+        background-color: rgb(94, 238, 94);
+    }
+}
+
+#pasteButton {
+    width: 150px;
+    padding: 10px;
+    background-color: #002060;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#pasteButton:hover {
+    background-color: #003e8a;
+}
+

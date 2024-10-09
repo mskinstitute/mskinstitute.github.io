@@ -10,15 +10,19 @@
 
     <!-- Meta Tags for SEO -->
 
-    <meta name="description" content="Learn how to apply for admission to MSK Institute in Shikohabad. Join our coding and computer courses with flexible online and offline options.">
-    <meta name="keywords" content="admission, apply now, coding courses, computer courses, MSK Institute, Shikohabad, online classes, offline classes, enrollment process, educational opportunities">
+    <meta name="description"
+        content="Learn how to apply for admission to MSK Institute in Shikohabad. Join our coding and computer courses with flexible online and offline options.">
+    <meta name="keywords"
+        content="admission, apply now, coding courses, computer courses, MSK Institute, Shikohabad, online classes, offline classes, enrollment process, educational opportunities">
     <meta name="author" content="Mr Sumit Kumar">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Admissions at MSK Institute - Apply Now">
-    <meta property="og:description" content="Discover the admission process at MSK Institute in Shikohabad. Enroll in our coding and computer courses today!">
-    <meta property="og:image" content="https://mskinstitute.github.io/assets/img/hello.png"> <!-- Replace with a relevant image URL -->
+    <meta property="og:description"
+        content="Discover the admission process at MSK Institute in Shikohabad. Enroll in our coding and computer courses today!">
+    <meta property="og:image" content="https://mskinstitute.github.io/assets/img/hello.png">
+    <!-- Replace with a relevant image URL -->
     <meta property="og:url" content="https://mskinstitute.github.io/admission.html">
     <meta property="og:site_name" content="MSK Institute">
     <meta property="og:type" content="website">
@@ -26,8 +30,10 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Admissions at MSK Institute">
-    <meta name="twitter:description" content="Learn about the admission process for our coding and computer courses. Join MSK Institute in Shikohabad today!">
-    <meta name="twitter:image" content="https://mskinstitute.github.io/assets/img/hello.png"> <!-- Replace with a relevant image URL -->
+    <meta name="twitter:description"
+        content="Learn about the admission process for our coding and computer courses. Join MSK Institute in Shikohabad today!">
+    <meta name="twitter:image" content="https://mskinstitute.github.io/assets/img/hello.png">
+    <!-- Replace with a relevant image URL -->
 
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="gOyz3tZx5HiJE7XZi57l5h4oZvU_ysC7gDr5WsHfNRM">
@@ -54,8 +60,6 @@
     <link rel="stylesheet" href="assets/libs/jarallax/dist/jarallax.css">
     <link rel="stylesheet" href="assets/libs/quill/dist/quill.core.css" />
 
-    <!-- Map -->
-    <link href=' ../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="assets/css/theme.min.css">
@@ -71,11 +75,12 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+
 </head>
 
 <body>
 
-    
+
     <header class="navbar navbar-expand-xl navbar-light">
         <div class="container">
 
@@ -135,7 +140,8 @@
 
             <div class="box sm-w-50 d-flex justify-content-end">
 
-                <a class="rounded btn btn-outline-primary px-3 py-1 mx-3" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='navy'">
+                <a class="rounded btn btn-outline-primary px-3 py-1 mx-3" onMouseOver="this.style.color='white'"
+                    onMouseOut="this.style.color='navy'">
                     Admission
                 </a>
                 <!-- Toggler -->
@@ -155,16 +161,130 @@
         </div>
     </header>
 
+    <div class="container py-4">
+        <h1 class="text-center mb-4">MSK Institute: Admission Form</h1>
+        <p class="text-muted">Rest assured that all the information you provide will be kept confidential and only used
+            for processing your application. We follow strict rules to protect your personal details. Sharing your
+            WhatsApp number is very helpful as it lets us contact you directly and quickly. You will get real-time
+            updates on your application status, important notifications, and answers to your questions. This makes the
+            admission process smooth and keeps you informed at every step.</p>
 
-    <div class="container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOmu0mD9DzlT9etaLkBZTTd8xqG4Z3_EvBI31dbRCyM_eTVQ/viewform?embedded=true"
-        width="100%" height="2100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <form name="addmission_form">
+
+            <!-- Full Name -->
+            <div class="mb-3">
+                <label for="full-name" class="form-label">Full Name *</label>
+                <input type="text" class="form-control" id="full-name" name="Name" required>
+            </div>
+
+            <!-- Father's Name -->
+            <div class="mb-3">
+                <label for="fathers-name" class="form-label">Father's Name *</label>
+                <input type="text" class="form-control" id="fathers-name" name="Father_Name" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth *</label>
+                <input type="date" class="form-control" id="dob" name="Bate_of_Birth" required>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="mb-3">
+                <label for="contact-number" class="form-label">Contact Number (WhatsApp) *</label>
+                <input type="tel" class="form-control" id="contact-number" name="Contact_Number" maxlength="10"
+                    required>
+            </div>
+
+            <!-- Gender -->
+            <div class="mb-3">
+                <label class="form-label">Gender *</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Gender" id="male" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Gender" id="female" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+
+            <!-- Course Selection -->
+            <div class="mb-3">
+                <label for="course" class="form-label">Course *</label>
+                <select class="form-select" id="course" name="Course" required>
+                    <option value="" disabled selected>Choose</option>
+                    <option value="adca">ADCA - 1 Year</option>
+                    <option value="data_analytics">Data Analytics - 1 Year</option>
+                    <option value="python_full_stack">Python Full Stack Development - 1 Year</option>
+                    <option value="software_development">Software Development - 1 Year</option>
+                    <option value="web_full_stack">Web Full Stack Development - 1 Year</option>
+                    <option value="python_data_science">Python for Data Science - 6 Months</option>
+                    <option value="python_ml">Python for Machine Learning - 6 Months</option>
+                    <option value="web_designing">Web Designing - 6 Months</option>
+                    <option value="graphic_designing_6">Graphic Designing - 6 Months</option>
+                    <option value="basic_course">Basic Course - 3 Months</option>
+                    <option value="c_cpp">C/C++ - 3 Months</option>
+                    <option value="ccc">CCC - 3 Months</option>
+                    <option value="graphic_designing_3">Graphic Designing - 3 Months</option>
+                    <option value="ms_excel_advance">MS-Excel Advance - 3 Months</option>
+                    <option value="ms_powerpoint_advance">MS-PowerPoint Advance - 3 Months</option>
+                    <option value="python_web_dev">Python for Web Development (Django + Flask) - 3 Months</option>
+                    <option value="tally">Tally - 3 Months</option>
+                    <option value="adobe_illustrator">Adobe Illustrator - 2 Months</option>
+                    <option value="adobe_photoshop">Adobe Photoshop - 2 Months</option>
+                    <option value="coreldraw">CorelDraw - 2 Months</option>
+                    <option value="css">CSS - 2 Months</option>
+                    <option value="javascript">JavaScript - 2 Months</option>
+                    <option value="canva">Canva - 1 Month</option>
+                    <option value="bootstrap">Bootstrap - 1 Month</option>
+                    <option value="html">HTML - 1 Month</option>
+                    <option value="ms_excel">MS-Excel - 1 Month</option>
+                    <option value="ms_powerpoint">MS-PowerPoint - 1 Month</option>
+                    <option value="ms_word">MS-Word - 1 Month</option>
+                    <option value="numpy">NumPy - 1 Month</option>
+                    <option value="python">Python - 1 Month</option>
+                    <option value="sql">SQL - 1 Month</option>
+                    <option value="power_bi">Power BI - 1 Month</option>
+                    <option value="tally_excel_advance">Tally + Excel in Advance - 6 Months</option>
+                </select>
+            </div>
+
+            <!-- Address -->
+            <div class="mb-3">
+                <label for="address" class="form-label">Address *</label>
+                <input type="text" class="form-control" id="address" name="Address" required>
+            </div>
+
+            <!-- Hidden input for current date and time -->
+            <input type="hidden" id="Admission_Time" name="Admission_Time">
+            <input type="hidden" id="Registration_No" name="Registration_No">
+
+
+            <!-- Submit and Reset Buttons -->
+            <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-arround">
+                    <button type="submit" class="btn btn-sm mx-1 btn-primary">Save</button>
+                    <button type="button" class="btn btn-sm btn-primary" onclick="window.location.href = 'add_pay.html'">Next</button>
+                </div>
+                <button type="reset" class="btn btn-sm btn-secondary">Clear</button>
+            </div>
+        </form>
+
+        <dialog data-modal-preview>
+            <h3>Registration No :</h3>
+            <p class="Registration_No_Show"></p>
+            <button id="Registration_No_Copy" >Copy</button>
+            <button onclick='document.querySelector("[data-modal-preview]").close()'>Close</button>
+        </dialog>
+
+
+
     </div>
 
 
 
-    <!-- JAVASCRIPT
-    ================================================== -->
+    <!-- JAVASCRIPT ================================================== -->
     <!-- Libs JS -->
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -184,10 +304,8 @@
     <script src="assets/libs/parallax-js/dist/parallax.min.js"></script>
     <script src="assets/libs/quill/dist/quill.min.js"></script>
     <script src="assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="assets/js/students/addmission_form.js"></script>
     <script src="assets/libs/typed.js/lib/typed.min.js"></script>
-
-    <!-- Map -->
-    <script src='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
     <!-- Theme JS -->
     <script src="assets/js/theme.min.js"></script>
