@@ -1183,5 +1183,55 @@
             "og:image": "https://mskinstitute.github.io/assets/img/webdesign.png",
             "og:url": "https://mskinstitute.github.io/course/webdesign.html"
         }
+    },
+    "0017": {
+        "name": "Data Analytics: Beginner",
+        "featured_image": "assets/img/products/data_analytics.png",
+        "featured_video": "youtube_video_link_tally",
+        "description": "\nWelcome to the Data Analytics: Beginner course at MSK Institute designed to provide you with a solid foundation in data analysis and equip you with the skills needed to extract meaningful insights from data. Whether you're a beginner or someone looking to expand your knowledge, this course takes you through a comprehensive journey, covering the essential tools and techniques required to excel in the field of data analytics.\n\nThe course begins with Microsoft Excel, one of the most widely-used tools for data analysis. You'll start by learning the basics of Excel, including data entry, formatting, and basic functions. As the course progresses, you'll dive deeper into advanced Excel functionalities such as pivot tables, VLOOKUP, and conditional formatting to manipulate and analyze large datasets. You\u2019ll also learn how to create meaningful charts and graphs to visualize data and communicate insights effectively.\n\nNext, we introduce you to SQL (Structured Query Language), a powerful language used for querying and managing databases. You will learn how to interact with databases, retrieve and filter data using SQL queries, and perform advanced operations such as joins, aggregations, and subqueries. By the end of this section, you\u2019ll be able to efficiently manage large datasets, extract insights, and make informed decisions based on your analysis.\n\nBuilding on your SQL knowledge, we cover MySQL, one of the most popular open-source database management systems. In this section, you will learn how to set up and interact with MySQL databases, write optimized queries, and handle large-scale data efficiently. This hands-on section will give you real-world experience in managing relational databases.\n\nThe course also delves into Python, a versatile programming language widely used in data science. You will explore Pandas, a Python library that simplifies data manipulation and analysis. Pandas will allow you to load datasets, clean and reshape data, and perform advanced operations such as grouping and merging data. Additionally, you\u2019ll learn how to use NumPy, a library that adds powerful mathematical and statistical functionalities to Python, enabling you to work with large, multidimensional arrays and perform complex computations.\n\nTo enhance your data visualization skills, the course introduces Power BI, a leading business intelligence tool used to create interactive dashboards and reports. In this section, you will learn how to connect to various data sources, transform and clean your data, and create stunning visualizations such as bar charts, line graphs, and data dashboards. By the end of this module, you'll be able to present your data in a visually compelling manner, making it easier for stakeholders to understand and act on your insights.\n\nBy the end of the course, you will have developed the skills to confidently analyze and visualize data using a combination of tools like Excel, SQL, MySQL, Python (Pandas and NumPy), and Power BI. This hands-on course includes real-world projects, allowing you to apply the concepts learned directly to your work. Upon completion, you will earn a certificate from MSK Institute, signifying your expertise in data analytics.\n\nJoin us at MSK Institute and start your journey toward mastering the exciting world of data analytics today!\n\n",
+        "what_you_learn": [
+            "Introduction to Data Analytics and its Importance.",
+            "Data Collection and Cleaning Techniques.",
+            "Performing Statistical Analysis for Insights.",
+            "Creating Effective Data Visualizations.",
+            "Working with SQL for Data Queries.",
+            "Analyzing Data with Python Libraries (Pandas and NumPy).",
+            "Building Data Dashboards in Power BI.",
+            "Presenting Data Insights to Stakeholders."
+        ],
+        "requirements": [
+            "No prior data analytics experience required.",
+            "Basic understanding of mathematics and statistics is helpful.",
+            "A computer with internet access.",
+            "Microsoft Excel and Power BI installed (or access to online versions).",
+            "Python installed (Anaconda or a similar distribution recommended)."
+        ],
+        "parent_course": "Data",
+        "skill_level": "Beginner to Advance",
+        "language": "Hindi/English",
+        "duration": "6 Months",
+        "deadline": "3 Months",
+        "enrolled": 22,
+        "discount": 20,
+        "fee": 15999,
+        "certificate": true,
+        "public_status": true,
+        "lectures": 60,
+        "link": "combo-course/data-analytics.html",
+        "curiculam": [
+            "0003",
+            "0009",
+            "0011",
+            "0008"
+        ],
+        "seo": {
+            "description": "Join the Data Analytics course at MSK Institute in Shikohabad. Learn data analysis, visualization, and interpretation using Excel, Power BI, SQL, and Python.",
+            "keywords": "Data Analytics course, MSK Institute, computer courses, Shikohabad, learn data analysis, Excel, Power BI, SQL, Python, beginner to intermediate data analysis",
+            "author": "Mr Sumit Kumar",
+            "og:title": "Data Analytics Course at MSK Institute",
+            "og:description": "Start your journey into data analytics with our beginner course at MSK Institute, Shikohabad. Master Excel, Power BI, SQL, and Python to extract insights from data!",
+            "og:image": "https://mskinstitute.github.io/assets/img/data_analytics.png",
+            "og:url": "https://mskinstitute.github.io/course/data_analytics.html"
+        }
     }
 }

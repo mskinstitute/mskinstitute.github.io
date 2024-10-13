@@ -1,0 +1,43 @@
+<footer class="phone-footer">
+    <a href="/"><i class="fa-solid fa-house"></i></a>
+    <a href="courses.html"><i class="fa-solid fa-book-open-reader"></i></a>
+    <a href="notes.html"><i class="fa-solid fa-book"></i></a>
+    <a href="contact.html"><i class="fa-solid fa-address-card"></i></a>
+</footer>
+
+<style>
+    .phone-footer {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #002060;
+            display: flex;
+            justify-content: space-evenly;
+            z-index: 1000;
+
+            a {
+                color: white;
+                text-decoration: none;
+                margin: 15px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    color: #FFD700;
+                    /* MSK branding gold hover color */
+                }
+                
+                i {
+                    font-size: 24px;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+</style>

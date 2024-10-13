@@ -81,85 +81,8 @@
 <body>
 
 
-    <header class="navbar navbar-expand-xl navbar-light">
-        <div class="container">
+    <div id="header"></div>
 
-            <!-- Brand -->
-            <a class="navbar-brand" href="index.html" style="font-family: Arial, Helvetica, sans-serif;">
-                MSK !nstitute
-            </a>
-
-            <!-- Collapse -->
-            <div class="collapse navbar-collapse z-index-lg" id="navbarCollapse">
-
-                <!-- Toggler -->
-                <button class="navbar-toggler outline-0 text-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <!-- Icon -->
-                    <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.142135 2.00015L1.55635 0.585938L15.6985 14.7281L14.2843 16.1423L0.142135 2.00015Z"
-                            fill="currentColor"></path>
-                        <path d="M14.1421 1.0001L15.5563 2.41431L1.41421 16.5564L0 15.1422L14.1421 1.0001Z"
-                            fill="currentColor"></path>
-                    </svg>
-
-                </button>
-
-                <!-- Navigation -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown dropdown-full-width ">
-                        <a style="padding-right: 0px;" class="nav-link px-xl-4 text-gigas" href="/">
-                            <span>Home</span>
-                        </a>
-
-                    </li>
-                    <li class="nav-item dropdown dropdown-full-width">
-                        <a style="padding-right: 0px;" class="nav-link text-gigas active" href="courses.html">
-                            Courses
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-full-width">
-                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="notes.html">
-                            Notes
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-full-width">
-                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="about.html">
-                            About
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-full-width">
-                        <a style="padding-right: 0px;" class="nav-link text-gigas" href="contact.html">
-                            Contact Us
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="box sm-w-50 d-flex justify-content-end">
-
-                <a class="rounded btn btn-outline-primary px-3 py-1 mx-3" onMouseOver="this.style.color='white'"
-                    onMouseOut="this.style.color='navy'">
-                    Admission
-                </a>
-                <!-- Toggler -->
-                <button
-                    class="navbar-toggler ms-md-5 shadow-none bg-primary text-white icon-xs p-0 outline-0 h-40p w-40p d-flex d-xl-none place-flex-center"
-                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- Icon -->
-                    <svg width="25" height="17" viewBox="0 0 25 17" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="25" height="1" fill="currentColor" />
-                        <rect y="8" width="15" height="1" fill="currentColor" />
-                        <rect y="16" width="20" height="1" fill="currentColor" />
-                    </svg>
-
-                </button>
-            </div>
-        </div>
-    </header>
 
     <div class="container py-4">
         <h1 class="text-center mb-4">MSK Institute: Admission Form</h1>
@@ -265,7 +188,8 @@
             <div class="d-flex justify-content-between">
                 <div class="d-flex justify-content-arround">
                     <button type="submit" class="btn btn-sm mx-1 btn-primary">Save</button>
-                    <button type="button" class="btn btn-sm btn-primary" onclick="window.location.href = 'add_pay.html'">Next</button>
+                    <button type="button" class="btn btn-sm btn-primary"
+                        onclick="window.location.href = 'add_pay.html'">Next</button>
                 </div>
                 <button type="reset" class="btn btn-sm btn-secondary">Clear</button>
             </div>
@@ -274,7 +198,7 @@
         <dialog data-modal-preview>
             <h3>Registration No :</h3>
             <p class="Registration_No_Show"></p>
-            <button id="Registration_No_Copy" >Copy</button>
+            <button id="Registration_No_Copy">Copy</button>
             <button onclick='document.querySelector("[data-modal-preview]").close()'>Close</button>
         </dialog>
 
@@ -283,6 +207,9 @@
     </div>
 
 
+
+    <div id="footer"></div>
+    <div id="phone-footer"></div>
 
     <!-- JAVASCRIPT ================================================== -->
     <!-- Libs JS -->
@@ -306,6 +233,7 @@
     <script src="assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
     <script src="assets/js/students/addmission_form.js"></script>
     <script src="assets/libs/typed.js/lib/typed.min.js"></script>
+    <script src="assets/js/components.js"></script>
 
     <!-- Theme JS -->
     <script src="assets/js/theme.min.js"></script>
