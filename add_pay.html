@@ -50,31 +50,36 @@
     <div id="header"></div>
 
 
-    <h2 class="text-center">Admission Fee Submission</h2>
+    <main class="mt-8 pt-5">
 
-    <div class="form-container">
-        <form id="feeForm">
-            <!-- Step 1: Registration No -->
-            <div class="form-group">
-                <label for="reg_no">Registration No:</label>
-                <div style="display:flex; align-items: center;">
-                    <input type="text" id="reg_no" name="registration_no" placeholder="Paste or Enter Registration No." required>
-                    <button type="button" id="pasteButton" style="margin-left: 10px;">Paste</button>
+
+        <h2 class="text-center mt-5">Admission Fee Submission</h2>
+
+        <div class="form-container">
+            <form id="feeForm">
+                <!-- Step 1: Registration No -->
+                <div class="form-group">
+                    <label for="reg_no">Registration No:</label>
+                    <div style="display:flex; align-items: center;">
+                        <input type="text" id="reg_no" name="registration_no"
+                            placeholder="Paste or Enter Registration No." required>
+                        <button type="button" id="pasteButton" style="margin-left: 10px;">Paste</button>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Step 3: Search Student Button -->
-            <div class="form-group">
-                <button type="submit">Search Student</button>
-            </div>
-        </form>
+                <!-- Step 3: Search Student Button -->
+                <div class="form-group">
+                    <button type="submit">Search Student</button>
+                </div>
+            </form>
 
-        <div id="studentData" class="result" style="display: none;"></div>
-        <div class="qr-code" id="qrCode" style="display: none;"></div>
-        <a id="payButton" class="form-group">Pay Fee</a>
+            <div id="studentData" class="result" style="display: none;"></div>
+            <div class="qr-code" id="qrCode" style="display: none;"></div>
+            <a id="payButton" class="form-group">Pay Fee</a>
 
-    </div>
+        </div>
 
+    </main>
 
     <div id="footer"></div>
     <div id="phone-footer"></div>
@@ -100,7 +105,7 @@
     <script src="assets/libs/parallax-js/dist/parallax.min.js"></script>
     <script src="assets/libs/quill/dist/quill.min.js"></script>
     <script src="assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
-    <script src="assets/js/students/add_pay.js"></script>
+    <script src="assets/js/students/addmission_pay.js"></script>
     <script src="assets/libs/typed.js/lib/typed.min.js"></script>
     <script src="assets/js/components.js"></script>
 

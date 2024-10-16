@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Lora:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;family=Nunito:wght@400;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/fontawesome.css">
+    <link rel="stylesheet" href="assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/libs/aos/dist/aos.css">
+    <link rel="stylesheet" href="assets/libs/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="assets/libs/flickity-fade/flickity-fade.css">
+    <link rel="stylesheet" href="assets/libs/flickity/dist/flickity.min.css">
+    <link rel="stylesheet" href="assets/libs/highlightjs/styles/vs2015.css">
+    <link rel="stylesheet" href="assets/libs/jarallax/dist/jarallax.css">
+    <link rel="stylesheet" href="assets/libs/quill/dist/quill.core.css" />
+    <link rel="stylesheet" href="assets/css/add_pay.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Fee Submission Form</title>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+
+
+    <main class="mt-8 pt-5">
+
+
+        <h2 class="text-center mt-5">Fee Submission</h2>
+
+        <div class="form-container">
+            <form id="feeForm">
+                <!-- Step 1: Registration No -->
+                <div class="form-group">
+                    <label for="reg_no">Registration No:</label>
+                    <div style="display:flex; align-items: center;">
+                        <input type="text" id="reg_no" name="registration_no"
+                            placeholder="Paste or Enter Registration No." required>
+                        <button type="button" id="pasteButton" style="margin-left: 10px;">Paste</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fee_amount">Fee Amount:</label>
+                    <div style="display:flex; align-items: center;">
+                        <input type="number" id="fee_amount" name="Fee_Amount" placeholder="Amount">
+                    </div>
+                </div>
+
+                <!-- Step 3: Search Student Button -->
+                <div class="form-group">
+                    <button type="submit">Search Student</button>
+                </div>
+            </form>
+
+            <div id="studentData" class="result" style="display: none;"></div>
+            <div class="qr-code" id="qrCode" style="display: none;"></div>
+            <a id="payButton" class="form-group">Pay Fee</a>
+
+        </div>
+
+    </main>
+
+    <div id="footer"></div>
+    <div id="phone-footer"></div>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="assets/libs/aos/dist/aos.js"></script>
+    <script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="assets/libs/countup.js/dist/countUp.min.js"></script>
+    <script src="assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="assets/libs/flickity-fade/flickity-fade.js"></script>
+    <script src="assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="assets/libs/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+    <script src="assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="assets/libs/parallax-js/dist/parallax.min.js"></script>
+    <script src="assets/libs/quill/dist/quill.min.js"></script>
+    <script src="assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="assets/js/students/fee_pay.js"></script>
+    <script src="assets/libs/typed.js/lib/typed.min.js"></script>
+    <script src="assets/js/components.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,14 +1,25 @@
-<header class="navbar navbar-expand-xl navbar-light">
-    <div class="container">
+<style>
+    @media (max-width: 991.98px) {
+        .navbar-nav .nav-link {
+            color: rgb(60, 60, 60) !important;
+
+            &:hover {
+                color: navy !important;
+            }
+        }
+    }
+</style>
+
+<header class="navbar navbar-expand-xl p-0 fixed-top bg-primary">
+    <div class="container text-white">
 
         <!-- Brand -->
-        <a class="navbar-brand" href="index.html" style="font-family: Arial, Helvetica, sans-serif;">
+        <a class="navbar-brand text-white" href="index.html" style="font-family: Arial, Helvetica, sans-serif;">
             MSK !nstitute
         </a>
 
         <!-- Collapse -->
         <div class="collapse navbar-collapse z-index-lg" id="navbarCollapse">
-
             <!-- Toggler -->
             <button class="navbar-toggler outline-0 text-primary" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -26,28 +37,28 @@
             <!-- Navigation -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown dropdown-full-width ">
-                    <a style="padding-right: 0px;" class="nav-link px-xl-4 text-gigas" href="/">
+                    <a style="padding-right: 0px;" class="nav-link px-xl-4 text-white" href="/">
                         <span>Home</span>
                     </a>
 
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
-                    <a style="padding-right: 0px;" class="nav-link text-gigas active" href="courses.html">
+                    <a style="padding-right: 0px;" class="nav-link text-white active" href="courses.html">
                         Courses
                     </a>
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
-                    <a style="padding-right: 0px;" class="nav-link text-gigas" href="notes.html">
+                    <a style="padding-right: 0px;" class="nav-link text-white" href="notes.html">
                         Notes
                     </a>
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
-                    <a style="padding-right: 0px;" class="nav-link text-gigas" href="about.html">
+                    <a style="padding-right: 0px;" class="nav-link text-white" href="about.html">
                         About
                     </a>
                 </li>
                 <li class="nav-item dropdown dropdown-full-width">
-                    <a style="padding-right: 0px;" class="nav-link text-gigas" href="contact.html">
+                    <a style="padding-right: 0px;" class="nav-link text-white" href="contact.html">
                         Contact Us
                     </a>
                 </li>
@@ -57,13 +68,16 @@
 
         <div class="box sm-w-50 d-flex justify-content-end">
 
-            <a class="rounded btn btn-outline-primary px-3 py-1 mx-3" href="admission.html"
-                onMouseOver="this.style.color='white'" onMouseOut="this.style.color='navy'">
+            <a class="rounded btn btn-outline-success px-3 py-1 mx-1" href="payment.html">
+                Pay
+            </a>
+            <a class="rounded btn btn-outline-success px-3 py-1 mx-1" href="admission.html">
                 Admission
             </a>
+
             <!-- Toggler -->
             <button
-                class="navbar-toggler ms-md-5 shadow-none bg-primary text-white icon-xs p-0 outline-0 h-40p w-40p d-flex d-xl-none place-flex-center"
+                class="navbar-toggler ms-md-5 shadow-none badge-success icon-xs p-0 outline-0 h-40p w-40p d-flex d-xl-none place-flex-center"
                 type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <!-- Icon -->
