@@ -105,7 +105,7 @@ fetch('assets/js/courses.json')
                     </div>
                 </div>
       `
-      
+
       const course_El = document.createElement('div');
       course_El.classList.add('col-md');
       course_El.classList.add('pb-4');
